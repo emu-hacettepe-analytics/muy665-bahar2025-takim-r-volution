@@ -6,7 +6,7 @@ Takim uyelerimizin detaylı ozgecmislerinin yer aldigi kisisel sayfalarina gitme
 
 # Takim Uyeleri
 
-1.  [Levent Bekci](/Takim/leventbekci.qmd)
+1.  [Levent Bekci](/takim/leventbekci.qmd)
 
 2.  [Dušan Tadić](/takim/dusantadic.qmd)
 
