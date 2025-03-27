@@ -1,6 +1,6 @@
 ---
 title: "Takim: R-Volution"
-sidebar: false 
+sidebar: true 
 ---
 
 MUY665-Is Analitigi Dersi R-Volution Takimi'nin sayfasina hosgeldiniz
