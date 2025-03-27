@@ -4,7 +4,7 @@ title: "Takim Uyeleri"
 
 Takim uyelerimizin detaylı ozgecmislerinin yer aldigi kisisel sayfalarina gitmek icin asagidaki linkleri kullanabilirsiniz.
 
-# Takim Uyeleri
+# Takiim Uyeleri
 
 1.  [Levent Bekci](/takim/leventbekci.qmd)
 
