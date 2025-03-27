@@ -1,0 +1,147 @@
+---
+title: "Levent Bekci"
+---
+
+![](/assets/images/leventbekci.jpg){fig-align="center"}
+
+# **Summary**
+
+The focus of my career, which I started in 2011, is to always learn new information and improve myself in the mechatronics area. In this direction, I specialized myself mostly in electronics things and now it's time to start to fill my deficiencies in the field of mechanics, the other main branch of mechatronics. Because of that reason right now I am working for TUSAŞ(Turkish Aerospace Industry-TAI) as Senior Expert Process Engineer at Machine Shop Inspection in The Quality Department. Before TUSAŞ(Turkish Aerospace Industry-TAI) i worked for Aselsan Hassas Optik(Aselsan Precision Optics) and designed PCB and embedded software for 1.5 years. Before Aselsan Hassas Optik(Aselsan Precision Optics) I worked for Alfa Test Ekipmanları(Alfa Testing Equipments) about 4.5 years at the same topic but started from zero and construct the electronics and software basis of the company and hand over about 35-40 kind of product and they continue to produce and sell the systems that I finished. Before Alfa Test Ekipmanları(Alfa Testing Equipments) I served as an electrical electronics lecturer in a high school for a short period of time and developed my communication ability. Before working as a lecturer I worked for HTG about 2 years. In this company, I worked in a wide variety of fields. I made literature review very hard. I used Catia to draw housing and make it produced myself. Draw PCB and write embedded software. As a summary I really worked as a mechatronics engineer in this company. And my first work experience was in the UDEA Elektronik(UDEA Electronics) as a purchasing engineer. This company gave me very valuable experiences about professionalism.
+
+# **Experience**
+
+**Senior Expert Process Engineer(Machine Shop Inspection-Quality Department)**
+
+Turkish Aerospace
+
+Dec 2022 – Present
+
+As a mechatronics engineer, i accepted this task in order to add mechanical and quality perspective to myself. Right now i work as a process engineer in the quality department of the largest aviation company in Turkey. I have full responsibility for 40 technicians and I work in the department where dimensional inspection of all detailed parts produced within TAI. Inspection procedures are carried out with CMM and manual measurement equipment such as; high gauge, caliper, micrometer, Loft etc.
+
+**Senior Hardware & Embedded Software Design Engineer**
+
+Aselsan Sivas Hassas Optik A.Ş.
+
+Aug 2022 – Dec 2022 (5 mos)
+
+**Hardware and Embedded Software Design Engineer**
+
+Aselsan Sivas Hassas Optik A.Ş.
+
+Jul 2021 – Aug 2022 (1 yr 2 mos)
+
+Aselsan Precision Optics company, which is by far the leader in its sector, operates in the field of optical products in the defense industry. The task undertaken in this company includes designing the PCBs of a wide variety of optical products, supplying and assembling their components, and monitoring their embedded software until they are made to military standards. In addition to these duties, undertaking the project management task of 2 projects carried out by other groups. Experiences gained in this company, multi-layer PCB and flex PCB design with Altium, STM32 coding, PIC coding, military product documentation, opto-electro-mechanical experience, project management.
+
+**Hardware and Embedded Software Design Engineer**
+
+ALFA Testing Equipment
+
+Feb 2017 – Jul 2021 (4 yrs 6 mos)
+
+Embedded software and hardware design tasks done at Alfa Testing Equipment, which produces industrial materials testing equipment. In this company between 30-35 new products R&D has been carried out and 350-400 of these devices have been sold, and they maintain their functionality in various parts of the world. PCBs were drawn and produced with the KiCad PCB program. Embedded software was made with Arduino IDE. Experience and experience gained in TFT touch screen, temperature sensor, encoder, loadcell, linear ruler, pressure transmitter, servo motor, stepper motor, AC motor and drivers, hydraulics. Communication works were carried out with SPI, UART, I2C, RS-485, Bluetooth protocols.
+
+**Electrical Electronic Educator**
+
+AKILLI EĞİTİM TEKNOLOJİLERİ VE DİJİTAL YAYINCILIK
+
+Sep 2016 – Feb 2017 (6 mos)
+
+Micro Controllers, Mobile Systems and Professional Development courses were given.
+
+**Mechatronics Engineer**
+
+HTG Teknoloji
+
+Sep 2013 – Jul 2015 (1 yr 11 mos)
+
+I worked in various fields in this company that produces vending machines. Experience has been gained in all areas of mechatronics engineering. From designing and producing products with a solid drawing program, to drawing and producing PCBs, to making material strings, to making embedded software. Programs used are CATIA, Arduino IDE, Eagle.
+
+**Purchasing Engineer**
+
+udea electronics
+
+Nov 2012 – Sep 2013 (11 mos)
+
+As an Electro-mechanical Purchasing Engineer, domestic and international procurement works were carried out in this defence industry company.
+
+**Management Trainee**
+
+FNSS Savunma Sistemleri A.Ş.
+
+Jul 2010 – Aug 2010 (2 mos)
+
+Gained business life experience in the defense industry.
+
+**Production Trainee**
+
+MKE Gazi Fişek Fabrikası
+
+Aug 2009 – Sep 2009 (2 mos)
+
+Gained business life experience in the defense industry.
+
+# **Education**
+
+**Hacettepe University**
+
+Master degree, Engineering Management
+
+2024-Continue
+
+**Atılım University**
+
+Bachelor's degree, Mechatronics, Robotics, and Automation Engineering
+
+2006 – 2011
+
+%100 English Education
+
+**Ankara Ayrancı Lisesi**
+
+High School Diploma, Mathematics and Science
+
+2002 – 2005
+
+**Ankara İlköğretim Okulu(Emek)**
+
+Primary School
+
+1999 – 2002
+
+**Dedeman İlkokulu**
+
+Primary School
+
+1995 – 1999
+
+# **Licenses & certifications**
+
+**AUKOM-GD&T**
+
+Geometric Dimensioning and Tolerancing
+
+Issued 2025
+
+**AUKOM-1**
+
+Metrology
+
+Issued 2024
+
+**KALDER**
+
+FMEA, SPC, Total Quality Control
+
+Issued 2024
+
+**PLC(Programmable Logic Control) - BELTEK**
+
+Issued Jul 2017 – Expires Sep 2017
+
+**SolidWorks - BELTEK**
+
+Issued Jul 2017 – Expires Sep 2017
+
+# **Skills**
+
+Geometric Dimensioning & Tolerancing, Pc-Dmis, Staff Management, Project Management, Altium Designer, C (Programming Language), Test Equipment, Sensors, Soldering Iron, CATIA

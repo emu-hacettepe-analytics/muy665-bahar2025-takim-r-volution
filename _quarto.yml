@@ -3,18 +3,18 @@ project:
   output-dir: docs
 
 website:
-  title: "XX Takımı Analitik Labı"
+  title: "R-Volution Takimi Analitik Labi"
   navbar:
     search: true
     left:
       - text: Ana Sayfa
-        href: index.qmd
-      - text: Takım Üyeleri
-        href: takim.qmd
+        href: Index.qmd
+      - text: Takim Uyeleri
+        href: Takim.qmd
       - text: Porfolyo
-        href: portfolyo.qmd
+        href: Portfolyo.qmd
       - text: Proje
-        href: proje.qmd
+        href: Proje.qmd
 
 
             
@@ -37,7 +37,7 @@ website:
       contents:
         - takim.qmd
         - takim/dusantadic.qmd
-        - takim/edindzeko.qmd
+        - takim/leventbekci.qmd
         - takim/fred.qmd  
         - takim/szymanski.qmd  
         

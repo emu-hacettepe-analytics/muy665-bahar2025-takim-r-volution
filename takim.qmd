@@ -1,12 +1,12 @@
 ---
-title: "Takım Üyeleri"
+title: "Takim Uyeleri"
 ---
 
-Takım Üyelerimizin detaylı özgemişlerinin yer aldığı kişisel sayfalarına gitmek için sol menüyü veya aşağıdaki linkleri kullanabilirsiniz.
+Takim uyelerimizin detaylı ozgecmislerinin yer aldigi kisisel sayfalarina gitmek icin asagidaki linkleri kullanabilirsiniz.
 
-# Takım Üyeleri
+# Takim Uyeleri
 
-1.  [Edin_Džeko](/takim/edindzeko.qmd)
+1.  [Levent Bekci](/Takim/leventbekci.qmd)
 
 2.  [Dušan Tadić](/takim/dusantadic.qmd)
 

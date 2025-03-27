@@ -1,58 +1,56 @@
 ---
-title: "Proje X (proje adını yazınız)"
+title: "Takim-R-Volution"
 number-sections: true
 ---
 
-**Proje sayfamıza hoş geldiniz.**
+**Proje sayfamiza hos geldiniz.**
 
-*Projemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.*
+*Projemizle ilgili guncellemelerden haberdar olmak icin bu alanı takip edin.*
 
-(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)
+# Proje Genel Bakis ve Kapsami
 
-# Proje Genel Bakış ve Kapsamı
-
-xxxxxx
+Hazirlaniyor...
 
 # Veri
 
-xxxxxx
+Hazirlaniyor...
 
-## Veri Kaynağı
+## Veri Kaynagi
 
-xxxxxx
+Hazirlaniyor...
 
-## Veri Hakkında Genel Bilgiler
+## Veri Hakkinda Genel Bilgiler
 
-xxxxxx
+Hazirlaniyor...
 
 ## Tercih Sebebi
 
-xxxxxx
+Hazirlaniyor...
 
-## Ön İşleme
+## On İsleme
 
-xxxxxx
+Hazirlaniyor...
 
 # Analiz
 
-xxxxxx
+Hazirlaniyor...
 
-## Keşifsel Veri Analizi
+## Kesifsel Veri Analizi
 
-xxxxxx
+Hazirlaniyor...
 
 ## Trend Analizi
 
-xxxxxx
+Hazirlaniyor...
 
 ## Model Uydurma
 
-xxxxxx
+Hazirlaniyor...
 
-## Sonuçlar
+## Sonuclar
 
-xxxxxx
+Hazirlaniyor...
 
-# Sonuçlar ve Ana Çıkarımlar
+# Sonuclar ve Ana Cikarimlar
 
-xxxxxx
+Hazirlaniyor...

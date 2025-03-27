@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.551">
+<meta name="generator" content="quarto-1.6.42">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>XX Takımı Analitik Labı - Çalışma 1</title>
+<title>Calisma 1 – R-Volution Takimi Analitik Labi</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,40 +20,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -64,19 +30,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../portfolyo/calisma2.html" rel="next">
-<link href="../portfolyo.html" rel="prev">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
 <script src="../site_libs/quarto-html/anchor.min.js"></script>
 <link href="../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../site_libs/quarto-html/quarto-syntax-highlighting-dark-b53751a350365c71b6c909e95f209ed1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="../site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../site_libs/bootstrap/bootstrap-9e883780f2fbd657c48aa509da551084.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../site_libs/bootstrap/bootstrap-dark-e77499559b757ffca09e2ecb2797a99c.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -109,7 +73,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,103 +81,56 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
     <a class="navbar-brand" href="../index.html">
-    <span class="navbar-title">XX Takımı Analitik Labı</span>
+    <span class="navbar-title">R-Volution Takimi Analitik Labi</span>
     </a>
   </div>
             <div id="quarto-search" class="" title="Search"></div>
-          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../index.html"> 
+    <a class="nav-link" href="../Index.html"> 
 <span class="menu-text">Ana Sayfa</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../takim.html"> 
-<span class="menu-text">Takım Üyeleri</span></a>
+    <a class="nav-link" href="../Takim.html"> 
+<span class="menu-text">Takim Uyeleri</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="../portfolyo.html" aria-current="page"> 
+    <a class="nav-link" href="../Portfolyo.html"> 
 <span class="menu-text">Porfolyo</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link" href="../proje.html"> 
+    <a class="nav-link" href="../Proje.html"> 
 <span class="menu-text">Proje</span></a>
   </li>  
 </ul>
           </div> <!-- /navcollapse -->
-          <div class="quarto-navbar-tools">
+            <div class="quarto-navbar-tools">
     <a href="https://github.com" title="" class="quarto-navigation-tool px-1" aria-label=""><i class="bi bi-github"></i></a>
   <a href="" class="quarto-color-scheme-toggle quarto-navigation-tool  px-1" onclick="window.quartoToggleColorScheme(); return false;" title="Toggle dark mode"><i class="bi"></i></a>
 </div>
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../portfolyo/calisma1.html">Çalışma 1</a></li></ol></nav>
-        <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-        </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
   <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal quarto-sidebar-collapse-item sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../portfolyo.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Portfolyo</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../portfolyo/calisma1.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Çalışma 1</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../portfolyo/calisma2.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Çalışma 2</span></a>
-  </div>
-</li>
-    </ul>
-    </div>
-    <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#a" id="toc-a" class="nav-link active" data-scroll-target="#a">(a)</a></li>
-  <li><a href="#b" id="toc-b" class="nav-link" data-scroll-target="#b">(b)</a></li>
-  </ul>
-</nav>
+    
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Çalışma 1</h1>
+<h1 class="title">Calisma 1</h1>
 </div>
 
 
@@ -230,23 +147,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<p><br>
-(Aşağıdakiler örnek olarak verilmiştir.)</p>
-<p>Bu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.</p>
-<section id="a" class="level2">
-<h2 class="anchored" data-anchor-id="a">(a)</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
-</div>
-</div>
-</section>
-<section id="b" class="level2">
-<h2 class="anchored" data-anchor-id="b">(b)</h2>
+<p>Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş &amp; Erdi Daşdemir</p>
+<p>Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır.</p>
+<p>Veri biliminde model kurulması ve sonuçların çıkarılması aşağıdaki adımlardan oluşmaktadır:</p>
+<p>1-&nbsp;&nbsp;&nbsp;&nbsp; Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor”&nbsp; bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir.</p>
+<p>2-&nbsp;&nbsp;&nbsp;&nbsp; Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir.</p>
+<p>3-&nbsp;&nbsp;&nbsp;&nbsp; EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir.</p>
+<p>4-&nbsp;&nbsp;&nbsp;&nbsp; Model Oluşturma ve Algoritmalar</p>
+<p>İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır.</p>
+<p>Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir.</p>
+<p>5-&nbsp;&nbsp;&nbsp;&nbsp; Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir.</p>
+<p>6-&nbsp;&nbsp;&nbsp;&nbsp; Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir.</p>
+<p>Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir.</p>
+<p>Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir.</p>
 
 
-</section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -428,18 +343,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }
     return false;
   }
-  const clipboard = new window.ClipboardJS('.code-copy-button', {
-    text: function(trigger) {
-      const codeEl = trigger.previousElementSibling.cloneNode(true);
-      for (const childEl of codeEl.children) {
-        if (isCodeAnnotation(childEl)) {
-          childEl.remove();
-        }
-      }
-      return codeEl.innerText;
-    }
-  });
-  clipboard.on('success', function(e) {
+  const onCopySuccess = function(e) {
     // button target
     const button = e.trigger;
     // don't keep focus
@@ -471,7 +375,27 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     }, 1000);
     // clear code selection
     e.clearSelection();
+  }
+  const getTextToCopy = function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+    text: getTextToCopy
   });
+  clipboard.on('success', onCopySuccess);
+  if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+    const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+      text: getTextToCopy,
+      container: window.document.getElementById('quarto-embedded-source-code-modal')
+    });
+    clipboardModal.on('success', onCopySuccess);
+  }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
       var filterRegex = new RegExp('/' + window.location.host + '/');
@@ -479,7 +403,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
     // Inspect non-navigation links and adorn them if external
- 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool)');
+ 	var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
     for (var i=0; i<links.length; i++) {
       const link = links[i];
       if (!isInternal(link.href)) {
@@ -576,7 +500,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      // TODO in 1.5, we should make sure this works without a callout special case
       if (note.classList.contains("callout")) {
         return note.outerHTML;
       } else {
@@ -802,18 +725,6 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<nav class="page-navigation">
-  <div class="nav-page nav-page-previous">
-      <a href="../portfolyo.html" class="pagination-link" aria-label="Portfolyo">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Portfolyo</span>
-      </a>          
-  </div>
-  <div class="nav-page nav-page-next">
-      <a href="../portfolyo/calisma2.html" class="pagination-link" aria-label="Çalışma 2">
-        <span class="nav-page-text">Çalışma 2</span> <i class="bi bi-arrow-right-short"></i>
-      </a>
-  </div>
-</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
