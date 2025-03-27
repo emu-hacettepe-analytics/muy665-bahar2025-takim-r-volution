@@ -7,7 +7,7 @@ website:
   navbar:
     search: true
     left:
-      - text: Ana Sayfa
+      - text: ana Sayfa
         href: index.qmd
       - text: Takim Uyeleri
         href: takim.qmd
