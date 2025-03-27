@@ -1,0 +1,7 @@
+---
+title: "Portfolyo"
+---
+
+Bu sayfada, MUY665 İs Analitigi dersi 2024-2025 bahar donemi boyunca yaptigimiz analitik calismalarini sunmaktayiz. Calismalarimiza asagidaki linkten ulasabilirsiniz.
+
+## [Calisma1](/Portfolyo/calisma1.qmd)

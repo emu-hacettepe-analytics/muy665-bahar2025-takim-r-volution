@@ -8,13 +8,13 @@ website:
     search: true
     left:
       - text: Ana Sayfa
-        href: Index.qmd
+        href: index.qmd
       - text: Takim Uyeleri
-        href: Takim.qmd
+        href: takim.qmd
       - text: Porfolyo
-        href: Portfolyo.qmd
+        href: portfolyo.qmd
       - text: Proje
-        href: Proje.qmd
+        href: proje.qmd
 
 
             

@@ -1,0 +1,15 @@
+---
+title: "Takim Uyeleri"
+---
+
+Takim uyelerimizin detaylı ozgecmislerinin yer aldigi kisisel sayfalarina gitmek icin asagidaki linkleri kullanabilirsiniz.
+
+# Takim Uyeleri
+
+1.  [Levent Bekci](/Takim/leventbekci.qmd)
+
+2.  [Dušan Tadić](/takim/dusantadic.qmd)
+
+3.  [Frederico Rodrigues de Paula Santos](/takim/fred.qmd)
+
+4.  [Sebastian Szymański](/takim/szymanski.qmd)

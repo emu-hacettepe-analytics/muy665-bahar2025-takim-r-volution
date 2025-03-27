@@ -1,0 +1,56 @@
+---
+title: "Takim-R-Volution"
+number-sections: true
+---
+
+**Proje sayfamiza hos geldiniz.**
+
+*Projemizle ilgili guncellemelerden haberdar olmak icin bu alanı takip edin.*
+
+# Proje Genel Bakis ve Kapsami
+
+Hazirlaniyor...
+
+# Veri
+
+Hazirlaniyor...
+
+## Veri Kaynagi
+
+Hazirlaniyor...
+
+## Veri Hakkinda Genel Bilgiler
+
+Hazirlaniyor...
+
+## Tercih Sebebi
+
+Hazirlaniyor...
+
+## On İsleme
+
+Hazirlaniyor...
+
+# Analiz
+
+Hazirlaniyor...
+
+## Kesifsel Veri Analizi
+
+Hazirlaniyor...
+
+## Trend Analizi
+
+Hazirlaniyor...
+
+## Model Uydurma
+
+Hazirlaniyor...
+
+## Sonuclar
+
+Hazirlaniyor...
+
+# Sonuclar ve Ana Cikarimlar
+
+Hazirlaniyor...

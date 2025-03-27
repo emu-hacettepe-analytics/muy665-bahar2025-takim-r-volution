@@ -1,0 +1,34 @@
+---
+title: "Takim: R-Volution"
+sidebar: false 
+---
+
+MUY665-Is Analitigi Dersi R-Volution Takimi'nin sayfasina hosgeldiniz
+
+Bu derste ogrendiklerimizi uyguladigimiz bu sayfada ki paylasimlarimizi gormek icin bizi takipte kalin
+
+## Takim Uyeleri
+
+1.  [Levent Bekci](/Takim/leventbekci.qmd)
+
+2.  [DuE!an TadiD](/takim/dusantadic.qmd)
+
+3.  [Frederico Rodrigues de Paula Santos](/takim/fred.qmd)
+
+4.  [Sebastian SzymaEski](/takim/szymanski.qmd)
+
+## Proje Adi
+
+MUY665-Analitik Iyilestirme Calismalari
+
+## Proje Konusu
+
+Hazirlaniyor...
+
+## Veri Seti Hakkinda Ozet Bilgi
+
+Hazirlaniyor...
+
+## Sonuclar
+
+Hazirlaniyor...
