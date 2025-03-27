@@ -1,6 +1,5 @@
 ---
 title: "Takim-R-Volution"
-number-sections: true
 ---
 
 **Proje sayfamiza hos geldiniz.**
