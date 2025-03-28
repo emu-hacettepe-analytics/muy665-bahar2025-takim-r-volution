@@ -9,7 +9,7 @@ Bu derste ogrendiklerimizi uyguladigimiz bu sayfada ki paylasimlarimizi gormek i
 
 ## Takim Uyeleri
 
-1.  [Levent Bekci](/Takim/leventbekci.qmd)
+1.  [Levent Bekci](/takim/leventbekci.qmd)
 
 2.  [DuE!an TadiD](/takim/dusantadic.qmd)
 
