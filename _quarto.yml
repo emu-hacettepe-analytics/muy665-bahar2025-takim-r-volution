@@ -31,7 +31,7 @@ website:
         - portfolyo/calisma1.qmd
         - portfolyo/calisma2.qmd  
         
-    - title: "Takım"
+    - title: "takım"
       style: "docked"
       search: true
       contents:
