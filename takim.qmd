@@ -14,3 +14,5 @@ title: "Tak??m uyeleri"
 3.  [kaanguven](/takim/kaanguven.qmd)
 
 4.  [yigitboran](/takim/yigitboran.qmd)
+
+5.  [leventbekci](/takim/leventbekci.qmd)

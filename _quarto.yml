@@ -3,13 +3,13 @@ project:
   output-dir: docs
 
 website:
-  title: "XX Takımı Analitik Labı"
+  title: "XX TakD1mD1 Analitik LabD1"
   navbar:
     search: true
     left:
       - text: Ana Sayfa
         href: index.qmd
-      - text: Takım Üyeleri
+      - text: TakD1m Cyeleri
         href: takim.qmd
       - text: Porfolyo
         href: portfolyo.qmd
@@ -23,7 +23,7 @@ website:
         href: https://github.com
 
   sidebar:
-    - title: "Çalışmalar"
+    - title: "Cal??smalar??"
       style: "docked"
       search: true
       contents:
@@ -31,7 +31,7 @@ website:
         - portfolyo/calisma1.qmd
         - portfolyo/calisma2.qmd  
         
-    - title: "Takım"
+    - title: "Tak??m"
       style: "docked"
       search: true
       contents:
