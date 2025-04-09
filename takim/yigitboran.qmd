@@ -7,15 +7,14 @@ title: "Yigit Guven"
 # Egitim
 
 -   Lisans, Malzeme Muhendisligi, Anadolu universitesi, Turkiye, 2005 - 2010.
--   YC<ksek Lisans, EndC<stri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
+-   Yuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
 
 # is Deneyimi
 
-## D0Eler
+
 
 
 1.  Firma xxx, pozisyon xx, yD1l xxx
 
 2.  Firma yyy, pozisyon yyy, yD1l yyy
 
-## Stajlar

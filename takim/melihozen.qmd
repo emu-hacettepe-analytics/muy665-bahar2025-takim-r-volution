@@ -7,12 +7,9 @@ title: "MELiH OZEN "
 # Egitim
 
 -   Lisans, Makine Muhendisligi, Gaziantep universitesi, Turkiye, 2008 - 2013.
--   YC<ksek Lisans, EndC<stri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
+-   Yuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
 
 # is Deneyimi
-
-## D0Eler
-
 
 
 
@@ -20,4 +17,4 @@ title: "MELiH OZEN "
 
 2.  Firma yyy, pozisyon yyy, yD1l yyy
 
-## Stajlar
+
