@@ -6,19 +6,19 @@ title: "Calisma 1"
 ## (a)
 OZET 
 
-Veri Bilimi ve End??stri M??hendisli??i ??zerine Sohbetler -Kerem Demirta?? & Erdi Da??demir
-Veri bilimi ??zerinden otonom ara??lar??n y??nlendirilmesi ve y??netilmesi konusunu anlatt??. Burada trafik ak???? modelleri, sens??rlerin kontrol??, envanter problemlerinin ????z??m?? ve sim??lasyon ara??lar??n??n kullan??ld??????n?? belirtti. Data k??sm??nda optimizasyonun yap??lmas?? ??rnek olarak salg??n hastal??klar??n ortaya ????kmas??, tarihsel datalar??n incelenmesi, potansiyel olarak ileride nerede ortaya ????kabilece??ini tahminlemesinin yap??ld??????n?? anlatm????t??r. Tez konusu olarak da ula????m anlam??nda otomobiller ??zerindeki sens??rler vas??tas??yla toplad?????? datalar ??rnek olarak ??n??n??zdeki ara?? saatte ka?? kilometre h??zla gidiyor bunun 360 derece belli bir uzakl????a kadar alg??layabiliyor, 3 boyutlu g??rev verisi ????kararaki hangi ??eritte ka?? ara?? var bunun hesaplamas??n?? yap??p, yayg??nla??an bulut sistemine aktar??m?? yap??l??yor. Burada ??l??eklenebilir sistem olu??turulmas?? hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model in??a etmek de??il, veriyi toplay??p, ??n i??leme yap??p, veriyi analiz edip, sonu??lar??n payda??larla payla????lmas?? da ??nemlidir. Veri biliminin sonu?? ????karabilmesi i??in insan fakt??r??n??n her zaman olmas?? gerekmektedir. Do??ru sorular?? bulup do??ru sorular??n ????kar??lmas?? ve do??ru ??ekilde yorumlanmas?? gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yapt??m fakat her zaman do??ru sonu?? vermeyebilir ????nk?? burada trend de??i??ebilir, ger??ek d??nya ile k??yaslama yapmak, sorgulamak ve modeli g??ncellemek gerekmektedir. Bu nedenle ??al????t??????n??z konu hakk??nda bilginiz yoksa sadece model kurarak sonu??lar?? yorumlayamazs??n??z. Bu anlamda yapay zeka bir veri bilimi de??il veri biliminin bir arac??d??r. ??nsan fakt??r?? ve insan yarg??s?? yine olacakt??r. 
-Veri biliminde model kurulmas?? ve sonu??lar??n ????kar??lmas?? a??a????daki ad??mlardan olu??maktad??r:
-1-	Problemin tan??mlanmas??: Biz burada do??ru problemi mi ????z??yoruz. ??rnek verecek olursak e??er 2. D??nya sava???? zaman??nda vurulan u??aklar??n vurulma b??lgeleri analiz edilerek vurulan k??s??mlarda g????lendirme yap??lm???? ve bunun sonucunda u??a???? a????rl?????? artmas??na ra??men vurulan u??aklar??n oran??nda bir de??i??iklik olmad?????? g??r??lm????t??r. Fakat problem farkl?? bir noktadan yakla????ld??????nda as??l sonucu de??i??tirecek k??s??mda sorulmas?? gereken soru ??? D??nmeyen u??aklar nerede???? ve ???D??nmeyen u??aklar nereden vuruluyor???  bu sorular??n cevab??n??n analiz edilmesi sonucunda kokpit ya da motor k??s??mda vurulan u??aklar??n d??nemedi??i g??r??lm????t??r. Asl??nda g????lendir,lmesi gereken k??s??mlar, u??aklar??n d??nmesini engelleyen problemlerin olu??tu??u yerdir. 
-2-	Data Toplama ve Haz??rlama: Burada iki tip data bulunuyor biri structured database olan yani kolonlar?? olan, integer bulunan datalar. ??kincisi ise unstructured olan text verisi olup belli imla hatalar?? i??eren datalard??r. Bunlar??n harmanlan??p bir f??zyon verisi olarak kullan??lmas?? gerekmektedir. 
-3-	EDA yani ke??ifsel veri analizi: Mean ya da medyanda z??plama neden kaynaklan??yor, bunu bulup buna g??re data science modeli kurulmas?? ??nemlidir. Burada verilebilecek ??rnek ise 1854 y??l??ndaki Kolera salg??n??n nedeni havadan bula??ma olarak g??r??l??rken John Snow isimli bilim adam?? bunun nedenin sudan bula??ma olarak ileri s??rm????t??r. Bu nedeni de desteklemek i??in veri bilimini kullanm????t??r. ??l??m raporlar??n?? inceleyip adresleri toplay??p bak??ld??????nda ??l??m oranlar??n??n adrese g??re de??i??ti??i g??r??lm????t??r. Bunun sonucunda Soho???da ortak bir kuyudan pompa ile su al??nan yerin ??evresinde ??l??m oran??n??n y??ksek oldu??u g??r??lm???? olup koleran??n buradan yay??ld??????n?? tespit etmi??lerdir.
-4-	Model Olu??turma ve Algoritmalar
-???? g??r??ler ????karma, sonu??lar?? tahmin etme, matematiksel algoritmik modeller ????karmay?? i??ermektedir. Tan??mlay??c??, tahminleyici, aksiyonlar??n ??nerilmesinden olu??an s??re??leri bulunmaktad??r. 
-Burada Lewis Fry Richardson ???B??t??n modeller yanl???? olacak, baz??lar?? size bilgi verecek, bu modeller sonucunda siz belli ????z??mlere gideceksiniz.??? demi??tir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model olu??turmu??tur. Burada data kalitesi, olu??turulan modelin algoritmas??n??n kalitesi data science kalitesi a????s??ndan ??nemlidir. 
-5-	Evaluation: model kurulmas?? burada tahmin ne kadar do??ru metrikler ne durumdad??r bunu de??erlendirilmesi bulunmaktad??r. Underfitting, overfitting ve well balanced modelleri bulunmaktad??r. Burada ??nerilen dengeli model olup baz?? noktalar?? g??rebiliyorsan??z hi?? g??rmedi??iniz noktalar?? tahmin edebiliyor durumda olman??z beklenmektedir. Buna ??rnek olarak da 1996???da Deep Model program?? Kasparov???u satran?? m??sabakas??nda yenmi??ti. Fakat Kasparov b??t??n ma??lar?? takip edip ezberlemi?? ve bunun sonucunda oyun stratejisini belirlemi??ti. Kasparov al??????lm???? hamlelerini yapmad?????? bir m??sabakada program al??????k olmad?????? hamleleri g??r??nce ??a????rm???? ve ma???? kaybetmi??tir.1997 y??l??na gelindi??indeyse Deep Blue farkl?? hamleleri ve stratejileri de deneyip Kasparov???u yenmi??tir. 
-6-	Production ve Live Performance: Verinin al??nmas??, i??lenmesi ve kurdu??umuz modele i??lenmesini i??ermektedir. Yie burada hata olmas?? durumunda insan m??dahalesi de yap??lmas?? gerekecektir. 
-??l??eklenebilirlik: Veri ??ok fazla ger??ek mi? Test edildi mi? Hata ????kacak m??? Gibi sorular?? i??ermektedir. Domain i??inde hangi toollar?? kullnabilecek d??zeyde bilip model olu??turulmas?? ve geli??tirme taraf??nda zaman harcanmas?? ??nerilmektedir. 
-Burada yine tez konusunda baz?? bilgiler verildi. Kendi kendini s??ren ara??lar??n konvoy olu??turmas??. Ara??lar??n birbiriyle konu??arak ??eridi maksimum oranda kullan??lmas?? hedeflenmektedir. Kar??????k trafikte otonom ara??lar?? y??nlendirerek kullan??mlar??n?? maksimize etmeyi planlamaktad??r. Gidece??i yere g??re ara??lar?? grupland??r??p y??nlendirme ve kontrol karar?? vermektedir. Data toplama ise bu i??in trajectory yani anl??k GPS verisinin sa??lanmas?? ve Occupancy taraf??nda trafik dolulu??u ve bu bilgilerin kameralardan al??nmas??n?? i??ermektedir.   
+Veri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş & Erdi Daşdemir
+Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır. 
+1- Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor” bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir. 
+2- Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir. 
+3- EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir.
+4- Model Oluşturma ve Algoritmalar
+İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır. 
+Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir. 
+5- Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir. 
+6- Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir. 
+Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir. 
+Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir. 
+
 
 
 ```
@@ -31,12 +31,12 @@ Burada yine tez konusunda baz?? bilgiler verildi. Kendi kendini s??ren ara??lar?
 
 str(mtcars)
 
-# Say??sal ??zet istatistikleri hesaplayan fonksiyon
+# Sayisal ozet istatistikleri hesaplayan fonksiyon
 my_summary_stats <- function(R) {
-  if (is.numeric(R) == FALSE) {  # Say??sal veri de??ilse
-    print("Girdi say??sal olmal??d??r.")
+  if (is.numeric(R) == FALSE) {  # Sayisal veri degilse
+    print("Girdi sayisal olmalidir.")
   } else {
-    # Say??sal veriler i??in ??zet istatistikleri hesapla
+    # Sayisal veriler icin ozet istatistikleri hesapla
     summary_list <- list(
       Mean = mean(R), 
       Median = median(R), 
@@ -44,48 +44,51 @@ my_summary_stats <- function(R) {
       Min = min(R), 
       Max = max(R)
     )
-    return(summary_list)  # Sonucu d??nd??r
+    return(summary_list)  # Sonucu dondur
   }
 }
 
-# mtcars veri seti ??zerinde d??ng?? ile say??sal s??tunlarda i??lem
+# mtcars veri seti uzerinde dongu ile sayisal sutunlarda islem
 for (i in 1:ncol(mtcars)) {  
-  R <- mtcars[, i]  # i. s??tunu al
+  R <- mtcars[, i]  # i. sutunu al
   
-  # E??er s??tun say??salsa i??le
+  # Eger sutun sayisalsa isle
   if (is.numeric(R)) {  
-    column_name <- colnames(mtcars)[i]  # S??tun ad??n?? al
-    print(paste("Column:", column_name))  # S??tun ad??n?? yazd??r
+    column_name <- colnames(mtcars)[i]  # Sutun adini al
+    print(paste("Sutun:", column_name))  # Sutun adini yazdir
     
-    result <- my_summary_stats(R)  # ??zet istatistikleri al
-    print("Results:")
-    print(paste("Mean:", round(result$Mean, 2)))
-    print(paste("Median:", round(result$Median, 2)))
-    print(paste("SD:", round(result$SD, 2)))
+    result <- my_summary_stats(R)  # Ozet istatistikleri al
+    print("Sonuclar:")
+    print(paste("Ortalama:", round(result$Mean, 2)))
+    print(paste("Medyan:", round(result$Median, 2)))
+    print(paste("Standart Sapma:", round(result$SD, 2)))
     print(paste("Min:", round(result$Min, 2)))
     print(paste("Max:", round(result$Max, 2)))
     
-    print("+++++++++")  # Ay??r??c?? art?? ekle
+    print("+++++++++")  # Ayirici arti ekle
   }
 }
 
-# mtcars veri setindeki say??sal s??tunlarda apply kullanarak fonksiyonu uygulama
+# apply ile uygulama
 apply(mtcars, 2, function(R) {
-  if (is.numeric(R)) {  # Say??sal veri kontrol??
-    column_name <- colnames(mtcars)[which(mtcars == R, arr.ind = TRUE)[1, 2]]  # S??tun ad??n?? al
-    result <- my_summary_stats(R)  # ??zet istatistikleri al
+  if (is.numeric(R)) {  # Sayisal veri kontrolu
+    column_index <- which(sapply(mtcars, identical, R))[1]  # Sutun indexini bul
+    column_name <- colnames(mtcars)[column_index]  # Sutun adini al
     
-    print(paste("Column:", column_name))  # S??tun ad??n?? yazd??r
-    print("Results:")
-    print(paste("Mean:", round(result$Mean, 2)))
-    print(paste("Median:", round(result$Median, 2)))
-    print(paste("SD:", round(result$SD, 2)))
+    result <- my_summary_stats(R)  # Ozet istatistikleri al
+    
+    print(paste("Sutun:", column_name))  # Sutun adini yazdir
+    print("Sonuclar:")
+    print(paste("Ortalama:", round(result$Mean, 2)))
+    print(paste("Medyan:", round(result$Median, 2)))
+    print(paste("Standart Sapma:", round(result$SD, 2)))
     print(paste("Min:", round(result$Min, 2)))
     print(paste("Max:", round(result$Max, 2)))
     
-    print("**************")  # Ay??r??c?? y??ld??z ekle
+    print("**************")  # Ayirici yildiz ekle
   }
 })
+
 
 ```
 
@@ -96,28 +99,29 @@ apply(mtcars, 2, function(R) {
 ```{r}
 
 
-# dslabs paketini y??kleyin
-#install.packages("dslabs")
+# dslabs paketini yükleyin
+# install.packages("dslabs")
 library(dslabs)
 
-# na_example veri setini y??kleyin
+# na_example veri setini yükleyin
 data("na_example")
 
-# Veri setinde ka?? adet NA bulundu??unu kontrol edin
+# Veri setinde kaç adet NA olduğunu kontrol edin
 na_count <- sum(is.na(na_example))
-print(paste("Veri setinde", na_count, "NA de??eri bulunmaktad??r."))
+print(paste("Veri setinde", na_count, "NA değeri bulunmaktadır."))
 
-# NA de??erlerini 2025 ile de??i??tirin
+# NA değerlerini 2025 ile değiştirin
 cleaned_data <- na_example
 cleaned_data[is.na(cleaned_data)] <- 2025
 
-# G??ncellenmi?? veri setinde eksik de??er olup olmad??????n?? kontrol edin
+# Güncellenmiş veri setinde eksik değer olup olmadığını kontrol edin
 clean_na_count <- sum(is.na(cleaned_data))
-print(paste("G??ncellenmi?? veri setinde", clean_na_count, "NA de??eri bulunmamaktad??r."))
+print(paste("Güncellenmiş veri setinde", clean_na_count, "NA değeri bulunmaktadır."))
 
-# 2025 say??s??n??n veri setinde ka?? kez ge??ti??ini kontrol edin
+# 2025 sayısının veri setinde kaç kez geçtiğini kontrol edin
 value_count <- sum(cleaned_data == 2025)
-print(paste("2025 say??s??", value_count, "kez veri setinde bulunmaktad??r."))
+print(paste("2025 sayısı", value_count, "kez veri setinde bulunmaktadır."))
+
 
 ```
 
