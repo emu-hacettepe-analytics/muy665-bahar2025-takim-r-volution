@@ -23,10 +23,6 @@ Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçlar�
 
 ```
 ## (b)
-
-
-
-
 ```{r}
 
 str(mtcars)
