@@ -1,15 +1,18 @@
 ---
-title: "Takım Üyeleri"
+title: "Tak??m uyeleri"
 ---
 
-Takım Üyelerimizin detaylı özgemişlerinin yer aldığı kişisel sayfalarına gitmek için sol menüyü veya aşağıdaki linkleri kullanabilirsiniz.
 
-# Takım Üyeleri
 
-1.  [Edin_Džeko](/takim/edindzeko.qmd)
+# Tak??m uyeleri
 
-2.  [Dušan Tadić](/takim/dusantadic.qmd)
 
-3.  [Frederico Rodrigues de Paula Santos](/takim/fred.qmd)
+1.  [ahmetcanbisit](/takim/ahmetcanbisit.qmd)
 
-4.  [Sebastian Szymański](/takim/szymanski.qmd)
+2.  [melihozen](/takim/melihozen.qmd)
+
+3.  [kaanguven](/takim/kaanguven.qmd)
+
+4.  [yigitboran](/takim/yigitboran.qmd)
+
+5.  [leventbekci](/takim/leventbekci.qmd)
