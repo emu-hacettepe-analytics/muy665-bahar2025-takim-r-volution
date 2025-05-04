@@ -9,7 +9,7 @@ website:
     left:
       - text: Ana Sayfa
         href: index.qmd
-      - text: Tak??m uyeleri
+      - text: Takim uyeleri
         href: takim.qmd
       - text: Porfolyo
         href: portfolyo.qmd

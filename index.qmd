@@ -1,6 +1,6 @@
 ---
 title: "Takım: XXX"
-sidebar: false 
+sidebar: true 
 ---
 
 MUY660-İş Analitiği dersi takım sayfamıza hoş geldiniz.
