@@ -2,7 +2,7 @@
 title: "Levent Bekci"
 ---
 
-![](/assets/images/vesikalik.jpeg){fig-align="center"}
+![](/assets/images/leventbekciphoto.jpeg){fig-align="center"}
 
 # Egitim
 
@@ -11,10 +11,6 @@ title: "Levent Bekci"
 
 # is Deneyimi
 
-
-
-
 1.  Firma xxx, pozisyon xx, yD1l xxx
 
 2.  Firma yyy, pozisyon yyy, yD1l yyy
-
