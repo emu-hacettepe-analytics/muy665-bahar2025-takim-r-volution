@@ -2,10 +2,7 @@
 title: "Tak??m uyeleri"
 ---
 
-
-
 # Tak??m uyeleri
-
 
 1.  [ahmetcanbisit](/takim/ahmetcanbisit.qmd)
 

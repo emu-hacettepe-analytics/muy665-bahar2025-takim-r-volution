@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "XX TakD1mD1 Analitik LabD1"
+  title: "R-Volution Takimi Analitik Labi"
   navbar:
     search: true
     left:
@@ -40,6 +40,7 @@ website:
         - takim/edindzeko.qmd
         - takim/fred.qmd  
         - takim/szymanski.qmd  
+        - takim/leventbekci.qmd  
         
         
   page-navigation: true
