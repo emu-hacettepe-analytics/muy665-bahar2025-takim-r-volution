@@ -23,7 +23,7 @@ website:
         href: https://github.com
 
   sidebar:
-    - title: "Cal??smalar??"
+    - title: "Calismalari"
       style: "docked"
       search: true
       contents:
@@ -31,7 +31,7 @@ website:
         - portfolyo/calisma1.qmd
         - portfolyo/calisma2.qmd  
         
-    - title: "Tak??m"
+    - title: "Takim"
       style: "docked"
       search: true
       contents:
