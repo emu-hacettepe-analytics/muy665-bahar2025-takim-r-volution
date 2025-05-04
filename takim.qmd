@@ -1,8 +1,8 @@
 ---
-title: "Tak??m uyeleri"
+title: "Takim uyeleri"
 ---
 
-# Tak??m uyeleri
+# Takim uyeleri
 
 1.  [ahmetcanbisit](/takim/ahmetcanbisit.qmd)
 
