@@ -5,13 +5,13 @@ number-sections: true
 
 **Proje sayfamD1za hoE geldiniz.**
 
-*Projemizle ilgili gC<ncellemelerden haberdar olmak iC'in bu alanD1 takip edin.*
+*Projemizle ilgili gC\<ncellemelerden haberdar olmak iC'in bu alanD1 takip edin.*
 
-(AEaDD1daki baElD1klar C6rnek olarak verilmiEtir; lC<tfen gerektiDi Eekilde dC<zenlemekten C'ekinmeyin.)
+(AEaDD1daki baElD1klar C6rnek olarak verilmiEtir; lC\<tfen gerektiDi Eekilde dC\<zenlemekten C'ekinmeyin.)
 
 # Proje Genel BakD1E ve KapsamD1
 
-Dünya Göc Stok Analizi
+DC\<nya GC6c Stok Analizi
 
 # Veri
 
