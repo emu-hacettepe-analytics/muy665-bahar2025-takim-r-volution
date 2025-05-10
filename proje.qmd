@@ -1,43 +1,43 @@
 ---
-title: "Proje X (proje adını yazınız)"
+title: "Uluslar Arası Göçmen Stoku"
 number-sections: true
 ---
 
-**Proje sayfamıza hoş geldiniz.**
+**Proje Sayfamıza Hos Geldiniz**
 
-*Projemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.*
+# Proje Genel Bakıs ve Kapsam
 
-(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)
-
-# Proje Genel Bakış ve Kapsamı
-
-xxxxxx
+Birleşmiş Milletler Ekonomik ve Sosyal İşler Departmanındaki Nüfus Bölümü, nüfus sorunlarını uluslararası toplumun dikkatine sunma yetkisinin bir parçası olarak dünya nüfusu hakkında veri kümeleri yayınlar ve küresel demografik eğilimleri analiz eder. Uluslararası Göçmen Stoku veri kümesinin 2024 baskısı, Birleşmiş Milletler'in dünyadaki uluslararası göçmenlerin sayıları ve özellikleri hakkındaki en son tahminlerini sunar.
 
 # Veri
 
-xxxxxx
+1990'dan 2024'e kadar olan dönemi kapsayan veri kümesi, 233 ülke ve bölge için cinsiyete göre toplam uluslararası göçmen sayısı ve bunların köken ve varış yerlerine ilişkin tahminleri içerir.
 
-## Veri Kaynağı
+## Veri Kaynagı
 
-xxxxxx
+https://www.un.org/development/desa/pd/content/international-migrant-stock
 
 ## Veri Hakkında Genel Bilgiler
 
-xxxxxx
+Uluslararası Göçmen Stoku veri kümesinin 2024 baskısını üretirken, Nüfus Bölümü, nüfus sayımlarından veya kayıtlarından elde edilen yeni ampirik bilgilere ve nispeten büyük sayıda uluslararası göçmene sahip ülkeler ile UNHCR tarafından belgelenen devam eden veya ortaya çıkan mülteci akışlarından etkilenen ülkeler için tahminleri revize etmeyi önceliklendirmiştir. Bu verilerin yeni baskısında, toplam 60 ülke ve bölge, bölgede ikamet eden uluslararası göçmen sayısındaki eğilimlerin tam bir yeniden değerlendirmesini aldı. Geriye kalan ülkeler ve bölgeler için, 2024'te üretilen tahminler, veri setinin 2020 baskısında yayınlanan tahminlerin ekstrapolasyonlarını yansıtmaktadır.
 
 ## Tercih Sebebi
 
 xxxxxx
 
-## Ön İşleme
+## Cod Düzenleme
 
-xxxxxx
+1
+
+```{r}
+
+```
 
 # Analiz
 
 xxxxxx
 
-## Keşifsel Veri Analizi
+## Kesifsel Veri Analizi
 
 xxxxxx
 
@@ -49,10 +49,10 @@ xxxxxx
 
 xxxxxx
 
-## Sonuçlar
+## Sonuclar
 
 xxxxxx
 
-# Sonuçlar ve Ana Çıkarımlar
+# Sonuclar ve Ana Cıkarımlar
 
 xxxxxx

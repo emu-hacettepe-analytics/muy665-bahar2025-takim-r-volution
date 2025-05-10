@@ -1,12 +1,12 @@
 ---
-title: "Levent Bekci"
+title: "LEVENT BEKCİ"
 ---
 
-![](/assets/images/leventbekciphoto.jpeg){fig-align="center"}
+![](/assets/images/vesikalik.jpeg){fig-align="center"}
 
 # Egitim
 
--   Lisans, Malzeme Muhendisligi, Anadolu universitesi, Turkiye, 2005 - 2010.
+-   Lisans, Malzeme Mühendisliği , Anadolu Üniversitesi, Turkiye, 2005 - 2010.
 -   Yuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
 
 # is Deneyimi
@@ -14,3 +14,4 @@ title: "Levent Bekci"
 1.  Firma xxx, pozisyon xx, yD1l xxx
 
 2.  Firma yyy, pozisyon yyy, yD1l yyy
+

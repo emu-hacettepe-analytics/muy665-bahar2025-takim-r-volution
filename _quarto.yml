@@ -3,7 +3,7 @@ project:
   output-dir: docs
 
 website:
-  title: "R-Volution Takimi Analitik Labi"
+  title: "R-Volution Takimi "
   navbar:
     search: true
     left:
@@ -36,10 +36,10 @@ website:
       search: true
       contents:
         - takim.qmd
-        - takim/dusantadic.qmd
-        - takim/edindzeko.qmd
-        - takim/fred.qmd  
-        - takim/szymanski.qmd  
+        - takim/ahmetcanbisit.qmd
+        - takim/kaanguven.qmd
+        - takim/melihozen.qmd  
+        - takim/yigitboran.qmd  
         - takim/leventbekci.qmd  
         
         
@@ -59,4 +59,5 @@ format:
 
 
 editor: visual
+
 

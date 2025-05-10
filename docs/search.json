@@ -2,9 +2,9 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Takım: XXX",
+    "title": "Takım R volution",
     "section": "",
-    "text": "MUY660-İş Analitiği dersi takım sayfamıza hoş geldiniz.\nBu analitik çalışmalarımızı paylaşıyoruz.\nLütfen faaliyetlerimizi görmek için için bizi takipte kalın."
+    "text": "MUY660-Is Analitigi dersi takım sayfamıza hos geldiniz."
   },
   {
     "objectID": "teammembers/volkansonmez.html",
@@ -192,16 +192,16 @@
   {
     "objectID": "index.html#proje-adı",
     "href": "index.html#proje-adı",
-    "title": "Takım: XXX",
+    "title": "Takım R volution",
     "section": "Proje Adı",
-    "text": "Proje Adı\nMUY660-İş Analitiği iyileştirme çalışmaları (örnek)"
+    "text": "Proje Adı"
   },
   {
     "objectID": "index.html#proje-konusu",
     "href": "index.html#proje-konusu",
-    "title": "Takım: XXX",
+    "title": "Takım R volution",
     "section": "Proje Konusu",
-    "text": "Proje Konusu\nÖrnek: Bu projede MUY660-İş Analitiği ders içeriğinin analitik yaklaşımlarla iyileştirilmesini hedefledik. Bu doğrultuda tüm üniversitelerdeki benzer derslerin verisini toplayarak bir veri seti oluşturduk Analiz için …….. yöntemleri kullanarak, ……. çalışmaları yaptık Sonuç olarak, MUY660-İş Analitiği dersinin dünyadaki tüm derslerden daha iyi olduğunu ve bu dersi aldığımız için çok mutlu olduğumuzu tespit ettik."
+    "text": "Proje Konusu"
   },
   {
     "objectID": "index.html#veri-seti-hakkında-özet-bilgi",
@@ -229,7 +229,7 @@
     "href": "portfolyo.html",
     "title": "Portfolyo",
     "section": "",
-    "text": "Bu sayfada, MUY665 İş Analitiği dersi 2024-2025 bahar dönemi boyunca yaptığımız analitik çalışmalarını sunmaktayız. Çalışmalarımıza sol menüden ulaşabilirsiniz.\n\n\n\n Back to top",
+    "text": "Back to top",
     "crumbs": [
       "Porfolyo",
       "Portfolyo"
@@ -238,20 +238,19 @@
   {
     "objectID": "takim.html",
     "href": "takim.html",
-    "title": "Tak??m uyeleri",
+    "title": "Takim uyeleri",
     "section": "",
-    "text": "Tak??m uyeleri\n\nahmetcanbisit\nmelihozen\nkaanguven\nyigitboran\n\n\n\n\n\n Back to top",
+    "text": "Takim uyeleri\n\nahmetcanbisit\nmelihozen\nkaanguven\nyigitboran\nleventbekci\n\n\n\n\n\n Back to top",
     "crumbs": [
-      "Takım Üyeleri",
-      "Tak??m uyeleri"
+      "Takim uyeleri"
     ]
   },
   {
     "objectID": "proje.html",
     "href": "proje.html",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Uluslar Arası Göçmen Stoku",
     "section": "",
-    "text": "Proje sayfamıza hoş geldiniz.\nProjemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.\n(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)"
+    "text": "Proje Sayfamıza Hos Geldiniz"
   },
   {
     "objectID": "proje.html#data-source",
@@ -312,12 +311,12 @@
   {
     "objectID": "portfolyo/calisma2.html",
     "href": "portfolyo/calisma2.html",
-    "title": "Çalışma 2",
+    "title": "Calısma 2",
     "section": "",
-    "text": "(Aşağıdakiler örnek olarak verilmiştir.)\nBu çalışmada 3 görevimiz var. Bu görevler….. Bunlara sırayla aşağıda cevap arıyoruz.",
+    "text": "Uluslararası Göçmen Stoku 2024\nBirleşmiş Milletler Ekonomik ve Sosyal İşler Departmanındaki Nüfus Bölümü, nüfus sorunlarını uluslararası toplumun dikkatine sunma yetkisinin bir parçası olarak dünya nüfusu hakkında veri kümeleri yayınlar ve küresel demografik eğilimleri analiz eder. Uluslararası Göçmen Stoku veri kümesinin 2024 baskısı, Birleşmiş Milletler’in dünyadaki uluslararası göçmenlerin sayıları ve özellikleri hakkındaki en son tahminlerini sunar. 1990’dan 2024’e kadar olan dönemi kapsayan veri kümesi, 233 ülke ve bölge için cinsiyete göre toplam uluslararası göçmen sayısı ve bunların köken ve varış yerlerine ilişkin tahminleri içerir. Uluslararası Göçmen Stoku\nveri kümesinin 2024 baskısını üretirken, Nüfus Bölümü, nüfus sayımlarından veya kayıtlarından elde edilen yeni ampirik bilgilere ve nispeten büyük sayıda uluslararası göçmene sahip ülkeler ile UNHCR tarafından belgelenen devam eden veya ortaya çıkan mülteci akışlarından etkilenen ülkeler için tahminleri revize etmeyi önceliklendirmiştir. Bu verilerin yeni baskısında, toplam 60 ülke ve bölge, bölgede ikamet eden uluslararası göçmen sayısındaki eğilimlerin tam bir yeniden değerlendirmesini aldı. Geriye kalan ülkeler ve bölgeler için, 2024’te üretilen tahminler, veri setinin 2020 baskısında yayınlanan tahminlerin ekstrapolasyonlarını yansıtmaktadır.\nVeri ön işlemede ülke, kıta, bölge ayrımlarının yapılması için F sütununa Area sekmesi eklenmiştir. Low developed, high developed continent bilgileri sonuçları üzerinde istenmediği için bunlarda dosyadan çıkarılmıştır.",
     "crumbs": [
       "Porfolyo",
-      "Çalışma 2"
+      "Calısma 2"
     ]
   },
   {
@@ -325,7 +324,7 @@
     "href": "portfolyo/calisma1.html",
     "title": "Calisma 1",
     "section": "",
-    "text": "OZET\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş & Erdi Daşdemir Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır. 1- Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor” bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir. 2- Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir. 3- EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir. 4- Model Oluşturma ve Algoritmalar İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır. Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir. 5- Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir. 6- Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir. Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir. Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir.\n## (b)\n::: {.cell}\n\n```{.r .cell-code}\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n# Sayisal ozet istatistikleri hesaplayan fonksiyon\nmy_summary_stats &lt;- function(R) {\n  if (is.numeric(R) == FALSE) {  # Sayisal veri degilse\n    print(\"Girdi sayisal olmalidir.\")\n  } else {\n    # Sayisal veriler icin ozet istatistikleri hesapla\n    summary_list &lt;- list(\n      Mean = mean(R), \n      Median = median(R), \n      SD = sd(R), \n      Min = min(R), \n      Max = max(R)\n    )\n    return(summary_list)  # Sonucu dondur\n  }\n}\n\n# mtcars veri seti uzerinde dongu ile sayisal sutunlarda islem\nfor (i in 1:ncol(mtcars)) {  \n  R &lt;- mtcars[, i]  # i. sutunu al\n  \n  # Eger sutun sayisalsa isle\n  if (is.numeric(R)) {  \n    column_name &lt;- colnames(mtcars)[i]  # Sutun adini al\n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"+++++++++\")  # Ayirici arti ekle\n  }\n}\n\n[1] \"Sutun: mpg\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: cyl\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n[1] \"Sutun: disp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"+++++++++\"\n[1] \"Sutun: hp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"+++++++++\"\n[1] \"Sutun: drat\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"+++++++++\"\n[1] \"Sutun: wt\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"+++++++++\"\n[1] \"Sutun: qsec\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: vs\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: am\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: gear\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"+++++++++\"\n[1] \"Sutun: carb\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n\n# apply ile uygulama\napply(mtcars, 2, function(R) {\n  if (is.numeric(R)) {  # Sayisal veri kontrolu\n    column_index &lt;- which(sapply(mtcars, identical, R))[1]  # Sutun indexini bul\n    column_name &lt;- colnames(mtcars)[column_index]  # Sutun adini al\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    \n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"**************\")  # Ayirici yildiz ekle\n  }\n})\n\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"**************\"\n\n\n             mpg              cyl             disp               hp \n\"**************\" \"**************\" \"**************\" \"**************\" \n            drat               wt             qsec               vs \n\"**************\" \"**************\" \"**************\" \"**************\" \n              am             gear             carb \n\"**************\" \"**************\" \"**************\" \n\n:::",
+    "text": "OZET\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş & Erdi Daşdemir Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır. 1- Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor” bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir. 2- Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir. 3- EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir. 4- Model Oluşturma ve Algoritmalar İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır. Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir. 5- Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir. 6- Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir. Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir. Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir.",
     "crumbs": [
       "Porfolyo",
       "Calisma 1"
@@ -341,14 +340,14 @@
   {
     "objectID": "proje.html#veri-hakkında-genel-bilgiler",
     "href": "proje.html#veri-hakkında-genel-bilgiler",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Uluslar Arası Göçmen Stoku",
     "section": "2.2 Veri Hakkında Genel Bilgiler",
-    "text": "2.2 Veri Hakkında Genel Bilgiler\nxxxxxx"
+    "text": "2.2 Veri Hakkında Genel Bilgiler\nUluslararası Göçmen Stoku veri kümesinin 2024 baskısını üretirken, Nüfus Bölümü, nüfus sayımlarından veya kayıtlarından elde edilen yeni ampirik bilgilere ve nispeten büyük sayıda uluslararası göçmene sahip ülkeler ile UNHCR tarafından belgelenen devam eden veya ortaya çıkan mülteci akışlarından etkilenen ülkeler için tahminleri revize etmeyi önceliklendirmiştir. Bu verilerin yeni baskısında, toplam 60 ülke ve bölge, bölgede ikamet eden uluslararası göçmen sayısındaki eğilimlerin tam bir yeniden değerlendirmesini aldı. Geriye kalan ülkeler ve bölgeler için, 2024’te üretilen tahminler, veri setinin 2020 baskısında yayınlanan tahminlerin ekstrapolasyonlarını yansıtmaktadır."
   },
   {
     "objectID": "proje.html#tercih-sebebi",
     "href": "proje.html#tercih-sebebi",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Uluslar Arası Göçmen Stoku",
     "section": "2.3 Tercih Sebebi",
     "text": "2.3 Tercih Sebebi\nxxxxxx"
   },
@@ -369,14 +368,14 @@
   {
     "objectID": "proje.html#trend-analizi",
     "href": "proje.html#trend-analizi",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Uluslar Arası Göçmen Stoku",
     "section": "3.2 Trend Analizi",
     "text": "3.2 Trend Analizi\nxxxxxx"
   },
   {
     "objectID": "proje.html#model-uydurma",
     "href": "proje.html#model-uydurma",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Uluslar Arası Göçmen Stoku",
     "section": "3.3 Model Uydurma",
     "text": "3.3 Model Uydurma\nxxxxxx"
   },
@@ -392,7 +391,7 @@
     "href": "portfolyo/calisma1.html#a",
     "title": "Calisma 1",
     "section": "",
-    "text": "OZET\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş & Erdi Daşdemir Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır. 1- Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor” bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir. 2- Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir. 3- EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir. 4- Model Oluşturma ve Algoritmalar İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır. Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir. 5- Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir. 6- Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir. Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir. Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir.\n## (b)\n::: {.cell}\n\n```{.r .cell-code}\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n# Sayisal ozet istatistikleri hesaplayan fonksiyon\nmy_summary_stats &lt;- function(R) {\n  if (is.numeric(R) == FALSE) {  # Sayisal veri degilse\n    print(\"Girdi sayisal olmalidir.\")\n  } else {\n    # Sayisal veriler icin ozet istatistikleri hesapla\n    summary_list &lt;- list(\n      Mean = mean(R), \n      Median = median(R), \n      SD = sd(R), \n      Min = min(R), \n      Max = max(R)\n    )\n    return(summary_list)  # Sonucu dondur\n  }\n}\n\n# mtcars veri seti uzerinde dongu ile sayisal sutunlarda islem\nfor (i in 1:ncol(mtcars)) {  \n  R &lt;- mtcars[, i]  # i. sutunu al\n  \n  # Eger sutun sayisalsa isle\n  if (is.numeric(R)) {  \n    column_name &lt;- colnames(mtcars)[i]  # Sutun adini al\n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"+++++++++\")  # Ayirici arti ekle\n  }\n}\n\n[1] \"Sutun: mpg\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: cyl\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n[1] \"Sutun: disp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"+++++++++\"\n[1] \"Sutun: hp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"+++++++++\"\n[1] \"Sutun: drat\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"+++++++++\"\n[1] \"Sutun: wt\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"+++++++++\"\n[1] \"Sutun: qsec\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: vs\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: am\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: gear\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"+++++++++\"\n[1] \"Sutun: carb\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n\n# apply ile uygulama\napply(mtcars, 2, function(R) {\n  if (is.numeric(R)) {  # Sayisal veri kontrolu\n    column_index &lt;- which(sapply(mtcars, identical, R))[1]  # Sutun indexini bul\n    column_name &lt;- colnames(mtcars)[column_index]  # Sutun adini al\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    \n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"**************\")  # Ayirici yildiz ekle\n  }\n})\n\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"**************\"\n\n\n             mpg              cyl             disp               hp \n\"**************\" \"**************\" \"**************\" \"**************\" \n            drat               wt             qsec               vs \n\"**************\" \"**************\" \"**************\" \"**************\" \n              am             gear             carb \n\"**************\" \"**************\" \"**************\" \n\n:::",
+    "text": "OZET\nVeri Bilimi ve Endüstri Mühendisliği Üzerine Sohbetler -Kerem Demirtaş & Erdi Daşdemir Veri bilimi üzerinden otonom araçların yönlendirilmesi ve yönetilmesi konusunu anlattı. Burada trafik akış modelleri, sensörlerin kontrolü, envanter problemlerinin çözümü ve simülasyon araçlarının kullanıldığını belirtti. Data kısmında optimizasyonun yapılması örnek olarak salgın hastalıkların ortaya çıkması, tarihsel dataların incelenmesi, potansiyel olarak ileride nerede ortaya çıkabileceğini tahminlemesinin yapıldığını anlatmıştır. Tez konusu olarak da ulaşım anlamında otomobiller üzerindeki sensörler vasıtasıyla topladığı datalar örnek olarak önünüzdeki araç saatte kaç kilometre hızla gidiyor bunun 360 derece belli bir uzaklığa kadar algılayabiliyor, 3 boyutlu görev verisi çıkararaki hangi şeritte kaç araç var bunun hesaplamasını yapıp, yaygınlaşan bulut sistemine aktarımı yapılıyor. Burada ölçeklenebilir sistem oluşturulması hedeflenmektedir. Bu anlamda Veri Biliminin hedefi sadece model inşa etmek değil, veriyi toplayıp, ön işleme yapıp, veriyi analiz edip, sonuçların paydaşlarla paylaşılması da önemlidir. Veri biliminin sonuç çıkarabilmesi için insan faktörünün her zaman olması gerekmektedir. Doğru soruları bulup doğru soruların çıkarılması ve doğru şekilde yorumlanması gerekmektedir. Burada dikkat edilmesi gereken bir nokta ise evet ben modeli yaptım fakat her zaman doğru sonuç vermeyebilir çünkü burada trend değişebilir, gerçek dünya ile kıyaslama yapmak, sorgulamak ve modeli güncellemek gerekmektedir. Bu nedenle çalıştığınız konu hakkında bilginiz yoksa sadece model kurarak sonuçları yorumlayamazsınız. Bu anlamda yapay zeka bir veri bilimi değil veri biliminin bir aracıdır. İnsan faktörü ve insan yargısı yine olacaktır. 1- Problemin tanımlanması: Biz burada doğru problemi mi çözüyoruz. Örnek verecek olursak eğer 2. Dünya savaşı zamanında vurulan uçakların vurulma bölgeleri analiz edilerek vurulan kısımlarda güçlendirme yapılmış ve bunun sonucunda uçağı ağırlığı artmasına rağmen vurulan uçakların oranında bir değişiklik olmadığı görülmüştür. Fakat problem farklı bir noktadan yaklaşıldığında asıl sonucu değiştirecek kısımda sorulması gereken soru “ Dönmeyen uçaklar nerede?” ve “Dönmeyen uçaklar nereden vuruluyor” bu soruların cevabının analiz edilmesi sonucunda kokpit ya da motor kısımda vurulan uçakların dönemediği görülmüştür. Aslında güçlendir,lmesi gereken kısımlar, uçakların dönmesini engelleyen problemlerin oluştuğu yerdir. 2- Data Toplama ve Hazırlama: Burada iki tip data bulunuyor biri structured database olan yani kolonları olan, integer bulunan datalar. İkincisi ise unstructured olan text verisi olup belli imla hataları içeren datalardır. Bunların harmanlanıp bir füzyon verisi olarak kullanılması gerekmektedir. 3- EDA yani keşifsel veri analizi: Mean ya da medyanda zıplama neden kaynaklanıyor, bunu bulup buna göre data science modeli kurulması önemlidir. Burada verilebilecek örnek ise 1854 yılındaki Kolera salgının nedeni havadan bulaşma olarak görülürken John Snow isimli bilim adamı bunun nedenin sudan bulaşma olarak ileri sürmüştür. Bu nedeni de desteklemek için veri bilimini kullanmıştır. Ölüm raporlarını inceleyip adresleri toplayıp bakıldığında ölüm oranlarının adrese göre değiştiği görülmüştür. Bunun sonucunda Soho’da ortak bir kuyudan pompa ile su alınan yerin çevresinde ölüm oranının yüksek olduğu görülmüş olup koleranın buradan yayıldığını tespit etmişlerdir. 4- Model Oluşturma ve Algoritmalar İç görüler çıkarma, sonuçları tahmin etme, matematiksel algoritmik modeller çıkarmayı içermektedir. Tanımlayıcı, tahminleyici, aksiyonların önerilmesinden oluşan süreçleri bulunmaktadır. Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size bilgi verecek, bu modeller sonucunda siz belli çözümlere gideceksiniz.” demiştir. Lewis Fry Richardson diferansiyel denklemler kullanarak hava tahmini yapan bir model oluşturmuştur. Burada data kalitesi, oluşturulan modelin algoritmasının kalitesi data science kalitesi açısından önemlidir. 5- Evaluation: model kurulması burada tahmin ne kadar doğru metrikler ne durumdadır bunu değerlendirilmesi bulunmaktadır. Underfitting, overfitting ve well balanced modelleri bulunmaktadır. Burada önerilen dengeli model olup bazı noktaları görebiliyorsanız hiç görmediğiniz noktaları tahmin edebiliyor durumda olmanız beklenmektedir. Buna örnek olarak da 1996’da Deep Model programı Kasparov’u satranç müsabakasında yenmişti. Fakat Kasparov bütün maçları takip edip ezberlemiş ve bunun sonucunda oyun stratejisini belirlemişti. Kasparov alışılmış hamlelerini yapmadığı bir müsabakada program alışık olmadığı hamleleri görünce şaşırmış ve maçı kaybetmiştir.1997 yılına gelindiğindeyse Deep Blue farklı hamleleri ve stratejileri de deneyip Kasparov’u yenmiştir. 6- Production ve Live Performance: Verinin alınması, işlenmesi ve kurduğumuz modele işlenmesini içermektedir. Yie burada hata olması durumunda insan müdahalesi de yapılması gerekecektir. Ölçeklenebilirlik: Veri çok fazla gerçek mi? Test edildi mi? Hata çıkacak mı? Gibi soruları içermektedir. Domain içinde hangi toolları kullnabilecek düzeyde bilip model oluşturulması ve geliştirme tarafında zaman harcanması önerilmektedir. Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir.",
     "crumbs": [
       "Porfolyo",
       "Calisma 1"
@@ -401,34 +400,34 @@
   {
     "objectID": "portfolyo/calisma2.html#a",
     "href": "portfolyo/calisma2.html#a",
-    "title": "Çalışma 2",
+    "title": "Calısma 2",
     "section": "(a)",
     "text": "(a)\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "Porfolyo",
-      "Çalışma 2"
+      "Calısma 2"
     ]
   },
   {
     "objectID": "portfolyo/calisma2.html#b",
     "href": "portfolyo/calisma2.html#b",
-    "title": "Çalışma 2",
+    "title": "Calısma 2",
     "section": "(b)",
-    "text": "(b)",
+    "text": "(b)\n\n1 + 1\n\n[1] 2",
     "crumbs": [
       "Porfolyo",
-      "Çalışma 2"
+      "Calısma 2"
     ]
   },
   {
     "objectID": "portfolyo/calisma1.html#b",
     "href": "portfolyo/calisma1.html#b",
-    "title": "Çalışma 1",
+    "title": "Calisma 1",
     "section": "(b)",
-    "text": "(b)",
+    "text": "(b)\n\nstr(mtcars)\n\n'data.frame':   32 obs. of  11 variables:\n $ mpg : num  21 21 22.8 21.4 18.7 18.1 14.3 24.4 22.8 19.2 ...\n $ cyl : num  6 6 4 6 8 6 8 4 4 6 ...\n $ disp: num  160 160 108 258 360 ...\n $ hp  : num  110 110 93 110 175 105 245 62 95 123 ...\n $ drat: num  3.9 3.9 3.85 3.08 3.15 2.76 3.21 3.69 3.92 3.92 ...\n $ wt  : num  2.62 2.88 2.32 3.21 3.44 ...\n $ qsec: num  16.5 17 18.6 19.4 17 ...\n $ vs  : num  0 0 1 1 0 1 0 1 1 1 ...\n $ am  : num  1 1 1 0 0 0 0 0 0 0 ...\n $ gear: num  4 4 4 3 3 3 3 4 4 4 ...\n $ carb: num  4 4 1 1 2 1 4 2 2 4 ...\n\n# Sayisal ozet istatistikleri hesaplayan fonksiyon\nmy_summary_stats &lt;- function(R) {\n  if (is.numeric(R) == FALSE) {  # Sayisal veri degilse\n    print(\"Girdi sayisal olmalidir.\")\n  } else {\n    # Sayisal veriler icin ozet istatistikleri hesapla\n    summary_list &lt;- list(\n      Mean = mean(R), \n      Median = median(R), \n      SD = sd(R), \n      Min = min(R), \n      Max = max(R)\n    )\n    return(summary_list)  # Sonucu dondur\n  }\n}\n\n# mtcars veri seti uzerinde dongu ile sayisal sutunlarda islem\nfor (i in 1:ncol(mtcars)) {  \n  R &lt;- mtcars[, i]  # i. sutunu al\n  \n  # Eger sutun sayisalsa isle\n  if (is.numeric(R)) {  \n    column_name &lt;- colnames(mtcars)[i]  # Sutun adini al\n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"+++++++++\")  # Ayirici arti ekle\n  }\n}\n\n[1] \"Sutun: mpg\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: cyl\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n[1] \"Sutun: disp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"+++++++++\"\n[1] \"Sutun: hp\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"+++++++++\"\n[1] \"Sutun: drat\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"+++++++++\"\n[1] \"Sutun: wt\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"+++++++++\"\n[1] \"Sutun: qsec\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"+++++++++\"\n[1] \"Sutun: vs\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: am\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"+++++++++\"\n[1] \"Sutun: gear\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"+++++++++\"\n[1] \"Sutun: carb\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"+++++++++\"\n\n# apply ile uygulama\napply(mtcars, 2, function(R) {\n  if (is.numeric(R)) {  # Sayisal veri kontrolu\n    column_index &lt;- which(sapply(mtcars, identical, R))[1]  # Sutun indexini bul\n    column_name &lt;- colnames(mtcars)[column_index]  # Sutun adini al\n    \n    result &lt;- my_summary_stats(R)  # Ozet istatistikleri al\n    \n    print(paste(\"Sutun:\", column_name))  # Sutun adini yazdir\n    print(\"Sonuclar:\")\n    print(paste(\"Ortalama:\", round(result$Mean, 2)))\n    print(paste(\"Medyan:\", round(result$Median, 2)))\n    print(paste(\"Standart Sapma:\", round(result$SD, 2)))\n    print(paste(\"Min:\", round(result$Min, 2)))\n    print(paste(\"Max:\", round(result$Max, 2)))\n    \n    print(\"**************\")  # Ayirici yildiz ekle\n  }\n})\n\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 20.09\"\n[1] \"Medyan: 19.2\"\n[1] \"Standart Sapma: 6.03\"\n[1] \"Min: 10.4\"\n[1] \"Max: 33.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 6.19\"\n[1] \"Medyan: 6\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 4\"\n[1] \"Max: 8\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 230.72\"\n[1] \"Medyan: 196.3\"\n[1] \"Standart Sapma: 123.94\"\n[1] \"Min: 71.1\"\n[1] \"Max: 472\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 146.69\"\n[1] \"Medyan: 123\"\n[1] \"Standart Sapma: 68.56\"\n[1] \"Min: 52\"\n[1] \"Max: 335\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.6\"\n[1] \"Medyan: 3.7\"\n[1] \"Standart Sapma: 0.53\"\n[1] \"Min: 2.76\"\n[1] \"Max: 4.93\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.22\"\n[1] \"Medyan: 3.33\"\n[1] \"Standart Sapma: 0.98\"\n[1] \"Min: 1.51\"\n[1] \"Max: 5.42\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 17.85\"\n[1] \"Medyan: 17.71\"\n[1] \"Standart Sapma: 1.79\"\n[1] \"Min: 14.5\"\n[1] \"Max: 22.9\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.44\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 0.41\"\n[1] \"Medyan: 0\"\n[1] \"Standart Sapma: 0.5\"\n[1] \"Min: 0\"\n[1] \"Max: 1\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 3.69\"\n[1] \"Medyan: 4\"\n[1] \"Standart Sapma: 0.74\"\n[1] \"Min: 3\"\n[1] \"Max: 5\"\n[1] \"**************\"\n[1] \"Sutun: NA\"\n[1] \"Sonuclar:\"\n[1] \"Ortalama: 2.81\"\n[1] \"Medyan: 2\"\n[1] \"Standart Sapma: 1.62\"\n[1] \"Min: 1\"\n[1] \"Max: 8\"\n[1] \"**************\"\n\n\n             mpg              cyl             disp               hp \n\"**************\" \"**************\" \"**************\" \"**************\" \n            drat               wt             qsec               vs \n\"**************\" \"**************\" \"**************\" \"**************\" \n              am             gear             carb \n\"**************\" \"**************\" \"**************\"",
     "crumbs": [
       "Porfolyo",
-      "Çalışma 1"
+      "Calisma 1"
     ]
   },
   {
@@ -575,7 +574,11 @@
     "href": "takim/ahmetcanbisit.html#stajlar",
     "title": "AHMETCAN BISIT",
     "section": "Stajlar",
-    "text": "Stajlar"
+    "text": "Stajlar",
+    "crumbs": [
+      "Takim uyeleri",
+      "AHMETCAN BISIT"
+    ]
   },
   {
     "objectID": "takim/melihozen.html#d0eler",
@@ -594,15 +597,189 @@
   {
     "objectID": "takim/kaanguven.html",
     "href": "takim/kaanguven.html",
-    "title": "Kaan Guven",
+    "title": "KAAN GUVEN",
     "section": "",
-    "text": "Egitim\n\nLisans, Makine Muhendisligi, Gaziantep universitesi, Turkiye, 2008 - 2014.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top"
+    "text": "Egitim\n\nLisans, Makine Mühendisliği , Gaziantep Üniversitesi, Turkiye, 2008 - 2014.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Takim uyeleri",
+      "KAAN GUVEN"
+    ]
   },
   {
     "objectID": "takim/leventbekci.html",
     "href": "takim/leventbekci.html",
-    "title": "Levent Bekci",
+    "title": "LEVENT BEKCİ",
     "section": "",
-    "text": "Egitim\n\nLisans, Malzeme Muhendisligi, Anadolu universitesi, Turkiye, 2005 - 2010.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top"
+    "text": "Egitim\n\nLisans, Malzeme Mühendisliği , Anadolu Üniversitesi, Turkiye, 2005 - 2010.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Takim uyeleri",
+      "LEVENT BEKCİ"
+    ]
+  },
+  {
+    "objectID": "takim/yigitboran.html",
+    "href": "takim/yigitboran.html",
+    "title": "YIGIT BORAN",
+    "section": "",
+    "text": "Egitim\n\nLisans, Malzeme Muhendisligi, Anadolu universitesi, Turkiye, 2005 - 2010.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Takim uyeleri",
+      "YIGIT BORAN"
+    ]
+  },
+  {
+    "objectID": "takim/melihozen.html",
+    "href": "takim/melihozen.html",
+    "title": "MELİH OZEN",
+    "section": "",
+    "text": "Egitim\n\nLisans, Makine Mühendisliği , Gaziantep Üniversitesi, Turkiye, 2008 - 2013.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Takim uyeleri",
+      "MELİH OZEN"
+    ]
+  },
+  {
+    "objectID": "proje.html#veri-kaynagı",
+    "href": "proje.html#veri-kaynagı",
+    "title": "Uluslar Arası Göçmen Stoku",
+    "section": "2.1 Veri Kaynagı",
+    "text": "2.1 Veri Kaynagı\nhttps://www.un.org/development/desa/pd/content/international-migrant-stock"
+  },
+  {
+    "objectID": "proje.html#veri-hakkd1nda-genel-bilgiler",
+    "href": "proje.html#veri-hakkd1nda-genel-bilgiler",
+    "title": "Uluslar Arası Göçmen Stoku",
+    "section": "2.2 Veri HakkD1nda Genel Bilgiler",
+    "text": "2.2 Veri HakkD1nda Genel Bilgiler\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#cod-düzenleme",
+    "href": "proje.html#cod-düzenleme",
+    "title": "Uluslar Arası Göçmen Stoku",
+    "section": "2.4 Cod Düzenleme",
+    "text": "2.4 Cod Düzenleme\n1"
+  },
+  {
+    "objectID": "proje.html#kesifsel-veri-analizi",
+    "href": "proje.html#kesifsel-veri-analizi",
+    "title": "Uluslar Arası Göçmen Stoku",
+    "section": "3.1 Kesifsel Veri Analizi",
+    "text": "3.1 Kesifsel Veri Analizi\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#sonuclar",
+    "href": "proje.html#sonuclar",
+    "title": "Uluslar Arası Göçmen Stoku",
+    "section": "3.4 Sonuclar",
+    "text": "3.4 Sonuclar\nxxxxxx"
+  },
+  {
+    "objectID": "index.html#takd1m-cyeleri",
+    "href": "index.html#takd1m-cyeleri",
+    "title": "TakD1m: XXX",
+    "section": "TakD1m C\u001cyeleri",
+    "text": "TakD1m C\u001cyeleri\n\nEdin_DE&gt;eko\nDuE!an TadiD\u0007\nFrederico Rodrigues de Paula Santos\nSebastian SzymaE\u0004ski\nLevent Bekci"
+  },
+  {
+    "objectID": "index.html#proje-add1",
+    "href": "index.html#proje-add1",
+    "title": "TakD1m: XXX",
+    "section": "Proje AdD1",
+    "text": "Proje AdD1"
+  },
+  {
+    "objectID": "index.html#veri-seti-hakkd1nda-czet-bilgi",
+    "href": "index.html#veri-seti-hakkd1nda-czet-bilgi",
+    "title": "Takım R volution",
+    "section": "Veri Seti HakkD1nda C\u0016zet Bilgi",
+    "text": "Veri Seti HakkD1nda C\u0016zet Bilgi"
+  },
+  {
+    "objectID": "index.html#sonuclar",
+    "href": "index.html#sonuclar",
+    "title": "Takım R volution",
+    "section": "Sonuclar",
+    "text": "Sonuclar\nBurada key takeways verilmelidir. En az 3 en fazla 5 madde ile C’arpD1cD1 sonuC’lar sunulmalD1dD1r."
+  },
+  {
+    "objectID": "takim/ahmetcanbisit.html",
+    "href": "takim/ahmetcanbisit.html",
+    "title": "AHMETCAN BISIT",
+    "section": "",
+    "text": "Egitim\n\nLisans, Makine Mühendisliği , Niğde Üniversitesi, Turkiye, 2010 - 2017.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Takim uyeleri",
+      "AHMETCAN BISIT"
+    ]
+  },
+  {
+    "objectID": "index.html#takım-uyeleri",
+    "href": "index.html#takım-uyeleri",
+    "title": "Takım R volution",
+    "section": "Takım Uyeleri",
+    "text": "Takım Uyeleri\n\nAhmetcan Bisit\nKaan Guven\nMelih Özen\nYigit Boran\nLevent Bekci"
+  },
+  {
+    "objectID": "docs/project.html",
+    "href": "docs/project.html",
+    "title": "Project X",
+    "section": "",
+    "text": "Welcome to my project page.\nKeep an eye on this space to stay updated with my project activities.\n(The titles below are provided as examples; please feel free to adjust them as necessary.)"
+  },
+  {
+    "objectID": "docs/project.html#data-source",
+    "href": "docs/project.html#data-source",
+    "title": "Project X",
+    "section": "2.1 Data Source",
+    "text": "2.1 Data Source\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#general-information-about-data",
+    "href": "docs/project.html#general-information-about-data",
+    "title": "Project X",
+    "section": "2.2 General Information About Data",
+    "text": "2.2 General Information About Data\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#reason-of-choice",
+    "href": "docs/project.html#reason-of-choice",
+    "title": "Project X",
+    "section": "2.3 Reason of Choice",
+    "text": "2.3 Reason of Choice\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#preprocessing",
+    "href": "docs/project.html#preprocessing",
+    "title": "Project X",
+    "section": "2.4 Preprocessing",
+    "text": "2.4 Preprocessing\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#exploratory-data-analysis",
+    "href": "docs/project.html#exploratory-data-analysis",
+    "title": "Project X",
+    "section": "3.1 Exploratory Data Analysis",
+    "text": "3.1 Exploratory Data Analysis\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#trend-analysis",
+    "href": "docs/project.html#trend-analysis",
+    "title": "Project X",
+    "section": "3.2 Trend Analysis",
+    "text": "3.2 Trend Analysis\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#model-fitting",
+    "href": "docs/project.html#model-fitting",
+    "title": "Project X",
+    "section": "3.3 Model Fitting",
+    "text": "3.3 Model Fitting\nxxxxxx"
+  },
+  {
+    "objectID": "docs/project.html#results",
+    "href": "docs/project.html#results",
+    "title": "Project X",
+    "section": "3.4 Results",
+    "text": "3.4 Results\nxxxxxx"
   }
 ]
