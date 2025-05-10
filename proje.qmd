@@ -1,9 +1,3 @@
-<<<<<<< HEAD
----
-title: "Uluslar Arası Göçmen Stoku"
-number-sections: true
----
-
 **Proje Sayfamıza Hos Geldiniz**
 
 # Proje Genel Bakıs ve Kapsam
@@ -55,65 +49,3 @@ xxxxxx
 xxxxxx
 
 # Sonuclar ve Ana Cıkarımlar
-
-xxxxxx
-=======
----
-title: "Proje X (proje adD1nD1 yazD1nD1z)"
-number-sections: true
----
-
-**Proje sayfamD1za hoE geldiniz.**
-
-*Projemizle ilgili gC<ncellemelerden haberdar olmak iC'in bu alanD1 takip edin.*
-
-(AEaDD1daki baElD1klar C6rnek olarak verilmiEtir; lC<tfen gerektiDi Eekilde dC<zenlemekten C'ekinmeyin.)
-
-# Proje Genel BakD1E ve KapsamD1
-
-Dünya Göc Stok Analizi
-
-# Veri
-
-xxxxxx
-
-## Veri KaynaDD1
-
-xxxxxx
-
-## Veri HakkD1nda Genel Bilgiler
-
-xxxxxx
-
-## Tercih Sebebi
-
-xxxxxx
-
-## Cn D0Eleme
-
-xxxxxx
-
-# Analiz
-
-xxxxxx
-
-## KeEifsel Veri Analizi
-
-xxxxxx
-
-## Trend Analizi
-
-xxxxxx
-
-## Model Uydurma
-
-xxxxxx
-
-## SonuC'lar
-
-xxxxxx
-
-# SonuC'lar ve Ana CD1karD1mlar
-
-xxxxxx
->>>>>>> 38350191dfd0395c5d2d83a001e45da3265548e0
