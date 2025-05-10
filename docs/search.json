@@ -249,9 +249,9 @@
   {
     "objectID": "proje.html",
     "href": "proje.html",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
     "section": "",
-    "text": "Proje sayfamıza hoş geldiniz.\nProjemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.\n(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)"
+    "text": "Proje sayfamD1za hoE\u001f geldiniz.\nProjemizle ilgili gC&lt;ncellemelerden haberdar olmak iC’in bu alanD1 takip edin.\n(AE\u001faD\u001fD1daki baE\u001flD1klar C6rnek olarak verilmiE\u001ftir; lC&lt;tfen gerektiD\u001fi E\u001fekilde dC&lt;zenlemekten C’ekinmeyin.)"
   },
   {
     "objectID": "proje.html#data-source",
@@ -348,7 +348,7 @@
   {
     "objectID": "proje.html#tercih-sebebi",
     "href": "proje.html#tercih-sebebi",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
     "section": "2.3 Tercih Sebebi",
     "text": "2.3 Tercih Sebebi\nxxxxxx"
   },
@@ -369,14 +369,14 @@
   {
     "objectID": "proje.html#trend-analizi",
     "href": "proje.html#trend-analizi",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
     "section": "3.2 Trend Analizi",
     "text": "3.2 Trend Analizi\nxxxxxx"
   },
   {
     "objectID": "proje.html#model-uydurma",
     "href": "proje.html#model-uydurma",
-    "title": "Proje X (proje adını yazınız)",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
     "section": "3.3 Model Uydurma",
     "text": "3.3 Model Uydurma\nxxxxxx"
   },
@@ -604,5 +604,40 @@
     "title": "Levent Bekci",
     "section": "",
     "text": "Egitim\n\nLisans, Malzeme Muhendisligi, Anadolu universitesi, Turkiye, 2005 - 2010.\nYuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.\n\n\n\nis Deneyimi\n\nFirma xxx, pozisyon xx, yD1l xxx\nFirma yyy, pozisyon yyy, yD1l yyy\n\n\n\n\n\n Back to top"
+  },
+  {
+    "objectID": "proje.html#veri-kaynadd1",
+    "href": "proje.html#veri-kaynadd1",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
+    "section": "2.1 Veri KaynaD\u001fD1",
+    "text": "2.1 Veri KaynaD\u001fD1\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#veri-hakkd1nda-genel-bilgiler",
+    "href": "proje.html#veri-hakkd1nda-genel-bilgiler",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
+    "section": "2.2 Veri HakkD1nda Genel Bilgiler",
+    "text": "2.2 Veri HakkD1nda Genel Bilgiler\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#cn-d0eleme",
+    "href": "proje.html#cn-d0eleme",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
+    "section": "2.4 C\u0016n D0E\u001fleme",
+    "text": "2.4 C\u0016n D0E\u001fleme\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#keeifsel-veri-analizi",
+    "href": "proje.html#keeifsel-veri-analizi",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
+    "section": "3.1 KeE\u001fifsel Veri Analizi",
+    "text": "3.1 KeE\u001fifsel Veri Analizi\nxxxxxx"
+  },
+  {
+    "objectID": "proje.html#sonuclar",
+    "href": "proje.html#sonuclar",
+    "title": "Proje X (proje adD1nD1 yazD1nD1z)",
+    "section": "3.4 SonuC’lar",
+    "text": "3.4 SonuC’lar\nxxxxxx"
   }
 ]

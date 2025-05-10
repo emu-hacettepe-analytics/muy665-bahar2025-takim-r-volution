@@ -1,27 +1,27 @@
 ---
-title: "Proje X (proje adını yazınız)"
+title: "Proje X (proje adD1nD1 yazD1nD1z)"
 number-sections: true
 ---
 
-**Proje sayfamıza hoş geldiniz.**
+**Proje sayfamD1za hoE geldiniz.**
 
-*Projemizle ilgili güncellemelerden haberdar olmak için bu alanı takip edin.*
+*Projemizle ilgili gC<ncellemelerden haberdar olmak iC'in bu alanD1 takip edin.*
 
-(Aşağıdaki başlıklar örnek olarak verilmiştir; lütfen gerektiği şekilde düzenlemekten çekinmeyin.)
+(AEaDD1daki baElD1klar C6rnek olarak verilmiEtir; lC<tfen gerektiDi Eekilde dC<zenlemekten C'ekinmeyin.)
 
-# Proje Genel Bakış ve Kapsamı
+# Proje Genel BakD1E ve KapsamD1
 
-xxxxxx
+Dünya Göc Stok Analizi
 
 # Veri
 
 xxxxxx
 
-## Veri Kaynağı
+## Veri KaynaDD1
 
 xxxxxx
 
-## Veri Hakkında Genel Bilgiler
+## Veri HakkD1nda Genel Bilgiler
 
 xxxxxx
 
@@ -29,7 +29,7 @@ xxxxxx
 
 xxxxxx
 
-## Ön İşleme
+## Cn D0Eleme
 
 xxxxxx
 
@@ -37,7 +37,7 @@ xxxxxx
 
 xxxxxx
 
-## Keşifsel Veri Analizi
+## KeEifsel Veri Analizi
 
 xxxxxx
 
@@ -49,10 +49,10 @@ xxxxxx
 
 xxxxxx
 
-## Sonuçlar
+## SonuC'lar
 
 xxxxxx
 
-# Sonuçlar ve Ana Çıkarımlar
+# SonuC'lar ve Ana CD1karD1mlar
 
 xxxxxx
