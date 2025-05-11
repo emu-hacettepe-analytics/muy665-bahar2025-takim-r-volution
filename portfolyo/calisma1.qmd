@@ -20,13 +20,11 @@ Burada Lewis Fry Richardson “Bütün modeller yanlış olacak, bazıları size
 Burada yine tez konusunda bazı bilgiler verildi. Kendi kendini süren araçların konvoy oluşturması. Araçların birbiriyle konuşarak şeridi maksimum oranda kullanılması hedeflenmektedir. Karışık trafikte otonom araçları yönlendirerek kullanımlarını maksimize etmeyi planlamaktadır. Gideceği yere göre araçları gruplandırıp yönlendirme ve kontrol kararı vermektedir. Data toplama ise bu işin trajectory yani anlık GPS verisinin sağlanması ve Occupancy tarafında trafik doluluğu ve bu bilgilerin kameralardan alınmasını içermektedir. 
 
 
-
-```
 ## (b)
+
+
 ```{r}
-
 str(mtcars)
-
 # Sayisal ozet istatistikleri hesaplayan fonksiyon
 my_summary_stats <- function(R) {
   if (is.numeric(R) == FALSE) {  # Sayisal veri degilse
@@ -84,8 +82,6 @@ apply(mtcars, 2, function(R) {
     print("**************")  # Ayirici yildiz ekle
   }
 })
-
-
 ```
 
 

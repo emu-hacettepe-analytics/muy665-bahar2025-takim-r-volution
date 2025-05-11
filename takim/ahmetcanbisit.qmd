@@ -6,7 +6,7 @@ title: "AHMETCAN BISIT"
 
 # Egitim
 
--   Lisans, Makine Muhendisligi, Omer Halisdemir universitesi, Turkiye, 2010 - 2017.
+-   Lisans, Makine Mühendisliği , Niğde Üniversitesi, Turkiye, 2010 - 2017.
 -   Yuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
 
 # is Deneyimi
@@ -14,5 +14,3 @@ title: "AHMETCAN BISIT"
 1.  Firma xxx, pozisyon xx, yD1l xxx
 
 2.  Firma yyy, pozisyon yyy, yD1l yyy
-
-## Stajlar

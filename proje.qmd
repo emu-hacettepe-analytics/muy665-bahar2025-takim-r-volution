@@ -1,45 +1,555 @@
----
-title: "Proje X (proje adD1nD1 yazD1nD1z)"
-number-sections: true
----
+![](100525_yigit/goc1.jpg)
 
-**Proje sayfamD1za hoE geldiniz.**
+# **Proje Adı**
 
-*Projemizle ilgili gC\<ncellemelerden haberdar olmak iC'in bu alanD1 takip edin.*
+**Proje sayfamiza hos geldiniz.**
 
-(AEaDD1daki baElD1klar C6rnek olarak verilmiEtir; lC\<tfen gerektiDi Eekilde dC\<zenlemekten C'ekinmeyin.)
+1990 yılı ile 2020 yılları arasındaki Dünya Üzerindeki Göçmen Stok Analizi
 
-# Proje Genel BakD1E ve KapsamD1
+# Proje Genel Bakış ve Kapsamı
 
-DC\<nya GC6c Stok Analizi
+Birleşmiş Milletler Ekonomik ve Sosyal İşler Departmanındaki Nüfus Bölümü, nüfus sorunlarını uluslararası toplumun dikkatine sunma yetkisinin bir parçası olarak dünya nüfusu hakkında veri kümeleri yayınlar ve küresel demografik eğilimleri analiz eder. 1990'dan 2020'e kadar olan dönemi kapsayan veri kümesi, 233 ülke ve bölge için cinsiyete göre toplam uluslararası göçmen sayısı ve varış yerlerine ilişkin bilgileri içerir. Uluslararası Göçmen Stoku veri kümesinin 2020 verisini üretirken, Dünya üzerinde Türkiye’nin de dahil olduğu en fazla göç alan 12 ülkeyi inceledik.
 
 # Veri
 
-xxxxxx
+Bu veri seti, 1990–2020 yılları arasında 233 ülke ve bölge için göçmen stoku verilerini içerir. Göçmenler, doğdukları ülke dışında yaşayan bireyler olarak tanımlanmıştır. Veriler cinsiyete (kadın/erkek), köken ülkesine ve varış ülkesine göre ayrılmıştır.
 
-## Veri KaynaDD1
+## Veri Kaynağı
 
-xxxxxx
+**Dosya:** `undesa_pd_2020_ims_stock_by_sex_destination_and_origin.xlsx`
 
-## Veri HakkD1nda Genel Bilgiler
+**Kaynak:** Birleşmiş Milletler Ekonomik ve Sosyal İşler Dairesi (UN DESA)\
+**Veri Seti:** International Migrant Stock 2020
 
-xxxxxx
+## Veri Hakkinda Genel Bilgiler
+
+**İçerik Özeti:**
+
+-   Yaş grubu bazlı göçmen dağılımı
+
+-   Cinsiyete göre toplam göçmen sayıları (Total Males, Females, Both)
+
+-   Ülke, kıta, bölge sınıflamaları
+
+-   Uzun dönemli zaman serisi (1990–2024)
+
+-   Yıllık bazda tahmin edilmiş göçmen sayıları
+
+**Kullanım Amaçları:**
+
+-   Göç profillerinin demografik analizi
+
+-   Ülkeler arası göç hareketlerinin trend analizi
+
+-   Cinsiyet ve yaşa göre göç eğilimlerinin karşılaştırılması
 
 ## Tercih Sebebi
 
-xxxxxx
+Dünya üzerinde 233 farklı ülkeden veri alınması, 1990'dan yılından itibaren başlayarak dünyada yaşanan farklı gelişmeler(çatışma, savaş, ekonomik sebepler) sonucunda dünya göc stoğunun değişimini incelemek istedik.
 
-## Cn D0Eleme
+# Ön İşleme
 
-xxxxxx
+Veri seti Birleşmiş Milletlerin sitesinden alınmış olup veri ön işleme adımları uygulanarak yaş grupları(total), yaş grupları(male) ve yas grupları(female) olarak düzeltilmiştir. Area sutünu eklenerek ülkelerin veri seti içerisinden secilmesini daha kolay alınmasını sağlamıstır.
 
-# Analiz
+# Analiz-1
 
-xxxxxx
+```{r}
+# Gerekli kütüphaneleri yükle
+library(readxl)
+library(dplyr)
+library(tidyr)      # drop_na() fonksiyonu buradan gelir
+library(ggplot2)
+library(scales)
 
-## KeEifsel Veri Analizi
+# Excel dosya yolunu belirt (proje klasörü içindeyse böyle yaz)
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
 
-xxxxxx
+# Veriyi oku
+df <- read_excel(file_path, sheet = "Table 1")
+
+# Temizle ve hazırla
+df_clean <- df %>%
+  mutate(
+    Total = as.numeric(`Total(Both)`),
+    Year = as.numeric(Year)
+  ) %>%
+  filter(Year == 2020, Area == "Country") %>%
+  drop_na(Total)
+
+# En çok göç alan ilk 12 ülkeyi seç
+df_top12 <- df_clean %>%
+  arrange(desc(Total)) %>%
+  slice(1:12)
+
+# Grafik oluştur
+ggplot(df_top12, aes(x = reorder(`Region, development group, country`, Total), y = Total)) +
+  geom_col(fill = "steelblue") +
+  coord_flip() +
+  geom_text(aes(label = paste0(round(Total / 1e6, 1), "M")), 
+            hjust = -0.1, size = 3.5) +
+  scale_y_continuous(labels = label_number(scale = 1e-6, suffix = "M"),
+                     expand = expansion(mult = c(0, 0.1))) +
+  labs(title = "Top 12 Countries by Total Migrant Stock in 2020",
+       x = "Country",
+       y = "Total Migrant Stock") +
+  theme_minimal(base_size = 13)
+
+```
+
+Grafik1: Top 12 Countries by Total Migrant Stock in 2020
+
+1\. En yüksek göçmen stoku olan ülke:
+
+United States of America (ABD): 50.6 milyon kişi ile açık ara önde.
+
+Bu rakam, ikinci sıradaki Almanya’nın (15.8M) 3 katından fazla.
+
+ABD’nin küresel cazibe merkezi olması (ekonomi, eğitim, mülteci kabulü vs.) bu farkı açıklıyor.
+
+ 2. Avrupa ülkeleri ağırlıkta:
+
+İlk 12’de Almanya, Birleşik Krallık, Fransa, İtalya, İspanya gibi birçok Avrupa ülkesi var.
+
+Bu ülkeler tarihsel olarak göç almış, refah düzeyi yüksek, sosyal güvenlik sistemleri gelişmiş ülkeler.
+
+3\. Körfez ülkeleri göçmen işgücüyle öne çıkıyor:
+
+Suudi Arabistan (13.5M) ve Birleşik Arap Emirlikleri (8.7M) gibi ülkeler, nüfuslarına oranla çok yüksek göçmen stoku barındırıyor.
+
+Bu göçmenler genellikle inşaat, hizmet, petrol gibi sektörlerde çalışan geçici işçiler.
+
+4\. Türkiye 12. sırada:
+
+6.1 milyon kişi ile listede yer alıyor.
+
+Türkiye’nin bu düzeyde göç alması, Suriye iç savaşı sonrası gelişen mülteci akını ve coğrafi konumu ile açıklanabilir.
+
+# Analiz-2
+
+2020 Yılı Cinsiyet Bazlı Top 12 Ülkedeki Göçmen Stoğu
+
+R Kodu
+
+```{r}
+# Gerekli kütüphaneler
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Dosya yolu ve veri seti
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
+df <- read_excel(file_path, sheet = "Table 1")
+
+# Veriyi hazırla
+df <- df %>%
+  mutate(
+    Total_Female = as.numeric(`Total(Females)`),
+    Total_Male = as.numeric(`Total(Males)`),
+    Year = as.numeric(Year),
+    Total = Total_Female + Total_Male
+  ) %>%
+  filter(Year == 2020, Area == "Country") %>%
+  drop_na(Total)
+
+# En çok göçmen barındıran ilk 12 ülke
+df_top12 <- df %>%
+  arrange(desc(Total)) %>%
+  slice(1:12) %>%
+  select(`Region, development group, country`, Total_Female, Total_Male)
+
+# Uzun formata getir
+df_long <- df_top12 %>%
+  pivot_longer(cols = c(Total_Female, Total_Male),
+               names_to = "Gender",
+               values_to = "Count") %>%
+  mutate(Gender = ifelse(Gender == "Total_Female", "Female", "Male"))
+
+# Grafik oluştur
+ggplot(df_long, aes(x = reorder(`Region, development group, country`, -Count),
+                    y = Count, fill = Gender)) +
+  geom_bar(stat = "identity", position = position_dodge(width = 0.8), width = 0.7) +
+  geom_text(aes(label = paste0(round(Count / 1e6, 1), "M")),
+            position = position_dodge(width = 0.8),
+            vjust = -0.8, size = 3.5) +
+  scale_y_continuous(labels = label_number(scale = 1e-6, suffix = "M"),
+                     limits = c(0, 30e6),
+                     expand = expansion(mult = c(0, 0.15))) +
+  labs(title = "2020 Yılında En Fazla Göçmen Barındıran 12 Ülke (Cinsiyete Göre)",
+       x = "Ülke",
+       y = "Göçmen Sayısı") +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1),
+        legend.title = element_blank(),
+        legend.position = "right")
+```
+
+2020 Yılı Cinsiyet Bazlı Top 12 Ülkedeki Göçmen Stoğu Yorumu
+
+🔹 1. ABD (United States of America) en yüksek göçmen nüfusuna sahip\*
+
+Kadın göçmen: 26.2 milyon
+
+Erkek göçmen: 24.5 milyon
+
+Aradaki fark az da olsa kadın göçmenler lehine.
+
+Bu, ABD’nin aile birleşimi, eğitim, uzun vadeli yaşam gibi nedenlerle göç alan bir ülke olduğuna işaret eder.
+
+🔹 2. Erkek ağırlıklı göç alan ülkeler:
+
+Suudi Arabistan:
+
+Erkek: 9.2M
+
+Kadın: 4.2M
+
+➤ Göçmen nüfusun %68’i erkek, bu da büyük oranda geçici iş gücü karakterini yansıtır.
+
+Birleşik Arap Emirlikleri:
+
+Erkek: 6.4M
+
+Kadın: 2.3M
+
+➤ Yoğun erkek işçi göçü var. Özellikle inşaat ve hizmet sektörlerinde.
+
+🔹 3. Kadın-Erkek oranı dengeli ülkeler:
+
+Almanya ve Kanada gibi ülkelerde kadın ve erkek göçmen sayıları neredeyse eşit.
+
+Bu, kalıcı göçün, aile göçlerinin ve sosyal uyum politikalarının etkisini gösterir.
+
+🔹 4. Türkiye:
+
+Kadın: 2.9M
+
+Erkek: 3.1M
+
+Fark çok küçük; Türkiye’de göçmenlerin cinsiyet dağılımı dengeli.
+
+Göçmen profilinin büyük ölçüde Suriyeli sığınmacılar olduğunu göz önünde bulundurursak, bu denge aile göçünün yaygınlığına işaret eder.
+
+# Analiz-3
+
+2020 Yılında Dünyadaki Göçmen Nüfusun Cinsiyete Göre Dağılımı
+
+R Kodu
+
+```{r}
+
+# Gerekli kütüphaneler
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+
+# Dosya yolu (kendi yolunu yaz)
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
+
+# Excel'den veriyi oku
+df <- read_excel(file_path, sheet = "Table 1")
+
+# Dünya verisi - 2020 yılı
+df_world <- df %>%
+  filter(Year == 2020, `Region, development group, country` == "WORLD") %>%
+  mutate(
+    Female = as.numeric(`Total(Females)`),
+    Male = as.numeric(`Total(Males)`)
+  ) %>%
+  select(Female, Male) %>%
+  pivot_longer(cols = everything(), names_to = "Gender", values_to = "Count") %>%
+  mutate(
+    Percentage = round(Count / sum(Count) * 100, 1),
+    Label = paste0(Gender, ": ", Percentage, "%")
+  )
+
+# Pasta grafiği
+ggplot(df_world, aes(x = "", y = Count, fill = Gender)) +
+  geom_bar(stat = "identity", width = 1, color = "white") +
+  coord_polar("y", start = 0) +
+  geom_text(aes(label = Label),
+            position = position_stack(vjust = 0.5), color = "white", size = 5) +
+  labs(title = "Gender Distribution of Migrant Stock Worldwide in 2020") +
+  theme_void(base_size = 14) +
+  theme(legend.title = element_blank(),
+        plot.title = element_text(hjust = 0.5))
+```
+
+1\. Cinsiyet Dağılımı Dengeye Yakın Ama Erkekler Hafif Üstün:
+
+Erkeklerin oranı %51.9 ile kadınlara göre yaklaşık 3.8 puan daha fazla.
+
+Bu fark, çoğunlukla: iş gücü göçü (özellikle inşaat, sanayi, hizmet sektörleri), tek başına göç eden bireylerin erkek ağırlıklı olması gibi nedenlerle açıklanabilir.
+
+2\. Kadın Göçmenlerin Yüksekliği Aile ve Eğitim Göçünü Gösteriyor:
+
+Kadın oranının bu kadar yüksek olması, göçün sadece ekonomik değil, aile birleşimi,eğitim amaçlı göç,sığınma ve insani göç gibi faktörleri de içerdiğini gösteriyor.
+
+Toplumsal hizmetler (sağlık, eğitim, koruma) planlanırken bu dağılım dikkate alınmalı.
+
+Özellikle kadın göçmenlerin korunması, istihdama entegrasyonu ve sosyal destek hizmetleri önemlidir.
+
+2020 yılı itibariyle dünya genelindeki uluslararası göçmen nüfusun %51.9’u erkek, %48.1’i kadındır. Bu dağılım, erkeklerin daha çok iş gücü amaçlı göç ettiğini gösterirken, kadın göçmenlerin oranının da yüksekliği aile birleşimi, eğitim ve sığınma gibi insani göç türlerinin önemli bir paya sahip olduğunu ortaya koymaktadır.
+
+# Analiz-4
+
+2020 Yılında Dünyadaki Göçmen Nüfusun Cinsiyete Göre Dağılımı
+
+R Kodu
+
+```{r}
+# Gerekli kütüphaneler
+library(readxl)
+library(dplyr)
+library(ggplot2)
+library(scales)
+
+# Dosya yolu ve veri
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
+df <- read_excel(file_path, sheet = "Table 1")
+
+# 2020 yılı, ülke bazlı veriler
+df_clean <- df %>%
+  filter(Year == 2020, Area == "Country") %>%
+  mutate(
+    Male = as.numeric(`Total(Males)`),
+    Female = as.numeric(`Total(Females)`)
+  ) %>%
+  drop_na(Male, Female)
+
+# Scatter plot
+ggplot(df_clean, aes(x = Male, y = Female)) +
+  geom_point(color = "steelblue", size = 2) +
+  geom_abline(intercept = 0, slope = 1, linetype = "dashed", color = "gray") +
+  scale_x_continuous(labels = label_number(scale = 1e-6, suffix = "M")) +
+  scale_y_continuous(labels = label_number(scale = 1e-6, suffix = "M")) +
+  labs(
+    title = "Migrant Stock by Gender Across Countries (2020)",
+    x = "Male Migrant Count (Millions)",
+    y = "Female Migrant Count (Millions)"
+  ) +
+  theme_minimal(base_size = 14)
+
+```
+
+Bu grafik, 2020 yılında her ülkenin göçmen stokunun erkek ve kadınlara göre dağılımını karşılaştırıyor.
+
+X ekseni: Erkek göçmen sayısı (milyon cinsinden)
+
+Y ekseni: Kadın göçmen sayısı (milyon cinsinden)
+
+Her nokta: Bir ülkeyi temsil ediyor
+
+Kesikli diyagonal çizgi: Erkek ve kadın göçmen sayısının eşit olduğu ülkeleri simgeler
+
+Denge çizgisine yakın olan ülkeler: Noktalar büyük ölçüde bu çizgiye yakın konumlanmış.
+
+Bu, çoğu ülkede göçmen kadın ve erkek sayısının dengeli olduğunu gösterir.
+
+Bu ülkeler genelde gelişmiş, istikrarlı göç politikaları olan ülkelerdir (örneğin: Almanya, Fransa, Kanada).
+
+2\. Denge çizgisinin altında kalan ülkeler:
+
+Bazı ülkeler diyagonal çizginin altında, yani erkek göçmen sayısı kadınlardan yüksek.
+
+Örnek ülkeler: Suudi Arabistan, Birleşik Arap Emirlikleri gibi Körfez ülkeleri
+
+Bu ülkelerde göçmenlerin çoğu erkek işçilerden oluşur (inşaat, sanayi, geçici çalışma vizeleri gibi nedenlerle).
+
+3\. Üstteki tek uç nokta (aşırı değer):
+
+Sağ üstteki belirgin nokta ABD (United States of America\*)’dır.
+
+Hem erkek hem kadın göçmen sayısında açık ara en yüksek ülke.
+
+Bu durum, ABD’nin uzun süredir göç alan küresel bir merkez olmasıyla ilgilidir.
+
+Grafik genel olarak göçmen stokunun cinsiyete göre çok aşırı dengesiz dağılmadığını,
+
+Ancak bazı bölgesel ve ekonomik faktörlere bağlı olarak erkek ağırlıklı göçmen profillerinin ortaya çıktığını gösteriyor.
+
+En büyük sapmalar, ekonomik amaçlı tekil erkek göçlerinin yoğun olduğu ülkelerde gözleniyor.
+
+# Analiz-5
+
+2020 – Yaş Gruplarının Toplam Göçmen Stokundaki Payı (Log Ölçek)
+
+R Kodu
+
+```{r}
+
+#| label: age-group-scatter
+#| fig-cap: "2020 – Migrant Share by Age Group (Log Scale)"
+#| warning: false
+#| message: false
+
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Dosya yolu (kendi dosya yolunuza göre güncelleyin)
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
+df <- read_excel(file_path, sheet = "Table 1")
+
+# Yaş grubu sütunları
+age_cols <- c("0-4 total", "5-9 total", "10-14 total", "15-19 total", "20-24 total",
+              "25-29 total", "30-34 total", "35-39 total", "40-44 total", "45-49 total",
+              "50-54 total", "55-59 total", "60-64 total", "65-69 total", "70-74 total", "75+ total")
+
+# Veriyi hazırlama
+df_age <- df %>%
+  filter(Year == 2020, Area == "Country") %>%
+  select(Country = `Region, development group, country`, Total = `Total(Both)`, all_of(age_cols)) %>%
+  mutate(across(all_of(age_cols), as.numeric),
+         Total = as.numeric(Total)) %>%
+  drop_na()
+
+# Uzun formata çevirme
+df_long <- df_age %>%
+  pivot_longer(cols = all_of(age_cols), names_to = "Age_Group", values_to = "Count") %>%
+  mutate(Share = Count / Total)
+
+# Grafik
+ggplot(df_long, aes(x = Total, y = Share)) +
+  geom_point(color = "blue", size = 1.5) +
+  scale_x_log10(
+    breaks = c(1e4, 1e5, 1e6, 1e7, 1e8),
+    labels = c("10K", "100K", "1M", "10M", "100M")
+  ) +
+  scale_y_continuous(labels = label_percent(accuracy = 1), limits = c(0, 0.35)) +
+  facet_wrap(~ Age_Group) +
+  labs(
+    title = "2020 – Migrant Share by Age Group (Log Scale)",
+    x = "Total Migrant Stock (log10, Millions)",
+    y = "Share of Age Group"
+  ) +
+  theme_minimal(base_size = 13) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+```
+
+Tüm yaş gruplarında, göçmen sayısı arttıkça oranlar genellikle %2–%10 arasında yoğunlaşıyor.Grafiklerin çoğunda, aşırı uç değerler hariç ülkelerin büyük kısmı aynı oransal bantta kalıyor.
+
+Yaş Grubu Karşılaştırmaları:
+
+25–44 yaş aralığı (özellikle 25–29, 30–34, 35–39 yaş):
+
+Oranlar en yüksek seviyede (%10–%15).
+
+Bu da göçmenlerin büyük kısmının çalışma çağında olduğunu gösteriyor.
+
+Göç çoğunlukla ekonomik, eğitim veya iş gücü temelli olabilir.
+
+0–14 yaş grubu:
+
+Oranlar daha düşük ancak sabit (çoğunlukla %5–%10).
+
+Bu çocukların muhtemelen aile göçü ile taşındığını düşündürür.
+
+65 yaş ve üstü gruplar:
+
+Oranlar oldukça düşük (%0–%5).
+
+Bu, göçmenlerin çoğunluğunun yaşlı nüfustan oluşmadığını gösteriyor. Ancak bazı ülkelerde outlier noktalar var — bu da bazı ülkelerde emeklilik veya aile birleşimi gibi nedenlerle yaşlı göçmenlerin daha fazla olduğunu gösterebilir.
+
+Log eksende geniş yayılım, ülkeler arasında çok büyük farklar olduğunu gösteriyor (örneğin: ABD ile küçük ada devletleri arasında).
+
+# 
+
+# Analiz-6
+
+2020 – Yaş Gruplarının Toplam Göçmen Stokundaki Payı (Log Ölçek)
+
+R Kodu
+
+```{r}
+
+# Gerekli kütüphaneler
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(scales)
+
+# Excel dosyasını oku
+file_path <- "C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"
+df <- read_excel(file_path, sheet = "Table 1")
+
+# 2020 yılı verilerini al, sayısal dönüşüm yap
+df_filtered <- df %>%
+  filter(Year == 2020, Area == "Country") %>%
+  mutate(Total = as.numeric(`Total(Both)`)) %>%
+  drop_na(Total)
+
+# En fazla göçmen barındıran ilk 12 ülkeyi bul
+top12_countries <- df_filtered %>%
+  arrange(desc(Total)) %>%
+  slice(1:12) %>%
+  pull(`Region, development group, country`)
+
+# Yaş grubu sütunlarını seç (örnek: "0-4", "5-9", ...)
+age_columns <- grep("^[0-9]+-[0-9]+", names(df_filtered), value = TRUE)
+
+# Uzun formata çevir
+df_age <- df_filtered %>%
+  filter(`Region, development group, country` %in% top12_countries) %>%
+  select(`Region, development group, country`, all_of(age_columns)) %>%
+  pivot_longer(
+    cols = -`Region, development group, country`,
+    names_to = "Age_Group",
+    values_to = "Count"
+  ) %>%
+  mutate(Count = as.numeric(gsub(",", "", Count))) %>%  # varsa virgül düzeltmesi
+  drop_na()
+
+# Grafik oluştur ve yazdır
+p <- ggplot(df_age, aes(x = `Region, development group, country`, y = Count)) +
+  geom_boxplot(fill = "lightblue") +
+  scale_y_continuous(labels = label_number(scale = 1e-6, suffix = "M")) +
+  labs(
+    title = "Top 12 Countries – Migrant Distribution by Age Group (2020)",
+    x = "Country",
+    y = "Migrant Count (per Age Group)"
+  ) +
+  theme_minimal(base_size = 12) +
+  theme(axis.text.x = element_text(angle = 45, hjust = 1))
+
+  ```
+```
+
+Tüm yaş gruplarında, göçmen sayısı arttıkça oranlar genellikle %2–%10 arasında yoğunlaşıyor.Grafiklerin çoğunda, aşırı uç değerler hariç ülkelerin büyük kısmı aynı oransal bantta kalıyor.
+
+Yaş Grubu Karşılaştırmaları:
+
+25–44 yaş aralığı (özellikle 25–29, 30–34, 35–39 yaş):
+
+Oranlar en yüksek seviyede (%10–%15).
+
+Bu da göçmenlerin büyük kısmının çalışma çağında olduğunu gösteriyor.
+
+Göç çoğunlukla ekonomik, eğitim veya iş gücü temelli olabilir.
+
+0–14 yaş grubu:
+
+Oranlar daha düşük ancak sabit (çoğunlukla %5–%10).
+
+Bu çocukların muhtemelen aile göçü ile taşındığını düşündürür.
+
+65 yaş ve üstü gruplar:
+
+Oranlar oldukça düşük (%0–%5).
+
+Bu, göçmenlerin çoğunluğunun yaşlı nüfustan oluşmadığını gösteriyor. Ancak bazı ülkelerde outlier noktalar var — bu da bazı ülkelerde emeklilik veya aile birleşimi gibi nedenlerle yaşlı göçmenlerin daha fazla olduğunu gösterebilir.
+
+Log eksende geniş yayılım, ülkeler arasında çok büyük farklar olduğunu gösteriyor (örneğin: ABD ile küçük ada devletleri arasında).
+
+# 
+
+## Keşifsel Veri Analizi
 
 ## Trend Analizi
 
@@ -49,10 +559,8 @@ xxxxxx
 
 xxxxxx
 
-## SonuC'lar
+## Sonuçlar
 
 xxxxxx
 
-# SonuC'lar ve Ana CD1karD1mlar
-
-xxxxxx
+# Sonuçlar ve Ana Çıkarımlar

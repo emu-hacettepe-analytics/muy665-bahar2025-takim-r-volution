@@ -1,36 +1,20 @@
 ---
-title: "Takım: XXX"
+title: "Takım R volution"
 sidebar: true 
 ---
 
-MUY660-İş Analitiği dersi takım sayfamıza hoş geldiniz.
+MUY660-Is Analitigi dersi takım sayfamıza hos geldiniz.
 
-Bu analitik çalışmalarımızı paylaşıyoruz.
+## Takım Uyeleri
 
-Lütfen faaliyetlerimizi görmek için için bizi takipte kalın.
+1.  [Ahmetcan Bisit](/takim/ahmetcanbisit.qmd)
 
-## Takım Üyeleri
+2.  [Kaan Guven](/takim/kaanguven.qmd)
 
-1.  [Edin_Džeko](/takim/edindzeko.qmd)
+3.  [Melih Özen](/takim/melihozen.qmd)
 
-2.  [Dušan Tadić](/takim/dusantadic.qmd)
-
-3.  [Frederico Rodrigues de Paula Santos](/takim/fred.qmd)
-
-4.  [Sebastian Szymański](/takim/szymanski.qmd)
+4.  [Yigit Boran](/takim/yigitboran.qmd)
 
 5.  [Levent Bekci](/takim/leventbekci.qmd)
 
-## Proje Adı
 
-MUY660-İş Analitiği iyileştirme çalışmaları (örnek)
-
-## Proje Konusu
-
-Örnek: Bu projede MUY660-İş Analitiği ders içeriğinin analitik yaklaşımlarla iyileştirilmesini hedefledik. Bu doğrultuda tüm üniversitelerdeki benzer derslerin verisini toplayarak bir veri seti oluşturduk Analiz için ........ yöntemleri kullanarak, ....... çalışmaları yaptık Sonuç olarak, MUY660-İş Analitiği dersinin dünyadaki tüm derslerden daha iyi olduğunu ve bu dersi aldığımız için çok mutlu olduğumuzu tespit ettik.
-
-## Veri Seti Hakkında Özet Bilgi
-
-## Sonuçlar
-
-Burada key takeways verilmelidir. En az 3 en fazla 5 madde ile çarpıcı sonuçlar sunulmalıdır.
