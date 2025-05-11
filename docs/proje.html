@@ -171,14 +171,21 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#analiz-3" id="toc-analiz-3" class="nav-link" data-scroll-target="#analiz-3">Analiz-3</a></li>
   <li><a href="#analiz-4" id="toc-analiz-4" class="nav-link" data-scroll-target="#analiz-4">Analiz-4</a></li>
   <li><a href="#analiz-5" id="toc-analiz-5" class="nav-link" data-scroll-target="#analiz-5">Analiz-5</a></li>
-  <li><a href="#analiz-6" id="toc-analiz-6" class="nav-link" data-scroll-target="#analiz-6">Analiz-6</a>
+  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section"></a></li>
+  <li><a href="#analiz-6" id="toc-analiz-6" class="nav-link" data-scroll-target="#analiz-6">Analiz-6</a></li>
+  <li><a href="#analiz-7" id="toc-analiz-7" class="nav-link" data-scroll-target="#analiz-7">Analiz-7</a></li>
+  <li><a href="#analiz-8" id="toc-analiz-8" class="nav-link" data-scroll-target="#analiz-8">Analiz-8</a></li>
+  <li><a href="#analiz-9" id="toc-analiz-9" class="nav-link" data-scroll-target="#analiz-9">Analiz-9</a></li>
+  <li><a href="#analiz-10" id="toc-analiz-10" class="nav-link" data-scroll-target="#analiz-10">Analiz-10</a></li>
+  <li><a href="#analiz-11" id="toc-analiz-11" class="nav-link" data-scroll-target="#analiz-11">Analiz-11</a></li>
+  <li><a href="#analiz-12" id="toc-analiz-12" class="nav-link" data-scroll-target="#analiz-12">Analiz-12</a></li>
+  <li><a href="#analiz-13" id="toc-analiz-13" class="nav-link" data-scroll-target="#analiz-13">Analiz-13</a></li>
+  <li><a href="#analiz-14" id="toc-analiz-14" class="nav-link" data-scroll-target="#analiz-14">Analiz-14</a></li>
+  <li><a href="#sonuçlar-ve-ana-çıkarımlar" id="toc-sonuçlar-ve-ana-çıkarımlar" class="nav-link" data-scroll-target="#sonuçlar-ve-ana-çıkarımlar">Sonuçlar ve Ana Çıkarımlar</a>
   <ul class="collapse">
-  <li><a href="#keşifsel-veri-analizi" id="toc-keşifsel-veri-analizi" class="nav-link" data-scroll-target="#keşifsel-veri-analizi">Keşifsel Veri Analizi</a></li>
-  <li><a href="#trend-analizi" id="toc-trend-analizi" class="nav-link" data-scroll-target="#trend-analizi">Trend Analizi</a></li>
-  <li><a href="#model-uydurma" id="toc-model-uydurma" class="nav-link" data-scroll-target="#model-uydurma">Model Uydurma</a></li>
-  <li><a href="#sonuçlar" id="toc-sonuçlar" class="nav-link" data-scroll-target="#sonuçlar">Sonuçlar</a></li>
+  <li><a href="#genel-bulgular-dünya-geneli" id="toc-genel-bulgular-dünya-geneli" class="nav-link" data-scroll-target="#genel-bulgular-dünya-geneli"><strong>Genel Bulgular (Dünya Geneli)</strong></a></li>
+  <li><a href="#türkiye-özelinde-bulgular" id="toc-türkiye-özelinde-bulgular" class="nav-link" data-scroll-target="#türkiye-özelinde-bulgular">🇹🇷 <strong>Türkiye Özelinde Bulgular</strong></a></li>
   </ul></li>
-  <li><a href="#sonuçlar-ve-ana-çıkarımlar" id="toc-sonuçlar-ve-ana-çıkarımlar" class="nav-link" data-scroll-target="#sonuçlar-ve-ana-çıkarımlar">Sonuçlar ve Ana Çıkarımlar</a></li>
   </ul>
 </nav>
 </nav>
@@ -633,9 +640,12 @@ Caused by warning:
 <p>Bu, göçmenlerin çoğunluğunun yaşlı nüfustan oluşmadığını gösteriyor. Ancak bazı ülkelerde outlier noktalar var — bu da bazı ülkelerde emeklilik veya aile birleşimi gibi nedenlerle yaşlı göçmenlerin daha fazla olduğunu gösterebilir.</p>
 <p>Log eksende geniş yayılım, ülkeler arasında çok büyük farklar olduğunu gösteriyor (örneğin: ABD ile küçük ada devletleri arasında).</p>
 </section>
+<section id="section" class="level1">
+<h1></h1>
+</section>
 <section id="analiz-6" class="level1">
 <h1>Analiz-6</h1>
-<p>2020 – Yaş Gruplarının Yaş Gruplarına Göre Box Plot</p>
+<p>2020 – Yaş Gruplarının Boxplot</p>
 <p>R Kodu</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
@@ -660,28 +670,46 @@ Caused by warning:
 Caused by warning:
 ! Zorlamadan dolayı ortaya çıkan NAs</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Filtrelenmiş veri örneği</span></span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a><span class="fu">head</span>(df_filtered)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code># A tibble: 6 × 58
-  Index  Year Region, development grou…¹ Notes `Location code` Area  `0-4 total`
-  &lt;dbl&gt; &lt;dbl&gt; &lt;chr&gt;                      &lt;chr&gt;           &lt;dbl&gt; &lt;chr&gt; &lt;chr&gt;      
-1   168  2020 Burundi                    &lt;NA&gt;              108 Coun… 40400      
-2   175  2020 Comoros                    &lt;NA&gt;              174 Coun… 304        
-3   182  2020 Djibouti                   &lt;NA&gt;              262 Coun… 3924       
-4   189  2020 Eritrea                    &lt;NA&gt;              232 Coun… 783        
-5   196  2020 Ethiopia                   &lt;NA&gt;              231 Coun… 119790     
-6   203  2020 Kenya                      &lt;NA&gt;              404 Coun… 80856      
-# ℹ abbreviated name: ¹​`Region, development group, country`
-# ℹ 51 more variables: `5-9 total` &lt;chr&gt;, `10-14 total` &lt;chr&gt;,
-#   `15-19 total` &lt;chr&gt;, `20-24 total` &lt;chr&gt;, `25-29 total` &lt;chr&gt;,
-#   `30-34 total` &lt;chr&gt;, `35-39 total` &lt;chr&gt;, `40-44 total` &lt;chr&gt;,
-#   `45-49 total` &lt;chr&gt;, `50-54 total` &lt;chr&gt;, `55-59 total` &lt;chr&gt;,
-#   `60-64 total` &lt;chr&gt;, `65-69 total` &lt;chr&gt;, `70-74 total` &lt;chr&gt;,
-#   `75+ total` &lt;chr&gt;, `Total(Both)` &lt;chr&gt;, `0-4 Male` &lt;chr&gt;, …</code></pre>
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En fazla göçmen barındıran ilk 12 ülkeyi bul</span></span>
+<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a>top12_countries <span class="ot">&lt;-</span> df_filtered <span class="sc">%&gt;%</span></span>
+<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-4"><a href="#cb21-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb21-5"><a href="#cb21-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>)</span>
+<span id="cb21-6"><a href="#cb21-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-7"><a href="#cb21-7" aria-hidden="true" tabindex="-1"></a><span class="co"># Yaş grubu sütunlarını seç (örnek: "0-4", "5-9", ...)</span></span>
+<span id="cb21-8"><a href="#cb21-8" aria-hidden="true" tabindex="-1"></a>age_columns <span class="ot">&lt;-</span> <span class="fu">grep</span>(<span class="st">"^[0-9]+-[0-9]+"</span>, <span class="fu">names</span>(df_filtered), <span class="at">value =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb21-9"><a href="#cb21-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-10"><a href="#cb21-10" aria-hidden="true" tabindex="-1"></a><span class="co"># İlk 12 ülkeye ait yaş grubu verisini uzun formata çevir</span></span>
+<span id="cb21-11"><a href="#cb21-11" aria-hidden="true" tabindex="-1"></a>df_age <span class="ot">&lt;-</span> df_filtered <span class="sc">%&gt;%</span></span>
+<span id="cb21-12"><a href="#cb21-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">%in%</span> top12_countries) <span class="sc">%&gt;%</span></span>
+<span id="cb21-13"><a href="#cb21-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>, <span class="fu">all_of</span>(age_columns)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-14"><a href="#cb21-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(</span>
+<span id="cb21-15"><a href="#cb21-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">cols =</span> <span class="sc">-</span><span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>,</span>
+<span id="cb21-16"><a href="#cb21-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">names_to =</span> <span class="st">"Age_Group"</span>,</span>
+<span id="cb21-17"><a href="#cb21-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">values_to =</span> <span class="st">"Count"</span></span>
+<span id="cb21-18"><a href="#cb21-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb21-19"><a href="#cb21-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Count =</span> <span class="fu">as.numeric</span>(Count)) <span class="sc">%&gt;%</span></span>
+<span id="cb21-20"><a href="#cb21-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb21-21"><a href="#cb21-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb21-22"><a href="#cb21-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Boxplot oluştur</span></span>
+<span id="cb21-23"><a href="#cb21-23" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_age, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>, <span class="at">y =</span> Count)) <span class="sc">+</span></span>
+<span id="cb21-24"><a href="#cb21-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"lightblue"</span>) <span class="sc">+</span></span>
+<span id="cb21-25"><a href="#cb21-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)) <span class="sc">+</span></span>
+<span id="cb21-26"><a href="#cb21-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb21-27"><a href="#cb21-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 12 Countries – Migrant Distribution by Age Group (2020)"</span>,</span>
+<span id="cb21-28"><a href="#cb21-28" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
+<span id="cb21-29"><a href="#cb21-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Migrant Count (per Age Group)"</span></span>
+<span id="cb21-30"><a href="#cb21-30" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb21-31"><a href="#cb21-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb21-32"><a href="#cb21-32" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-6-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
 </div>
 </div>
-<p>Ülke Bazlı Gözlemler:</p>
+</div>
 <p>🇺🇸 United States of America*</p>
 <p>Göçmen dağılımı diğer ülkelere kıyasla çok daha yüksek ve geniş.</p>
 <p>Medyanı yaklaşık 2 milyon.</p>
@@ -697,29 +725,679 @@ Caused by warning:
 <p>🇹🇷 Turkey</p>
 <p>Göçmen sayısı düşük, dağılım dar; medyan yaklaşık 200–300 bin.</p>
 <p>Yaş grupları arasında göçmen sayısı çok fazla farklılık göstermiyor (homojen).</p>
-<p>Genel olarak Avrupa ülkeleri:</p>
+<p>🟨 Genel olarak Avrupa ülkeleri:</p>
 <p>Kutu grafikler nispeten kısa, medyanlar daha düşük.</p>
 <p>Bu ülkelerde göçmen sayısı daha dengeli ve yaş grupları arasında uçurum yok.</p>
-<section id="keşifsel-veri-analizi" class="level2">
-<h2 class="anchored" data-anchor-id="keşifsel-veri-analizi">Keşifsel Veri Analizi</h2>
 </section>
-<section id="trend-analizi" class="level2">
-<h2 class="anchored" data-anchor-id="trend-analizi">Trend Analizi</h2>
-<p>xxxxxx</p>
+<section id="analiz-7" class="level1">
+<h1>Analiz-7</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Dosya yolu</span></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli dönüşüm ve filtreleme</span></span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">as.numeric</span>(Year),</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a>    <span class="at">TotalBoth =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Both)</span><span class="st">`</span>)</span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Area <span class="sc">==</span> <span class="st">"Country"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Year, TotalBoth)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There was 1 warning in `mutate()`.
+ℹ In argument: `TotalBoth = as.numeric(`Total(Both)`)`.
+Caused by warning:
+! Zorlamadan dolayı ortaya çıkan NAs</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2020 yılına göre en fazla göçmen alan 12 ülkeyi bul</span></span>
+<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a>top12_countries <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-4"><a href="#cb24-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(TotalBoth)) <span class="sc">%&gt;%</span></span>
+<span id="cb24-5"><a href="#cb24-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb24-6"><a href="#cb24-6" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pull</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>)</span>
+<span id="cb24-7"><a href="#cb24-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-8"><a href="#cb24-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Bu ülkelerin tüm yıllarını al</span></span>
+<span id="cb24-9"><a href="#cb24-9" aria-hidden="true" tabindex="-1"></a>df_top12_years <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb24-10"><a href="#cb24-10" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">%in%</span> top12_countries)</span>
+<span id="cb24-11"><a href="#cb24-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb24-12"><a href="#cb24-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik çiz</span></span>
+<span id="cb24-13"><a href="#cb24-13" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_top12_years, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>, <span class="at">y =</span> TotalBoth)) <span class="sc">+</span></span>
+<span id="cb24-14"><a href="#cb24-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>(<span class="at">fill =</span> <span class="st">"lightgreen"</span>) <span class="sc">+</span></span>
+<span id="cb24-15"><a href="#cb24-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)) <span class="sc">+</span></span>
+<span id="cb24-16"><a href="#cb24-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb24-17"><a href="#cb24-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 12 Countries – Migrant Stock Distribution Across Years (1990–2020)"</span>,</span>
+<span id="cb24-18"><a href="#cb24-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Country"</span>,</span>
+<span id="cb24-19"><a href="#cb24-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Total Migrant Stock"</span></span>
+<span id="cb24-20"><a href="#cb24-20" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb24-21"><a href="#cb24-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>) <span class="sc">+</span></span>
+<span id="cb24-22"><a href="#cb24-22" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-7-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Ülke Bazlı Gözlemler:</p>
+<p>🇺🇸 United States of America*</p>
+<p>Açık ara en yüksek göçmen stokuna sahip ülke.</p>
+<p>Medyan yaklaşık 35–40 milyon.</p>
+<p>Boxplot yüksek: bu da yıllar içinde ciddi artış olduğunu ve bazı dönemlerde sıçrama yaşandığını gösterir.</p>
+<p>En yüksek değeri 2020’de görmüş olabilir (50M+).</p>
+<p>🇩🇪 Germany</p>
+<p>Göçmen sayısı istikrarlı şekilde yüksek.</p>
+<p>Medyan yaklaşık 9–10 milyon.</p>
+<p>Göçmen politikaları, AB içi hareketlilik ve sığınmacı kabulleri bu dağılıma katkı sağlar.</p>
+<p>🇸🇦 Saudi Arabia</p>
+<p>Boxplot geniş → göçmen sayısı zaman içinde ciddi dalgalanmış.</p>
+<p>Özellikle bazı yıllarda (muhtemelen 2000 sonrası) ani artışlar var (iş gücü talebi kaynaklı).</p>
+<p>🇦🇪 United Arab Emirates</p>
+<p>Orta düzeyde medyan (~6M), ancak değişkenlik çok → geçici iş gücü hareketliliği etkili.</p>
+<p>Aykırı değerler, yoğun göç aldığı kısa dönemleri yansıtır.</p>
+<p>🇹🇷 Turkey</p>
+<p>En alttaki kutulardan biri.</p>
+<p>Medyanı düşük, göçmen sayısı 1990–2010 arası çok sabit, 2010 sonrası artış olabilir.</p>
+<p>Bu artış, Suriye iç savaşı sonrası göçmen akışı ile ilişkilendirilebilir.</p>
 </section>
-<section id="model-uydurma" class="level2">
-<h2 class="anchored" data-anchor-id="model-uydurma">Model Uydurma</h2>
-<p>xxxxxx</p>
+<section id="analiz-8" class="level1">
+<h1>Analiz-8</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb25-4"><a href="#cb25-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb25-5"><a href="#cb25-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb25-6"><a href="#cb25-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb25-7"><a href="#cb25-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-8"><a href="#cb25-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Excel dosyasını oku</span></span>
+<span id="cb25-9"><a href="#cb25-9" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb25-10"><a href="#cb25-10" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb25-11"><a href="#cb25-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-12"><a href="#cb25-12" aria-hidden="true" tabindex="-1"></a><span class="co"># Sayısal dönüşüm ve 2020 filtrelemesi</span></span>
+<span id="cb25-13"><a href="#cb25-13" aria-hidden="true" tabindex="-1"></a>df_2020 <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb25-14"><a href="#cb25-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2020</span>, Area <span class="sc">==</span> <span class="st">"Country"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb25-15"><a href="#cb25-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb25-16"><a href="#cb25-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total_Female =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Females)</span><span class="st">`</span>),</span>
+<span id="cb25-17"><a href="#cb25-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total_Male =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Males)</span><span class="st">`</span>),</span>
+<span id="cb25-18"><a href="#cb25-18" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total =</span> Total_Female <span class="sc">+</span> Total_Male</span>
+<span id="cb25-19"><a href="#cb25-19" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb25-20"><a href="#cb25-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Total_Female, Total_Male)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: There were 2 warnings in `mutate()`.
+The first warning was:
+ℹ In argument: `Total_Female = as.numeric(`Total(Females)`)`.
+Caused by warning:
+! Zorlamadan dolayı ortaya çıkan NAs
+ℹ Run `dplyr::last_dplyr_warnings()` to see the 1 remaining warning.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a><span class="co"># En yüksek toplam göçmen stoğuna sahip ilk 12 ülkeyi seç</span></span>
+<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a>top12_countries <span class="ot">&lt;-</span> df_2020 <span class="sc">%&gt;%</span></span>
+<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">arrange</span>(<span class="fu">desc</span>(Total)) <span class="sc">%&gt;%</span></span>
+<span id="cb27-4"><a href="#cb27-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">12</span>)</span>
+<span id="cb27-5"><a href="#cb27-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-6"><a href="#cb27-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Uzun formata çevir (kadın–erkek ayırımı için)</span></span>
+<span id="cb27-7"><a href="#cb27-7" aria-hidden="true" tabindex="-1"></a>df_long <span class="ot">&lt;-</span> top12_countries <span class="sc">%&gt;%</span></span>
+<span id="cb27-8"><a href="#cb27-8" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span>, Total_Female, Total_Male) <span class="sc">%&gt;%</span></span>
+<span id="cb27-9"><a href="#cb27-9" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">c</span>(Total_Female, Total_Male),</span>
+<span id="cb27-10"><a href="#cb27-10" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"Gender"</span>,</span>
+<span id="cb27-11"><a href="#cb27-11" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"Count"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb27-12"><a href="#cb27-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(<span class="at">Gender =</span> <span class="fu">ifelse</span>(Gender <span class="sc">==</span> <span class="st">"Total_Female"</span>, <span class="st">"Female"</span>, <span class="st">"Male"</span>))</span>
+<span id="cb27-13"><a href="#cb27-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb27-14"><a href="#cb27-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik oluştur (boxplot)</span></span>
+<span id="cb27-15"><a href="#cb27-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_long, <span class="fu">aes</span>(<span class="at">x =</span> Gender, <span class="at">y =</span> Count, <span class="at">fill =</span> Gender)) <span class="sc">+</span></span>
+<span id="cb27-16"><a href="#cb27-16" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_boxplot</span>() <span class="sc">+</span></span>
+<span id="cb27-17"><a href="#cb27-17" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)) <span class="sc">+</span></span>
+<span id="cb27-18"><a href="#cb27-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb27-19"><a href="#cb27-19" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Top 12 Countries – Migrant Stock Distribution by Gender (2020)"</span>,</span>
+<span id="cb27-20"><a href="#cb27-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Gender"</span>,</span>
+<span id="cb27-21"><a href="#cb27-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Migrant Stock"</span></span>
+<span id="cb27-22"><a href="#cb27-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb27-23"><a href="#cb27-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">12</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-8-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>1. Erkek (Male) göçmen stokları kadınlara göre daha yüksek</p>
+<p>Medyan değer erkeklerde daha yukarıda (~8-9M), kadınlarda daha düşük (~5M).</p>
+<p>Kutu genişliği erkeklerde daha fazla: bazı ülkelerde çok daha fazla erkek göçmen var.</p>
+<p>2. Aykırı değerler (outliers)</p>
+<p>Her iki cinsiyette de yüksek değerli aykırı ülkeler var → bu muhtemelen ABD ve Körfez ülkeleri.</p>
+<p>Kadın göçmen stokunda bir ülke (muhtemelen ABD) 25 milyon civarında göçmenle aykırı olmuş.</p>
+<p>3. Göçmenlik cinsiyete göre farklılaşıyor</p>
+<p>Erkek göçmenlerin dağılımı daha geniş: bu durum özellikle geçici iş gücü göçünün yoğun olduğu ülkelerle ilişkilendirilebilir (örneğin Suudi Arabistan, BAE).</p>
+<p>Kadın göçmenlerin dağılımı daha sıkışık ve merkezde → bu da daha dengeli veya aile temelli göçü yansıtabilir.</p>
+<p>2020 verilerine göre, 12 ülke arasında erkek göçmen stokunun dağılımı daha geniş ve daha yüksek medyan değere sahiptir. Bu durum, özellikle geçici iş gücüne dayalı göç alan ülkelerde erkeklerin daha baskın olduğu bir göçmen profiline işaret etmektedir. Öte yandan, kadın göçmenlerin dağılımı daha dar olup, görece daha dengeli bir yapıyı yansıtmaktadır. Her iki grupta da aykırı değer olarak göze çarpan ülke büyük olasılıkla Amerika Birleşik Devletleri’dir.</p>
 </section>
-<section id="sonuçlar" class="level2">
-<h2 class="anchored" data-anchor-id="sonuçlar">Sonuçlar</h2>
-<p>xxxxxx</p>
+<section id="analiz-9" class="level1">
+<h1>Analiz-9</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-6"><a href="#cb28-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Excel verisini oku</span></span>
+<span id="cb28-7"><a href="#cb28-7" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb28-8"><a href="#cb28-8" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb28-9"><a href="#cb28-9" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">names</span>(df))</span>
+<span id="cb28-10"><a href="#cb28-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-11"><a href="#cb28-11" aria-hidden="true" tabindex="-1"></a><span class="co"># WORLD verisini hazırla</span></span>
+<span id="cb28-12"><a href="#cb28-12" aria-hidden="true" tabindex="-1"></a>df_world <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb28-13"><a href="#cb28-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"WORLD"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb28-14"><a href="#cb28-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb28-15"><a href="#cb28-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">as.numeric</span>(Year),</span>
+<span id="cb28-16"><a href="#cb28-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Both)</span><span class="st">`</span>)</span>
+<span id="cb28-17"><a href="#cb28-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb28-18"><a href="#cb28-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Year, Total)</span>
+<span id="cb28-19"><a href="#cb28-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-20"><a href="#cb28-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 2020 verisi</span></span>
+<span id="cb28-21"><a href="#cb28-21" aria-hidden="true" tabindex="-1"></a>df_2020 <span class="ot">&lt;-</span> df_world <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2020</span>)</span>
+<span id="cb28-22"><a href="#cb28-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-23"><a href="#cb28-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Grafik</span></span>
+<span id="cb28-24"><a href="#cb28-24" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_world, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Total)) <span class="sc">+</span></span>
+<span id="cb28-25"><a href="#cb28-25" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">linewidth =</span> <span class="fl">1.2</span>, <span class="at">color =</span> <span class="st">"darkgreen"</span>) <span class="sc">+</span></span>
+<span id="cb28-26"><a href="#cb28-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb28-27"><a href="#cb28-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="at">data =</span> df_2020,</span>
+<span id="cb28-28"><a href="#cb28-28" aria-hidden="true" tabindex="-1"></a>            <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(Total <span class="sc">/</span> <span class="fl">1e6</span>, <span class="dv">1</span>), <span class="st">"M"</span>)),</span>
+<span id="cb28-29"><a href="#cb28-29" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">size =</span> <span class="fl">4.2</span>) <span class="sc">+</span></span>
+<span id="cb28-30"><a href="#cb28-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb28-31"><a href="#cb28-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>),</span>
+<span id="cb28-32"><a href="#cb28-32" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.1</span>))  <span class="co"># üstte boşluk bırak</span></span>
+<span id="cb28-33"><a href="#cb28-33" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-34"><a href="#cb28-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb28-35"><a href="#cb28-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"1990–2020 Arası Dünya Genelinde Göçmen Stoğu"</span>,</span>
+<span id="cb28-36"><a href="#cb28-36" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Birlesmis Milletler Uluslararasi Gocmen Verisine Gore"</span>,</span>
+<span id="cb28-37"><a href="#cb28-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yil"</span>,</span>
+<span id="cb28-38"><a href="#cb28-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Toplam Gocmen Sayisi (Milyon)"</span></span>
+<span id="cb28-39"><a href="#cb28-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb28-40"><a href="#cb28-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-9-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Y Eksenindeki Değer:</p>
+<p>Toplam uluslararası göçmen sayısı (milyon kişi cinsinden)</p>
+<p>&nbsp;Gözlemlenen Eğilim:</p>
+<p>Göçmen sayısı 1990’dan 2020’ye kadar her on yılda belirgin bir şekilde artmıştır.</p>
+<p>Artış lineer değil, ivmeli: 2000 sonrası artış hızı dikkat çekici şekilde yükselmiştir.</p>
+<p>Yıllara Göre Toplam Göçmen Sayısı:</p>
+<p>Yıl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Tahmini Göçmen Stoku</p>
+<p>1990&nbsp;&nbsp;&nbsp;&nbsp; ~152 milyon</p>
+<p>2000&nbsp;&nbsp;&nbsp;&nbsp; ~174 milyon</p>
+<p>2010&nbsp;&nbsp;&nbsp;&nbsp; ~222 milyon</p>
+<p>2020&nbsp;&nbsp;&nbsp;&nbsp; 280.6 milyon</p>
+<p>🔺 30 yılda %85’ten fazla artış!</p>
+<p>🧠 Olası Nedenler:</p>
+<p>1990 sonrası küreselleşmenin hızlanması</p>
+<p>AB genişlemesi ve serbest dolaşım</p>
+<p>Suriye İç Savaşı, Afganistan, Irak gibi krizler</p>
+<p>İklim değişikliği ve ekonomik eşitsizlik</p>
+<p>Nitelikli iş gücü ve eğitim göçü artışı</p>
+<p>Yumuşak yeşil çizgi ve net etiket → 2020 değeri vurgulanmış (280.6M)</p>
+<p>Ana trendi anlatmak için çok uygun: “Dünyada göçmen sayısı hızlı şekilde artıyor.”</p>
+<p>&nbsp;“1990 yılında dünya genelindeki uluslararası göçmen stoku yaklaşık 152 milyon iken, bu sayı 2020 yılında 280 milyonu aşmıştır. Son 30 yılda yaşanan bu dramatik artış, hem ekonomik fırsatlar hem de siyasi ve çevresel zorunluluklarla şekillenmiştir.”</p>
 </section>
+<section id="analiz-10" class="level1">
+<h1>Analiz-10</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
+<span id="cb29-2"><a href="#cb29-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb29-3"><a href="#cb29-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb29-4"><a href="#cb29-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb29-5"><a href="#cb29-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb29-6"><a href="#cb29-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-7"><a href="#cb29-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Veriyi oku ve temizle</span></span>
+<span id="cb29-8"><a href="#cb29-8" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb29-9"><a href="#cb29-9" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb29-10"><a href="#cb29-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">names</span>(df))  <span class="co"># boşlukları temizle</span></span>
+<span id="cb29-11"><a href="#cb29-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-12"><a href="#cb29-12" aria-hidden="true" tabindex="-1"></a>df_world <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb29-13"><a href="#cb29-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"WORLD"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb29-14"><a href="#cb29-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb29-15"><a href="#cb29-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">as.numeric</span>(Year),</span>
+<span id="cb29-16"><a href="#cb29-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Both)</span><span class="st">`</span>)</span>
+<span id="cb29-17"><a href="#cb29-17" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb29-18"><a href="#cb29-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Year, Total)</span>
+<span id="cb29-19"><a href="#cb29-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-20"><a href="#cb29-20" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Doğrusal regresyon modeli oluştur</span></span>
+<span id="cb29-21"><a href="#cb29-21" aria-hidden="true" tabindex="-1"></a>model <span class="ot">&lt;-</span> <span class="fu">lm</span>(Total <span class="sc">~</span> Year, <span class="at">data =</span> df_world)</span>
+<span id="cb29-22"><a href="#cb29-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-23"><a href="#cb29-23" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 2024 yılı için tahmin al</span></span>
+<span id="cb29-24"><a href="#cb29-24" aria-hidden="true" tabindex="-1"></a>new_data <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">Year =</span> <span class="dv">2024</span>)</span>
+<span id="cb29-25"><a href="#cb29-25" aria-hidden="true" tabindex="-1"></a>pred_2024 <span class="ot">&lt;-</span> <span class="fu">predict</span>(model, <span class="at">newdata =</span> new_data)</span>
+<span id="cb29-26"><a href="#cb29-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-27"><a href="#cb29-27" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Tahmini veriyi df'ye ekle</span></span>
+<span id="cb29-28"><a href="#cb29-28" aria-hidden="true" tabindex="-1"></a>df_world_pred <span class="ot">&lt;-</span> <span class="fu">bind_rows</span>(</span>
+<span id="cb29-29"><a href="#cb29-29" aria-hidden="true" tabindex="-1"></a>  df_world,</span>
+<span id="cb29-30"><a href="#cb29-30" aria-hidden="true" tabindex="-1"></a>  <span class="fu">data.frame</span>(<span class="at">Year =</span> <span class="dv">2024</span>, <span class="at">Total =</span> pred_2024)</span>
+<span id="cb29-31"><a href="#cb29-31" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb29-32"><a href="#cb29-32" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb29-33"><a href="#cb29-33" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Grafik çizimi</span></span>
+<span id="cb29-34"><a href="#cb29-34" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_world_pred, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Total)) <span class="sc">+</span></span>
+<span id="cb29-35"><a href="#cb29-35" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb29-36"><a href="#cb29-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">data =</span> df_world, <span class="at">color =</span> <span class="st">"darkgreen"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb29-37"><a href="#cb29-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">data =</span> df_world, <span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">TRUE</span>, <span class="at">color =</span> <span class="st">"red"</span>, <span class="at">linetype =</span> <span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb29-38"><a href="#cb29-38" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">data =</span> <span class="fu">filter</span>(df_world_pred, Year <span class="sc">==</span> <span class="dv">2024</span>), <span class="at">color =</span> <span class="st">"blue"</span>, <span class="at">size =</span> <span class="dv">3</span>) <span class="sc">+</span></span>
+<span id="cb29-39"><a href="#cb29-39" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb29-40"><a href="#cb29-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> <span class="fu">filter</span>(df_world_pred, Year <span class="sc">==</span> <span class="dv">2024</span>),</span>
+<span id="cb29-41"><a href="#cb29-41" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="st">"Tahmin (2024): "</span>, <span class="fu">round</span>(Total <span class="sc">/</span> <span class="fl">1e6</span>), <span class="st">"M"</span>)),</span>
+<span id="cb29-42"><a href="#cb29-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">hjust =</span> <span class="dv">1</span>, <span class="at">size =</span> <span class="dv">4</span>, <span class="at">color =</span> <span class="st">"blue"</span></span>
+<span id="cb29-43"><a href="#cb29-43" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-44"><a href="#cb29-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb29-45"><a href="#cb29-45" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>),</span>
+<span id="cb29-46"><a href="#cb29-46" aria-hidden="true" tabindex="-1"></a>    <span class="at">expand =</span> <span class="fu">expansion</span>(<span class="at">mult =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">0.15</span>))</span>
+<span id="cb29-47"><a href="#cb29-47" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-48"><a href="#cb29-48" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(</span>
+<span id="cb29-49"><a href="#cb29-49" aria-hidden="true" tabindex="-1"></a>    <span class="at">breaks =</span> <span class="fu">seq</span>(<span class="dv">1990</span>, <span class="dv">2024</span>, <span class="at">by =</span> <span class="dv">5</span>)  <span class="co"># X ekseninde 2024 dahil edilir</span></span>
+<span id="cb29-50"><a href="#cb29-50" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-51"><a href="#cb29-51" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb29-52"><a href="#cb29-52" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"1990–2020 Dünya Göçmen Stoku ve 2024 Tahmini"</span>,</span>
+<span id="cb29-53"><a href="#cb29-53" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="st">"Kırmızı çizgi: regresyon eğrisi | Mavi nokta: 2024 tahmini"</span>,</span>
+<span id="cb29-54"><a href="#cb29-54" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb29-55"><a href="#cb29-55" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Toplam Göçmen Sayısı (Milyon)"</span></span>
+<span id="cb29-56"><a href="#cb29-56" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb29-57"><a href="#cb29-57" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-10-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>2024 Tahmini:</p>
+<p>Tahmin edilen göçmen sayısı: 286 milyon</p>
+<p>Gerçek 2020 verisi: ~280 milyon</p>
+<p>Bu, göçmen stokunun 2020–2024 arasında yaklaşık 6 milyon artacağı anlamına gelir.</p>
+<p>Regresyon eğrisi (kırmızı):</p>
+<p>1990–2020 arası veriye dayalı tahmin üretir.</p>
+<p>Gözlemlerle (yeşil çizgi) oldukça uyumludur ancak 2020 sonrası sapmaların artabileceği göz önünde bulundurulmalıdır.</p>
+<p>Trend Analizi:</p>
+<p>Yıl&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Göçmen Sayısı (Milyon)</p>
+<p>1990&nbsp;&nbsp;&nbsp;&nbsp; ~152M</p>
+<p>2000&nbsp;&nbsp;&nbsp;&nbsp; ~174M</p>
+<p>2010&nbsp;&nbsp;&nbsp;&nbsp; ~222M</p>
+<p>2020&nbsp;&nbsp;&nbsp;&nbsp; ~281M</p>
+<p>2024&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 286M (tahmin)</p>
+<p>Grafik, dünya genelinde uluslararası göçmen stokunun sürekli arttığını ve bu artışın gelecekte de devam etmesinin beklendiğini göstermektedir. 2024 tahminine göre, göçmen sayısı yaklaşık 286 milyona ulaşacaktır. Bu artış eğilimi, savaşlar, ekonomik eşitsizlikler, iklim değişikliği gibi küresel dinamiklerin göçü teşvik ettiğini ortaya koymaktadır.</p>
+</section>
+<section id="analiz-11" class="level1">
+<h1>Analiz-11</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb31-4"><a href="#cb31-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb31-5"><a href="#cb31-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb31-6"><a href="#cb31-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-7"><a href="#cb31-7" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Veriyi oku</span></span>
+<span id="cb31-8"><a href="#cb31-8" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb31-9"><a href="#cb31-9" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb31-10"><a href="#cb31-10" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">names</span>(df))  <span class="co"># boşlukları temizle</span></span>
+<span id="cb31-11"><a href="#cb31-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-12"><a href="#cb31-12" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Türkiye verisini filtrele ve temizle</span></span>
+<span id="cb31-13"><a href="#cb31-13" aria-hidden="true" tabindex="-1"></a>df_tr <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb31-14"><a href="#cb31-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Turkey"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb31-15"><a href="#cb31-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb31-16"><a href="#cb31-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Year =</span> <span class="fu">as.numeric</span>(Year),</span>
+<span id="cb31-17"><a href="#cb31-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Total =</span> <span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Both)</span><span class="st">`</span>)</span>
+<span id="cb31-18"><a href="#cb31-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb31-19"><a href="#cb31-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>(Year, Total)</span>
+<span id="cb31-20"><a href="#cb31-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-21"><a href="#cb31-21" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 2020 yılını ayrı al</span></span>
+<span id="cb31-22"><a href="#cb31-22" aria-hidden="true" tabindex="-1"></a>df_2020 <span class="ot">&lt;-</span> df_tr <span class="sc">%&gt;%</span> <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2020</span>)</span>
+<span id="cb31-23"><a href="#cb31-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-24"><a href="#cb31-24" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Grafik</span></span>
+<span id="cb31-25"><a href="#cb31-25" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_tr, <span class="fu">aes</span>(<span class="at">x =</span> Year, <span class="at">y =</span> Total)) <span class="sc">+</span></span>
+<span id="cb31-26"><a href="#cb31-26" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_line</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">linewidth =</span> <span class="fl">1.2</span>) <span class="sc">+</span></span>
+<span id="cb31-27"><a href="#cb31-27" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">size =</span> <span class="dv">2</span>) <span class="sc">+</span></span>
+<span id="cb31-28"><a href="#cb31-28" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(</span>
+<span id="cb31-29"><a href="#cb31-29" aria-hidden="true" tabindex="-1"></a>    <span class="at">data =</span> df_2020,</span>
+<span id="cb31-30"><a href="#cb31-30" aria-hidden="true" tabindex="-1"></a>    <span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(<span class="fu">round</span>(Total <span class="sc">/</span> <span class="fl">1e6</span>, <span class="dv">1</span>), <span class="st">"M"</span>)),</span>
+<span id="cb31-31"><a href="#cb31-31" aria-hidden="true" tabindex="-1"></a>    <span class="at">vjust =</span> <span class="sc">-</span><span class="dv">1</span>, <span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">size =</span> <span class="dv">4</span></span>
+<span id="cb31-32"><a href="#cb31-32" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-33"><a href="#cb31-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb31-34"><a href="#cb31-34" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>),</span>
+<span id="cb31-35"><a href="#cb31-35" aria-hidden="true" tabindex="-1"></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">8000000</span>)  <span class="co"># Y eksenini 0–8M arası sınırla</span></span>
+<span id="cb31-36"><a href="#cb31-36" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-37"><a href="#cb31-37" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb31-38"><a href="#cb31-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"1990–2020 Arası Türkiye'deki Göçmen Stoku"</span>,</span>
+<span id="cb31-39"><a href="#cb31-39" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yıl"</span>,</span>
+<span id="cb31-40"><a href="#cb31-40" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Toplam Göçmen Sayısı (Milyon)"</span></span>
+<span id="cb31-41"><a href="#cb31-41" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb31-42"><a href="#cb31-42" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-11-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Dikkat Çekici Artış:</p>
+<p>1990–2010 arası göçmen sayısı oldukça sabit (~1.3 milyon).</p>
+<p>2010–2020 arasında çok keskin bir artış gözlenmiş:</p>
+<p>2010: ~1.4 milyon</p>
+<p>2015: ~4.5 milyon</p>
+<p>2020: 6.1 milyon</p>
+<p>Toplam Artış:</p>
+<p>1990–2010: +0.2M (20 yılda küçük artış)</p>
+<p>2010–2020: +4.7M (10 yılda 3 kattan fazla artış)</p>
+<p>🧠 Olası Nedenler:</p>
+<p>2010 Sonrası Artışın Sebebi:</p>
+<p>Suriye İç Savaşı (2011 sonrası):</p>
+<p>Türkiye’ye kitlesel sığınmacı akını başlamıştır.</p>
+<p>Coğrafi Konum:</p>
+<p>Avrupa’ya geçiş noktası olarak stratejik bir yerde bulunması.</p>
+<p>Açık kapı politikası (özellikle ilk yıllarda)</p>
+<p>Geçici koruma statüsü ve kayıtlı göçmenlerin artışı</p>
+<p>Grafik Özellikleri:</p>
+<p>Kırmızı çizgi ile verilmiş trend net bir şekilde gözüküyor.</p>
+<p>2020 değeri açıkça vurgulanmış: 6.1 milyon</p>
+<p>Y-ekseni milyon cinsinden verilmiş ve değişimi rahat takip etmeyi sağlıyor.</p>
+<p>1990’dan 2010’a kadar Türkiye’deki göçmen stoku yaklaşık 1.3 milyon civarında sabit kalmışken, 2010 sonrası dönemde belirgin bir artış gözlemlenmiştir. Özellikle Suriye İç Savaşı’nın etkisiyle 2020 yılına gelindiğinde bu sayı 6.1 milyona ulaşmıştır. Bu dramatik artış, Türkiye’nin kriz bölgelerine yakınlığı ve göç rotası üzerindeki konumu ile açıklanabilir.</p>
+</section>
+<section id="analiz-12" class="level1">
+<h1>Analiz-12</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb32-6"><a href="#cb32-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(stringr)</span>
+<span id="cb32-7"><a href="#cb32-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales)</span>
+<span id="cb32-8"><a href="#cb32-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-9"><a href="#cb32-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Veri dosyasını oku</span></span>
+<span id="cb32-10"><a href="#cb32-10" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb32-11"><a href="#cb32-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb32-12"><a href="#cb32-12" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df) <span class="ot">&lt;-</span> <span class="fu">trimws</span>(<span class="fu">names</span>(df))  <span class="co"># Başlıklardaki boşlukları temizle</span></span>
+<span id="cb32-13"><a href="#cb32-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-14"><a href="#cb32-14" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Yaş grubu sütunlarını bul</span></span>
+<span id="cb32-15"><a href="#cb32-15" aria-hidden="true" tabindex="-1"></a>age_cols <span class="ot">&lt;-</span> <span class="fu">names</span>(df)[<span class="fu">str_detect</span>(<span class="fu">names</span>(df), <span class="st">"^[0-9]{1,2}-[0-9]{1,2} total$|^75</span><span class="sc">\\</span><span class="st">+ total$"</span>)]</span>
+<span id="cb32-16"><a href="#cb32-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-17"><a href="#cb32-17" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Türkiye'nin 2020 yılı yaş dağılımını al</span></span>
+<span id="cb32-18"><a href="#cb32-18" aria-hidden="true" tabindex="-1"></a>df_tr_age <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb32-19"><a href="#cb32-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span> <span class="sc">==</span> <span class="st">"Turkey"</span>, Year <span class="sc">==</span> <span class="dv">2020</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-20"><a href="#cb32-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="fu">all_of</span>(age_cols)) <span class="sc">%&gt;%</span></span>
+<span id="cb32-21"><a href="#cb32-21" aria-hidden="true" tabindex="-1"></a>  <span class="fu">pivot_longer</span>(<span class="at">cols =</span> <span class="fu">everything</span>(),</span>
+<span id="cb32-22"><a href="#cb32-22" aria-hidden="true" tabindex="-1"></a>               <span class="at">names_to =</span> <span class="st">"AgeGroup"</span>,</span>
+<span id="cb32-23"><a href="#cb32-23" aria-hidden="true" tabindex="-1"></a>               <span class="at">values_to =</span> <span class="st">"Count"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb32-24"><a href="#cb32-24" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb32-25"><a href="#cb32-25" aria-hidden="true" tabindex="-1"></a>    <span class="at">AgeGroup =</span> <span class="fu">str_replace</span>(AgeGroup, <span class="st">" total"</span>, <span class="st">""</span>),</span>
+<span id="cb32-26"><a href="#cb32-26" aria-hidden="true" tabindex="-1"></a>    <span class="at">Count =</span> <span class="fu">as.numeric</span>(Count),</span>
+<span id="cb32-27"><a href="#cb32-27" aria-hidden="true" tabindex="-1"></a>    <span class="at">CountM =</span> Count <span class="sc">/</span> <span class="fl">1e6</span>  <span class="co"># milyon cinsinden</span></span>
+<span id="cb32-28"><a href="#cb32-28" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb32-29"><a href="#cb32-29" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb32-30"><a href="#cb32-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb32-31"><a href="#cb32-31" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Grafik çiz</span></span>
+<span id="cb32-32"><a href="#cb32-32" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_tr_age, <span class="fu">aes</span>(<span class="at">x =</span> AgeGroup, <span class="at">y =</span> Count)) <span class="sc">+</span></span>
+<span id="cb32-33"><a href="#cb32-33" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">fill =</span> <span class="st">"steelblue"</span>) <span class="sc">+</span></span>
+<span id="cb32-34"><a href="#cb32-34" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">sprintf</span>(<span class="st">"%.1fM"</span>, CountM)),</span>
+<span id="cb32-35"><a href="#cb32-35" aria-hidden="true" tabindex="-1"></a>            <span class="at">vjust =</span> <span class="sc">-</span><span class="fl">0.5</span>, <span class="at">size =</span> <span class="fl">3.8</span>, <span class="at">color =</span> <span class="st">"black"</span>) <span class="sc">+</span></span>
+<span id="cb32-36"><a href="#cb32-36" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(</span>
+<span id="cb32-37"><a href="#cb32-37" aria-hidden="true" tabindex="-1"></a>    <span class="at">limits =</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="fl">8e5</span>),</span>
+<span id="cb32-38"><a href="#cb32-38" aria-hidden="true" tabindex="-1"></a>    <span class="at">labels =</span> <span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)</span>
+<span id="cb32-39"><a href="#cb32-39" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-40"><a href="#cb32-40" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb32-41"><a href="#cb32-41" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2020 Türkiye Göçmen Stoku - Yaş Gruplarına Göre Dağılım"</span>,</span>
+<span id="cb32-42"><a href="#cb32-42" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Yaş Grubu"</span>,</span>
+<span id="cb32-43"><a href="#cb32-43" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Göçmen Sayısı (Milyon)"</span></span>
+<span id="cb32-44"><a href="#cb32-44" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb32-45"><a href="#cb32-45" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>) <span class="sc">+</span></span>
+<span id="cb32-46"><a href="#cb32-46" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme</span>(<span class="at">axis.text.x =</span> <span class="fu">element_text</span>(<span class="at">angle =</span> <span class="dv">45</span>, <span class="at">hjust =</span> <span class="dv">1</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-12-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>🔹 En Yoğun Yaş Grupları:</p>
+<p>25–29 yaş ve 30–34 yaş aralıkları her biri ~0.7 milyon kişiyle en yüksek göçmen sayısına sahip.</p>
+<p>Ardından gelen gruplar:</p>
+<p>20–24 yaş → 0.6M</p>
+<p>35–39 yaş → 0.6M</p>
+<p>🟩 Bu gruplar, genel olarak çalışma çağındaki nüfusu temsil eder.</p>
+<p>🔹 Çocuk ve Ergen Grupları:</p>
+<p>0–4 yaş: 0.4M</p>
+<p>5–9 yaş: 0.3M</p>
+<p>10–14 yaş: 0.3M</p>
+<p>📌 Bu değerler, aile göçü veya doğum sonrası göçmen çocukların artışını işaret eder.</p>
+<p>🔹 Yaşlı Gruplar:</p>
+<p>65 yaş üzeri toplam: ~0.3M (dağıtılmış: 65–69, 70–74, 75+)</p>
+<p>Görece daha düşük: göçmenlerin yaşlı bireyleri daha az temsil ettiği anlaşılır.</p>
+<p>📈 Genel Dağılım Yorumu:</p>
+<p>Göçmen stokunun büyük kısmı 20–39 yaş aralığında yoğunlaşmaktadır.</p>
+<p>Bu durum, Türkiye’deki göçmen nüfusun çoğunlukla ekonomik nedenlerle gelen, genç ve üretken bireylerden oluştuğunu göstermektedir.</p>
+<p>Ayrıca, çocuk yaş gruplarındaki sayı da yüksek olduğundan, aile göçü veya çocuk doğumu sonrası kayıtlı nüfus etkisi de söz konusudur.</p>
+<p>2020 yılında Türkiye’deki göçmen nüfusu büyük oranda 20–39 yaş arasındaki bireylerden oluşmaktadır. Bu gruplar toplam göçmen stokunun yaklaşık yarısını oluştururken, 0–14 yaş arası çocuk göçmenler de önemli bir paya sahiptir. Yaşlı göçmen oranının oldukça düşük olması, Türkiye’nin daha çok çalışma çağındaki bireyleri çeken bir göç ülkesi olduğunu göstermektedir.</p>
+</section>
+<section id="analiz-13" class="level1">
+<h1>Analiz-13</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a href="#cb33-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Gerekli kütüphaneler</span></span>
+<span id="cb33-2"><a href="#cb33-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb33-3"><a href="#cb33-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb33-4"><a href="#cb33-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb33-5"><a href="#cb33-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-6"><a href="#cb33-6" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Dosya yolu</span></span>
+<span id="cb33-7"><a href="#cb33-7" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb33-8"><a href="#cb33-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb33-9"><a href="#cb33-9" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. AN2:BE2 hücre aralığından veriyi oku (sayıların olduğu satır)</span></span>
+<span id="cb33-10"><a href="#cb33-10" aria-hidden="true" tabindex="-1"></a>df_raw <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>, <span class="at">range =</span> <span class="st">"AN2:BE2"</span>, <span class="at">col_names =</span> <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>New names:
+• `` -&gt; `...1`
+• `` -&gt; `...2`
+• `` -&gt; `...3`
+• `` -&gt; `...4`
+• `` -&gt; `...5`
+• `` -&gt; `...6`
+• `` -&gt; `...7`
+• `` -&gt; `...8`
+• `` -&gt; `...9`
+• `` -&gt; `...10`
+• `` -&gt; `...11`
+• `` -&gt; `...12`
+• `` -&gt; `...13`
+• `` -&gt; `...14`
+• `` -&gt; `...15`
+• `` -&gt; `...16`
+• `` -&gt; `...17`
+• `` -&gt; `...18`</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb35"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb35-1"><a href="#cb35-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. Erkek ve kadın sayısını al</span></span>
+<span id="cb35-2"><a href="#cb35-2" aria-hidden="true" tabindex="-1"></a>male_count <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(df_raw[[<span class="dv">1</span>]])        <span class="co"># AN2 sütunu</span></span>
+<span id="cb35-3"><a href="#cb35-3" aria-hidden="true" tabindex="-1"></a>female_count <span class="ot">&lt;-</span> <span class="fu">as.numeric</span>(df_raw[[<span class="dv">18</span>]])     <span class="co"># BE2 sütunu</span></span>
+<span id="cb35-4"><a href="#cb35-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-5"><a href="#cb35-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Veri çerçevesi oluştur</span></span>
+<span id="cb35-6"><a href="#cb35-6" aria-hidden="true" tabindex="-1"></a>df_gender <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb35-7"><a href="#cb35-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Gender =</span> <span class="fu">c</span>(<span class="st">"Erkek"</span>, <span class="st">"Kadın"</span>),</span>
+<span id="cb35-8"><a href="#cb35-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Count =</span> <span class="fu">c</span>(male_count, female_count)</span>
+<span id="cb35-9"><a href="#cb35-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb35-10"><a href="#cb35-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb35-11"><a href="#cb35-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Pasta grafiği oluştur</span></span>
+<span id="cb35-12"><a href="#cb35-12" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_gender, <span class="fu">aes</span>(<span class="at">x =</span> <span class="st">""</span>, <span class="at">y =</span> Count, <span class="at">fill =</span> Gender)) <span class="sc">+</span></span>
+<span id="cb35-13"><a href="#cb35-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_col</span>(<span class="at">width =</span> <span class="dv">1</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb35-14"><a href="#cb35-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">coord_polar</span>(<span class="at">theta =</span> <span class="st">"y"</span>) <span class="sc">+</span></span>
+<span id="cb35-15"><a href="#cb35-15" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_text</span>(<span class="fu">aes</span>(<span class="at">label =</span> <span class="fu">paste0</span>(Gender, <span class="st">": "</span>, <span class="fu">round</span>(Count <span class="sc">/</span> <span class="fu">sum</span>(Count) <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">1</span>), <span class="st">"%"</span>)),</span>
+<span id="cb35-16"><a href="#cb35-16" aria-hidden="true" tabindex="-1"></a>            <span class="at">position =</span> <span class="fu">position_stack</span>(<span class="at">vjust =</span> <span class="fl">0.5</span>),</span>
+<span id="cb35-17"><a href="#cb35-17" aria-hidden="true" tabindex="-1"></a>            <span class="at">size =</span> <span class="dv">5</span>, <span class="at">color =</span> <span class="st">"white"</span>) <span class="sc">+</span></span>
+<span id="cb35-18"><a href="#cb35-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_fill_manual</span>(<span class="at">values =</span> <span class="fu">c</span>(<span class="st">"Kadın"</span> <span class="ot">=</span> <span class="st">"#FF6F61"</span>, <span class="st">"Erkek"</span> <span class="ot">=</span> <span class="st">"#4F9CD3"</span>)) <span class="sc">+</span></span>
+<span id="cb35-19"><a href="#cb35-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb35-20"><a href="#cb35-20" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"2020 Yılında Türkiye'deki Göçmen Nüfusunun Cinsiyete Göre Dağılımı"</span>,</span>
+<span id="cb35-21"><a href="#cb35-21" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="cn">NULL</span>, <span class="at">y =</span> <span class="cn">NULL</span>, <span class="at">fill =</span> <span class="st">"Cinsiyet"</span></span>
+<span id="cb35-22"><a href="#cb35-22" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb35-23"><a href="#cb35-23" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_void</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-13-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Veri Özeti:</p>
+<p>Cinsiyet&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Oran (%)</p>
+<p>Erkek&nbsp;&nbsp;&nbsp; 50.7%</p>
+<p>Kadın&nbsp;&nbsp;&nbsp; 49.3%</p>
+<p>🔍 Yorum ve Değerlendirme:</p>
+<p>🔹 1. Cinsiyet Dengesi Çok Yakın:</p>
+<p>Erkek göçmen oranı yalnızca %1.4 daha fazla.</p>
+<p>Bu, göçmenlerin önemli bir bölümünün aile göçü, uzun süreli yerleşim veya toplu sığınmacı hareketi kapsamında geldiğini düşündürür.</p>
+<p>🔹 2. Kadın Göçmenlerin Yüksek Oranı Önemlidir:</p>
+<p>Savaş, afet ve kriz göçlerinde kadınların sayısı genellikle daha düşüktür.</p>
+<p>Ancak Türkiye örneğinde, bu dengenin korunmuş olması:</p>
+<p>Sığınmacı kabul sürecinin aile temelli olması,</p>
+<p>Kadınların nüfus kaydına alınmasındaki etkinlik ile açıklanabilir.</p>
+<p>🔹 3. Geçici İş Gücü Göçünden Farklılık Gösterir:</p>
+<p>Örneğin Körfez ülkelerinde göçmen nüfusun %70–80’i erkek olur (tek başına çalışmaya gelenler).</p>
+<p>Türkiye’deki bu eşitlik, geçici işçi göçünden çok insani ve yerleşik göç tipinin baskın olduğunu gösterir.</p>
+<p>2020 yılı verilerine göre Türkiye’deki göçmen nüfusun %50,7’si erkek, %49,3’ü kadındır. Bu dengeli dağılım, göçmen hareketlerinin büyük ölçüde aile temelli ve uzun süreli yerleşime yönelik olduğunu göstermektedir. Cinsiyet farkının azlığı, Türkiye’nin sığınmacı kabul politikalarının birey değil, hane bazlı olduğunu da desteklemektedir.</p>
+</section>
+<section id="analiz-14" class="level1">
+<h1>Analiz-14</h1>
+<p>2020 – Yaş Gruplarının Boxplot</p>
+<p>R Kodu</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1. Dosya yolu</span></span>
+<span id="cb36-6"><a href="#cb36-6" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"C:/R-packages/undesa_pd_2020_ims_stock_by_age_sex_and_destination_2.xlsx"</span></span>
+<span id="cb36-7"><a href="#cb36-7" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-8"><a href="#cb36-8" aria-hidden="true" tabindex="-1"></a><span class="co"># 2. Veriyi oku</span></span>
+<span id="cb36-9"><a href="#cb36-9" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">sheet =</span> <span class="st">"Table 1"</span>)</span>
+<span id="cb36-10"><a href="#cb36-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-11"><a href="#cb36-11" aria-hidden="true" tabindex="-1"></a><span class="co"># 3. 2020 yılı ve ülke bazlı veriyi al</span></span>
+<span id="cb36-12"><a href="#cb36-12" aria-hidden="true" tabindex="-1"></a>df_corr <span class="ot">&lt;-</span> df <span class="sc">%&gt;%</span></span>
+<span id="cb36-13"><a href="#cb36-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(Year <span class="sc">==</span> <span class="dv">2020</span>, Area <span class="sc">==</span> <span class="st">"Country"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb36-14"><a href="#cb36-14" aria-hidden="true" tabindex="-1"></a>  <span class="fu">mutate</span>(</span>
+<span id="cb36-15"><a href="#cb36-15" aria-hidden="true" tabindex="-1"></a>    <span class="at">Male =</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Males)</span><span class="st">`</span>)),</span>
+<span id="cb36-16"><a href="#cb36-16" aria-hidden="true" tabindex="-1"></a>    <span class="at">Female =</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(<span class="st">`</span><span class="at">Total(Females)</span><span class="st">`</span>)),</span>
+<span id="cb36-17"><a href="#cb36-17" aria-hidden="true" tabindex="-1"></a>    <span class="at">Country =</span> <span class="st">`</span><span class="at">Region, development group, country</span><span class="st">`</span></span>
+<span id="cb36-18"><a href="#cb36-18" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">%&gt;%</span></span>
+<span id="cb36-19"><a href="#cb36-19" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(Country, Male, Female) <span class="sc">%&gt;%</span></span>
+<span id="cb36-20"><a href="#cb36-20" aria-hidden="true" tabindex="-1"></a>  <span class="fu">drop_na</span>()</span>
+<span id="cb36-21"><a href="#cb36-21" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-22"><a href="#cb36-22" aria-hidden="true" tabindex="-1"></a><span class="co"># 4. Korelasyon katsayısını hesapla</span></span>
+<span id="cb36-23"><a href="#cb36-23" aria-hidden="true" tabindex="-1"></a>correlation <span class="ot">&lt;-</span> <span class="fu">cor</span>(df_corr<span class="sc">$</span>Male, df_corr<span class="sc">$</span>Female, <span class="at">method =</span> <span class="st">"pearson"</span>)</span>
+<span id="cb36-24"><a href="#cb36-24" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="fu">paste</span>(<span class="st">"Kadın ve erkek göçmen sayıları arasındaki Pearson korelasyon katsayısı:"</span>, <span class="fu">round</span>(correlation, <span class="dv">3</span>)))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "Kadın ve erkek göçmen sayıları arasındaki Pearson korelasyon katsayısı: 0.97"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5. Scatter plot + regresyon çizgisi</span></span>
+<span id="cb38-2"><a href="#cb38-2" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(df_corr, <span class="fu">aes</span>(<span class="at">x =</span> Male, <span class="at">y =</span> Female)) <span class="sc">+</span></span>
+<span id="cb38-3"><a href="#cb38-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_point</span>(<span class="at">color =</span> <span class="st">"darkblue"</span>, <span class="at">size =</span> <span class="dv">2</span>, <span class="at">alpha =</span> <span class="fl">0.7</span>) <span class="sc">+</span></span>
+<span id="cb38-4"><a href="#cb38-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">geom_smooth</span>(<span class="at">method =</span> <span class="st">"lm"</span>, <span class="at">se =</span> <span class="cn">FALSE</span>, <span class="at">color =</span> <span class="st">"firebrick"</span>, <span class="at">linewidth =</span> <span class="dv">1</span>) <span class="sc">+</span></span>
+<span id="cb38-5"><a href="#cb38-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">labs</span>(</span>
+<span id="cb38-6"><a href="#cb38-6" aria-hidden="true" tabindex="-1"></a>    <span class="at">title =</span> <span class="st">"Kadın ve Erkek Göçmen Sayıları Arasındaki İlişki (2020)"</span>,</span>
+<span id="cb38-7"><a href="#cb38-7" aria-hidden="true" tabindex="-1"></a>    <span class="at">subtitle =</span> <span class="fu">paste</span>(<span class="st">"Pearson korelasyon katsayısı:"</span>, <span class="fu">round</span>(correlation, <span class="dv">3</span>)),</span>
+<span id="cb38-8"><a href="#cb38-8" aria-hidden="true" tabindex="-1"></a>    <span class="at">x =</span> <span class="st">"Erkek Göçmen Sayısı"</span>,</span>
+<span id="cb38-9"><a href="#cb38-9" aria-hidden="true" tabindex="-1"></a>    <span class="at">y =</span> <span class="st">"Kadın Göçmen Sayısı"</span></span>
+<span id="cb38-10"><a href="#cb38-10" aria-hidden="true" tabindex="-1"></a>  ) <span class="sc">+</span></span>
+<span id="cb38-11"><a href="#cb38-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_x_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)) <span class="sc">+</span></span>
+<span id="cb38-12"><a href="#cb38-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">scale_y_continuous</span>(<span class="at">labels =</span> scales<span class="sc">::</span><span class="fu">label_number</span>(<span class="at">scale =</span> <span class="fl">1e-6</span>, <span class="at">suffix =</span> <span class="st">"M"</span>)) <span class="sc">+</span></span>
+<span id="cb38-13"><a href="#cb38-13" aria-hidden="true" tabindex="-1"></a>  <span class="fu">theme_minimal</span>(<span class="at">base_size =</span> <span class="dv">13</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>`geom_smooth()` using formula = 'y ~ x'</code></pre>
+</div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="proje_files/figure-html/unnamed-chunk-14-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+</div>
+<p>Grafik, her bir noktanın bir ülkeyi temsil ettiği ve X ekseninde erkek, Y ekseninde kadın göçmen sayılarının gösterildiği bir dağılım (scatter) grafiğidir.</p>
+<p>Noktaların regresyon çizgisine çok yakın dağılması, değişkenler arasında güçlü ve doğrusal bir ilişki olduğunu gösterir.</p>
+<p>Pearson korelasyon katsayısı 0.97 olarak bulunmuştur. Bu, kadın ve erkek göçmen sayılarının ülkeler bazında büyük ölçüde birlikte arttığını ve aralarında pozitif yönlü, çok güçlü bir korelasyon olduğunu gösterir.</p>
+<p>Bu durum, göçmen kabul eden ülkelerde genellikle her iki cinsiyetin de benzer oranlarda temsil edildiğini işaret eder.</p>
 </section>
 <section id="sonuçlar-ve-ana-çıkarımlar" class="level1">
 <h1>Sonuçlar ve Ana Çıkarımlar</h1>
+<section id="genel-bulgular-dünya-geneli" class="level3">
+<h3 class="anchored" data-anchor-id="genel-bulgular-dünya-geneli"><strong>Genel Bulgular (Dünya Geneli)</strong></h3>
+<ol type="1">
+<li><p><strong>ABD lider konumda</strong>: Yaklaşık <strong>50.6 milyon göçmenle</strong> en çok göç alan ülkedir. Almanya’nın 3 katı kadar göçmene sahiptir.</p>
+<p><strong>Avrupa ülkeleri göç merkezi</strong>: Almanya, Birleşik Krallık, Fransa, İtalya, İspanya gibi ülkeler göçmen sayısında üst sıralardadır. Bu ülkelerde iş gücü ve sığınma politikaları etkili olmuştur.</p>
+<p><strong>Körfez ülkelerinde erkek göçmen yoğunluğu</strong>:</p>
+<ul>
+<li><p>Suudi Arabistan (%68 erkek)</p>
+<p>BAE (%74 erkek)<br>
+Bu ülkelerde göçmenlerin çoğu geçici işçi niteliğindedir.</p>
+<p><strong>Kadın-erkek dağılımı genellikle dengeli</strong>:</p></li>
+<li><p>Dünya genelinde: %51.9 erkek, %48.1 kadın</p>
+<p>Türkiye özelinde: %50.7 erkek, %49.3 kadın<br>
+Bu denge, aile temelli göç ve insani göçlerin varlığına işaret eder.</p>
+<p><strong>Göçmenler çoğunlukla 20–39 yaş aralığında</strong>:<br>
+Bu yaş grubu, toplam göçmen stokunun en büyük kısmını oluşturmaktadır. Çalışma, eğitim ve ekonomik nedenlerin ön planda olduğunu göstermektedir.</p></li>
+</ul></li>
+</ol>
+</section>
+<section id="türkiye-özelinde-bulgular" class="level3">
+<h3 class="anchored" data-anchor-id="türkiye-özelinde-bulgular">🇹🇷 <strong>Türkiye Özelinde Bulgular</strong></h3>
+<ol type="1">
+<li><p><strong>Göçmen sayısında keskin artış</strong>:</p>
+<p>1990–2010: Göçmen stoku sabit (~1.3M)</p>
+<p>2010–2020: Göçmen sayısı 6.1 milyona ulaştı<br>
+➤ Bu artışın başlıca nedeni Suriye iç savaşıdır.</p>
+<p><strong>Yaş dağılımı</strong>:</p>
+<ul>
+<li><p>En çok göçmen 25–34 yaş aralığında.</p>
+<p>0–14 yaş arası çocuk göçmen oranı da yüksektir.</p>
+<p>65 yaş üstü göçmen sayısı düşüktür.<br>
+➤ Genç ve aile göçü profili baskındır.</p>
+<p><strong>Cinsiyet dengesi çok yakın</strong>:<br>
+Türkiye’deki göçmenlerin neredeyse yarısı kadındır. Bu, Türkiye’nin insani ve aile bazlı göç kabulü yaptığını göstermektedir.</p></li>
+</ul>
+<p><strong>Trend ve Korelasyon Çıkarımları</strong></p></li>
+</ol>
+<ul>
+<li><p>1990–2020 arasında dünya genelindeki göçmen sayısı <strong>%85 artış göstermiştir</strong> (152 milyondan 280 milyona).</p>
+<p><strong>2024 yılı tahmini</strong>: 286 milyon (doğrusal regresyon modeliyle)</p>
+<p><strong>Kadın ve erkek göçmen sayıları arasında yüksek korelasyon</strong>: Pearson katsayısı <strong>0.97</strong><br>
+➤ Cinsiyetler arasında göç eğilimleri ülkeler genelinde birlikte artmaktadır.</p></li>
+</ul>
 
 
+</section>
 </section>
 
 <a onclick="window.scrollTo(0, 0); return false;" role="button" id="quarto-back-to-top"><i class="bi bi-arrow-up"></i> Back to top</a></main> <!-- /main -->
