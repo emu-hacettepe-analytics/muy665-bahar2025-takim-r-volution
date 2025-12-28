@@ -1,12 +1,12 @@
 ---
-title: "MELiH OZEN "
+title: "MELİH OZEN"
 ---
 
 ![](/assets/images/vesikalik.jpeg){fig-align="center"}
 
 # Egitim
 
--   Lisans, Makine Muhendisligi, Gaziantep universitesi, Turkiye, 2008 - 2013.
+-   Lisans, Makine Mühendisliği , Gaziantep Üniversitesi, Turkiye, 2008 - 2013.
 -   Yuksek Lisans, Endustri Muhendisligi, Hacettepe universitesi, Turkiye, 2024 - devam ediyor.
 
 # is Deneyimi
