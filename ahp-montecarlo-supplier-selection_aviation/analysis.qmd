@@ -1,0 +1,744 @@
+---
+title: "Monte Carlo & Tornado Sensitivity (AHP Supplier Selection)"
+author: "Yiğit Boran"
+date: today
+format:
+  html:
+    toc: true
+    number-sections: true
+execute:
+  echo: true
+  warning: false
+  message: false
+freeze: auto
+---
+
+## 1) Monte Carlo Simülasyonu Yöntemi
+Bu çalışmada, AHP yöntemi ile elde edilen deterministik tedarikçi sıralamasının belirsizlikler altındaki sağlamlığını değerlendirmek amacıyla Monte Carlo simülasyonu uygulanmıştır. Simülasyon sürecinde iki temel belirsizlik kaynağı dikkate alınmıştır: (i) tedarikçi performans puanlarındaki belirsizlik ve (ii) kriter ağırlıklarındaki belirsizlik.
+Tedarikçi performans puanlarındaki belirsizlik, her bir alt kriter için 0–5 ölçeğinde belirlenen ortalama puan etrafında ±0,5 yarı aralıklı üçgen dağılım kullanılarak modellenmiştir. Kriter ağırlıklarındaki belirsizlik ise, AHP yöntemiyle elde edilen ortalama ağırlık vektörü merkez alınarak Drichlet dağılımı ile temsil edilmiştir. Drichlet dağılımı için k = 300 parametresi kullanılmış olup, bu değer uzman yargılarının görece güvenilir olduğu ancak tamamen deterministik kabul edilmediği bir durumu temsil etmektedir.
+Monte Carlo simülasyonları, sonuçların istatistiksel olarak kararlı ve karşılaştırılabilir olmasını sağlamak amacıyla tüm senaryolarda 50.000 iterasyon kullanılarak gerçekleştirilmiştir. Aynı iterasyon sayısının kullanılması, farklı analizler arasında tutarlılık ve metodolojik bütünlük sağlamaktadır.
+
+## 2) Kurulum ve veri okuma
+
+```{r}
+rm(list = ls())
+
+library(readxl)
+library(dplyr)
+library(tidyr)
+library(ggplot2)
+library(tibble)
+
+file_path <- "data/supplier_scores.xlsx"
+
+df <- read_excel(file_path, .name_repair = "unique") %>%
+  select(-matches("^\\.\\.\\."))
+
+names(df)
+glimpse(df)
+df %>% head(5)
+
+w_raw <- suppressWarnings(as.numeric(df[["Global_Weight_%"]]))
+
+# yüzde (0-100) mi, oran (0-1) mı?
+
+w0 <- if (all(w_raw <= 1, na.rm = TRUE)) w_raw else w_raw/100
+
+# normalize (toplam 1)
+
+w0 <- w0 / sum(w0, na.rm = TRUE)
+
+m <- length(w0)
+
+tibble(
+m = m,
+weight_sum = sum(w0, na.rm = TRUE),
+min_w = min(w0, na.rm = TRUE),
+max_w = max(w0, na.rm = TRUE)
+)
+B_score <- "Supplier2_Score"
+D_score <- "Supplier4_Score"
+
+muB <- suppressWarnings(as.numeric(df[[B_score]]))
+muD <- suppressWarnings(as.numeric(df[[D_score]]))
+
+crit_label <- if ("Sub_Criterion" %in% names(df)) df$Sub_Criterion else paste0("C", seq_len(nrow(df)))
+main_map   <- if ("Main_Criterion" %in% names(df)) df$Main_Criterion else rep("MAIN", nrow(df))
+
+clamp <- function(x, lo=1, hi=5) pmax(lo, pmin(hi, x))
+
+rtriangle <- function(n, a, c, b) {
+u <- runif(n)
+Fc <- (c - a) / (b - a)
+ifelse(u < Fc,
+a + sqrt(u * (b - a) * (c - a)),
+b - sqrt((1 - u) * (b - a) * (b - c)))
+}
+
+rdirichlet_mat <- function(n, alpha) {
+K <- length(alpha)
+X <- matrix(rgamma(n*K, shape=alpha, rate=1), nrow=n, ncol=K, byrow=TRUE)
+X / rowSums(X)
+}
+
+tibble(
+score_columns = paste(B_score, D_score, sep = " vs "),
+n_criteria = m,
+has_Sub_Criterion = "Sub_Criterion" %in% names(df),
+has_Main_Criterion = "Main_Criterion" %in% names(df)
+)
+set.seed(42)
+
+N <- 50000
+kappa <- 300
+half_range <- 0.5
+
+alpha <- w0 * kappa                 # Dirichlet parametreleri
+W <- rdirichlet_mat(N, alpha)       # N x m ağırlık matrisi
+
+SB <- sapply(seq_len(m), function(j) {
+  clamp(
+    rtriangle(N, muB[j] - half_range, muB[j], muB[j] + half_range),
+    1, 5
+  )
+})
+
+SD <- sapply(seq_len(m), function(j) {
+  clamp(
+    rtriangle(N, muD[j] - half_range, muD[j], muD[j] + half_range),
+    1, 5
+  )
+})
+
+delta <- SB - SD
+gap   <- rowSums(W * delta)
+
+tibble(
+N = N,
+kappa = kappa,
+half_range = half_range,
+mean_gap = mean(gap),
+p_B_beats_D = mean(gap > 0),
+gap_p05 = unname(quantile(gap, 0.05)),
+gap_p95 = unname(quantile(gap, 0.95))
+)
+drivers <- W * delta
+
+corr <- sapply(seq_len(m), function(j) {
+  cor(drivers[, j], gap, use = "complete.obs")
+})
+
+tornado_corr <- tibble(
+Criterion = crit_label,
+Correlation = corr,
+AbsCorrelation = abs(corr)
+) %>%
+arrange(desc(AbsCorrelation))
+
+top10 <- tornado_corr %>% slice(1:10)
+top10
+
+ggplot(top10, aes(x = AbsCorrelation, y = reorder(Criterion, AbsCorrelation))) +
+geom_col() +
+labs(title="Tornado (Sensitivity) – Top 10 Drivers",
+x="|Correlation with (B–D) gap|", y=NULL)
+ggplot(top10, aes(x = Correlation, y = reorder(Criterion, AbsCorrelation))) +
+geom_col() +
+geom_vline(xintercept = 0, linetype="dashed") +
+labs(title="Signed Drivers of (B–D) gap (Top 10)",
+x="Correlation", y=NULL)
+
+gap_contrib <- W * (SB - SD)
+
+main_contrib_df <- lapply(unique(main_map), function(mc) {
+idx <- which(main_map == mc)
+contrib_iter <- rowSums(gap_contrib[, idx, drop = FALSE])
+data.frame(
+Main_Criterion = mc,
+MeanAbsContribution = mean(abs(contrib_iter))
+)
+}) %>%
+bind_rows() %>%
+arrange(desc(MeanAbsContribution))
+
+main_contrib_top6 <- main_contrib_df %>% slice(1:6)
+main_contrib_top6
+
+ggplot(main_contrib_top6,
+aes(x = MeanAbsContribution,
+y = reorder(Main_Criterion, MeanAbsContribution))) +
+geom_col() +
+labs(title = "Tornado – Main-criterion Sensitivity (Top 6)",
+x = "Mean(|contribution|) to (B–D) gap",
+y = NULL)
+main_contrib_df
+
+```
+
+## 3) Monte Carlo Simülasyon Sonuçları
+
+Gerçekleştirilen 50.000 Monte Carlo iterasyonu sonucunda, dört tedarikçi için toplam performans skorları ve en iyi alternatif olma olasılıkları hesaplanmıştır. Sonuçlar, deterministik AHP sıralaması ile büyük ölçüde tutarlıdır.
+Elde edilen bulgulara göre SupplierB, yaklaşık %65–66 oranında en iyi alternatif olarak seçilmiş ve en yüksek seçilme olasılığına sahip tedarikçi olmuştur. SupplierD ise yaklaşık %34–35 oranında ikinci sırada yer almıştır. SupplierA ve SupplierC ise simülasyon koşulları altında hiçbir iterasyonda en iyi alternatif olarak seçilmemiştir.
+Bu sonuçlar, kararın esas olarak iki güçlü tedarikçi (SupplierB ve SupplierD) arasında şekillendiğini ve belirsizlikler dikkate alındığında dahi lider alternatifin değişmediğini göstermektedir. Monte Carlo simülasyonu sonuçlarının deterministik AHP sıralaması ile uyumlu olması, önerilen karar modelinin belirsizlikler altında sağlam (robust) olduğunu ortaya koymaktadır.
+Tornado tipi duyarlılık analizi sonuçları incelendiğinde, karar sonucunun özellikle Management Commitment, Health & Safety, Time and Budget ile System Engineering & Verification kriterlerine yüksek derecede duyarlı olduğu görülmektedir. Bu bulgu, literatürde WCM ve WPI yaklaşımlarında vurgulanan kritik başarı faktörleri ile yüksek uyum göstermektedir.
+WCM yaklaşımına göre, yönetim kararlılığı ve liderlik desteği, tüm iyileştirme faaliyetleri için çarpan etkisi yaratan temel bir unsurdur. Benzer şekilde, zaman ve bütçe yönetimi; mühendislik, kalite ve organizasyonel iyileştirme projelerinin sürdürülebilirliğini doğrudan etkilemektedir.
+Bu bağlamda, Monte Carlo simülasyonu ve tornado analizi sonuçlarının belirli kriterler etrafında yoğunlaşması tesadüfi olmayıp, WCM literatüründe tanımlanan sistemik etki mekanizmaları ile tutarlıdır. Elde edilen sonuçlar, karar modelinin teorik altyapı ile uyumlu çalıştığını göstermektedir.
+Bu çalışmanın önemli çıktılarından biri, kriterlerin yalnızca göreli ağırlıklarının değil, aynı zamanda mevcut olgunluk seviyeleri ve tedarikçi performansları ile birlikte değerlendirilmiş olmasıdır. WCM yaklaşımında kriterler, reaktif seviyeden dünya klasmanına kadar uzanan olgunluk seviyeleri ile tanımlanmaktadır.
+AHP yöntemi ile elde edilen kriter ağırlıkları, hangi alanların karar açısından daha kritik olduğunu ortaya koyarken; tedarikçi performans puanları bu alanlardaki mevcut durumu göstermektedir. Monte Carlo simülasyonu ise, bu iki boyut arasındaki belirsizliği ve risk seviyesini nicel olarak değerlendirme imkânı sunmaktadır.
+Bu bütüncül yaklaşım sayesinde, yüksek ağırlığa sahip ancak olgunluk seviyesi görece düşük olan kriterler, stratejik iyileştirme açısından öncelikli alanlar olarak belirlenebilmektedir. Özellikle Management Commitment, Program Management ve People Development gibi kriterler, iyileştirme yatırımlarının en yüksek geri dönüşü sağlayabileceği alanlar olarak öne çıkmaktadır.
+Bu yönüyle çalışma, WCM literatüründe yer alan olgunluk değerlendirmelerini, nicel ağırlıklandırma ve belirsizlik temelli analizlerle tamamlayan özgün bir karar destek modeli sunmaktadır.
+
+## 4) Tornado Duyarlılık Analizleri
+
+Tornado grafiği, karar sonucunun en duyarlı olduğu alt kriterleri göstermektedir. Analiz sonuçlarına göre, kararın en fazla etkilendiği alt kriterler sırasıyla Time and Budget, Health & Safety, RMST ve System Engineering & Verification olarak belirlenmiştir. Bu kriterler, iki önde gelen tedarikçi arasındaki skor farkının büyük bölümünü açıklamaktadır.
+Daha düşük ağırlığa sahip veya tedarikçiler arasında benzer puanlanan kriterlerin karar üzerindeki etkisinin sınırlı olduğu görülmüştür. Bu durum, modelin kritik ve karar verici öneme sahip kriterlere odaklandığını göstermektedir.
+
+Alt kriter düzeyinde elde edilen katkılar, ana kriter seviyesinde toplanarak analiz edilmiştir. Şekilde sunulan ana kriter tornado grafiği, karar değişkenliğinin en çok Cost & Resource Management ve Quality ana kriterlerinden kaynaklandığını göstermektedir. Bu bulgu, havacılık sektöründe tedarikçi seçiminde zaman, bütçe, emniyet ve kalite boyutlarının belirleyici rolünü bir kez daha doğrulamaktadır.
+
+## 5) Genel Değerlendirme
+
+Monte Carlo simülasyonu ve tornado tipi duyarlılık analizi sonuçları birlikte değerlendirildiğinde, önerilen AHP tabanlı tedarikçi değerlendirme modelinin belirsizlikler altında dahi tutarlı ve güvenilir sonuçlar ürettiği görülmektedir. Kararın, düşük etkili kriterlerden ziyade zaman, bütçe, emniyet ve teknik olgunluk gibi kritik boyutlar tarafından yönlendirilmesi, modelin sektörel gerçekliklerle uyumlu olduğunu göstermektedir.
+
+Elde edilen sonuçlar doğrultusunda, SupplierB birincil tedarikçi olarak önerilirken, SupplierD güçlü bir ikinci kaynak (secondary supplier) olarak değerlendirilebilir. Bu yaklaşım, tedarik zinciri sürekliliği ve risk yönetimi açısından da önemli bir avantaj sağlamaktadır.
+
+---
+title: "AHP – Sistem Baş Mühendisi"
+format:
+  html:
+    toc: true
+    number-sections: true
+---
+
+## Amaç
+
+Bu bölümde, Sistem Baş Mühendisi tarafından yapılan ikili karşılaştırmalar
+Analitik Hiyerarşi Prosesi (AHP) yöntemi kullanılarak analiz edilmiştir.
+Amaç, kriterlerin göreli önem ağırlıklarını belirlemek ve tutarlılığı
+kontrol etmektir.
+
+## Kullanılan Kriterler
+
+- Teknik  
+- Tedarik ve Operasyon  
+- Stratejik İyileştirme  
+- Maliyet ve Kaynak Yönetimi  
+- Organizasyonel Yönetim  
+- Kalite  
+
+## AHP Hesaplamaları
+
+```{r}
+# =========================
+# AHP - Sistem Baş Mühendisi
+# =========================
+
+# 1) Kriter isimleri (sıra önemli!)
+kriterler <- c(
+  "teknik",
+  "tedarik ve operasyon",
+  "stratejik iyilestirme",
+  "maliyet ve kaynak yonetimi",
+  "organizasyonel yonetim",
+  "kalite"
+)
+
+# 2) Ikili karsilastirma matrisi (6x6)
+M_sistem <- matrix(c(
+  1,    3,    7,    3,    7,    5,
+  1/3,  1,    2,    1,    3,    3,
+  1/7,  0.5,  1,    1,    1,    1,
+  1/3,  1,    1,    1,    1,    2,
+  1/7,  1/3,  1,    1,    1,    1,
+  0.2,  1/3,  1,    0.5,  1,    1
+), nrow = 6, byrow = TRUE,
+dimnames = list(kriterler, kriterler))
+
+# 3) AHP agirlik hesaplama (Eigenvector)
+ahp_weights <- function(M){
+  ev <- eigen(M)
+  w <- Re(ev$vectors[,1])
+  w <- w / sum(w)
+  setNames(as.numeric(w), colnames(M))
+}
+
+# 4) Tutarlilik (lambda_max, CI, CR)
+ahp_consistency <- function(M){
+  n <- nrow(M)
+  ev <- eigen(M)
+  lambda_max <- Re(ev$values[1])
+  CI <- (lambda_max - n) / (n - 1)
+
+  RI <- c(0, 0, 0.58, 0.90, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49)
+  CR <- CI / RI[n]
+
+  list(lambda_max = lambda_max, CI = CI, CR = CR)
+}
+
+# 5) Hesapla
+w_sistem <- ahp_weights(M_sistem)
+cons_sistem <- ahp_consistency(M_sistem)
+
+# 6) Sonuc tablosu
+sonuc_sistem <- data.frame(
+  Kriter = names(w_sistem),
+  Agirlik = as.numeric(w_sistem),
+  Yuzde = 100 * as.numeric(w_sistem)
+)
+
+# Dense-rank (base R uyumlu)
+sonuc_sistem$Agirlik_r <- round(sonuc_sistem$Agirlik, 8)
+sonuc_sistem$Sira <- match(
+  -sonuc_sistem$Agirlik_r,
+  sort(unique(-sonuc_sistem$Agirlik_r))
+)
+
+sonuc_sistem <- sonuc_sistem[
+  order(sonuc_sistem$Sira, -sonuc_sistem$Agirlik_r),
+]
+
+sonuc_sistem$Agirlik_r <- NULL
+
+sonuc_sistem
+
+cat("Lambda max:", round(cons_sistem$lambda_max, 4), "\n")
+cat("CI:", round(cons_sistem$CI, 4), "\n")
+cat("CR (%):", round(cons_sistem$CR * 100, 2), "\n")
+# =========================
+# AHP - Program Yöneticisi
+# =========================
+
+# 1) Bu değerlendiricinin matrisine ait GERÇEK kriter sırası
+kriterler_program <- c(
+  "teknik",
+  "tedarik ve operasyon",
+  "organizasyonel yonetim",
+  "maliyet ve kaynak yonetimi",
+  "kalite",
+  "stratejik iyilestirme"
+)
+
+# 2) Ikili karsilastirma matrisi (6x6)
+M_program <- matrix(c(
+  1,    3,    3,    3,    3,    7,
+  1/3,  1,    1,    1,    1,    5,
+  1/3,  1,    1,    1,    1,    5,
+  1/3,  1,    1,    1,    1,    5,
+  1/3,  1,    1,    1,    1,    5,
+  1/7,  0.2,  0.2,  0.2,  0.2,  1
+), nrow = 6, byrow = TRUE,
+dimnames = list(kriterler_program, kriterler_program))
+
+# 3) AHP agirlik (Eigenvector)
+ahp_weights <- function(M){
+  ev <- eigen(M)
+  w <- Re(ev$vectors[,1])
+  w <- w / sum(w)
+  setNames(as.numeric(w), colnames(M))
+}
+
+# 4) Tutarlilik (lambda_max, CI, CR)
+ahp_consistency <- function(M){
+  n <- nrow(M)
+  ev <- eigen(M)
+  lambda_max <- Re(ev$values[1])
+  CI <- (lambda_max - n) / (n - 1)
+
+  RI <- c(0, 0, 0.58, 0.90, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49)
+  CR <- CI / RI[n]
+
+  list(lambda_max = lambda_max, CI = CI, CR = CR)
+}
+
+# 5) Dense rank (base R uyumlu)
+dense_rank_safe <- function(x, digits = 8){
+  xr <- round(x, digits)
+  match(-xr, sort(unique(-xr)))
+}
+
+# 6) Hesapla
+w_program <- ahp_weights(M_program)
+cons_program <- ahp_consistency(M_program)
+
+sonuc_program <- data.frame(
+  Kriter = names(w_program),
+  Agirlik = as.numeric(w_program),
+  Yuzde = 100 * as.numeric(w_program)
+)
+
+sonuc_program$Sira <- dense_rank_safe(sonuc_program$Agirlik)
+sonuc_program <- sonuc_program[order(sonuc_program$Sira, -sonuc_program$Agirlik), ]
+
+print("=== Program Yöneticisi AHP Sonuçları ===")
+sonuc_program
+
+cat("\n=== Tutarlılık Sonuçları ===\n")
+cat("lambda_max:", round(cons_program$lambda_max, 6), "\n")
+cat("CI:", round(cons_program$CI, 6), "\n")
+cat("CR:", round(cons_program$CR * 100, 2), "%\n")
+
+# =========================
+# AHP - Altsözleşme
+# =========================
+
+# 1) Bu değerlendiricinin matrisine ait kriter sırası
+kriterler_alt <- c(
+  "teknik",
+  "maliyet ve kaynak yonetimi",
+  "kalite",
+  "organizasyonel yonetim",
+  "tedarik ve operasyon",
+  "stratejik iyilestirme"
+)
+
+# 2) Ikili karsilastirma matrisi (6x6)
+M_alt <- matrix(c(
+  1,    1,    1,    3,    3,    5,
+  1,    1,    1,    3,    3,    5,
+  1,    1,    1,    3,    3,    5,
+  1/3,  1/3,  1/3,  1,    1,    3,
+  1/3,  1/3,  1/3,  1,    1,    3,
+  0.2,  0.2,  0.2,  1/3,  1/3,  1
+), nrow = 6, byrow = TRUE,
+dimnames = list(kriterler_alt, kriterler_alt))
+
+# 3) AHP agirlik (Eigenvector)
+ahp_weights <- function(M){
+  ev <- eigen(M)
+  w <- Re(ev$vectors[,1])
+  w <- w / sum(w)
+  setNames(as.numeric(w), colnames(M))
+}
+
+# 4) Tutarlilik (lambda_max, CI, CR)
+ahp_consistency <- function(M){
+  n <- nrow(M)
+  ev <- eigen(M)
+  lambda_max <- Re(ev$values[1])
+  CI <- (lambda_max - n) / (n - 1)
+
+  RI <- c(0, 0, 0.58, 0.90, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49)
+  CR <- CI / RI[n]
+
+  list(lambda_max = lambda_max, CI = CI, CR = CR)
+}
+
+# 5) Dense rank (base R uyumlu)
+dense_rank_safe <- function(x, digits = 8){
+  xr <- round(x, digits)
+  match(-xr, sort(unique(-xr)))
+}
+
+# 6) Hesapla
+w_alt <- ahp_weights(M_alt)
+cons_alt <- ahp_consistency(M_alt)
+
+sonuc_alt <- data.frame(
+  Kriter = names(w_alt),
+  Agirlik = as.numeric(w_alt),
+  Yuzde = 100 * as.numeric(w_alt)
+)
+
+sonuc_alt$Sira <- dense_rank_safe(sonuc_alt$Agirlik)
+sonuc_alt <- sonuc_alt[order(sonuc_alt$Sira, -sonuc_alt$Agirlik), ]
+
+print("=== AHP Sonuclari (Altsözleşme) ===")
+print(sonuc_alt)
+
+cat("\n=== Tutarlilik Sonuclari ===\n")
+cat("lambda_max:", round(cons_alt$lambda_max, 6), "\n")
+cat("CI:", round(cons_alt$CI, 6), "\n")
+cat("CR:", round(cons_alt$CR * 100, 2), "%\n")
+
+# =========================
+# AHP - Kalite Yönetimi
+# =========================
+
+# 1) Bu değerlendiricinin matrisine ait kriter sırası
+kriterler_kalite <- c(
+  "teknik",
+  "tedarik ve operasyon",
+  "organizasyonel yonetim",
+  "kalite",
+  "maliyet ve kaynak yonetimi",
+  "stratejik iyilestirme"
+)
+
+# 2) Ikili karsilastirma matrisi (6x6)
+M_kalite <- matrix(c(
+  1,    3,    3,    5,    3,    5,
+  1/3,  1,    1,    5,    1,    3,
+  1/3,  1,    1,    2,    1,    3,
+  0.2,  0.2,  0.5,  1,    1,    1,
+  1/3,  1,    1,    1,    1,    1,
+  0.2,  1/3,  1/3,  1,    1,    1
+), nrow = 6, byrow = TRUE,
+dimnames = list(kriterler_kalite, kriterler_kalite))
+
+# 3) AHP agirlik (Eigenvector)
+ahp_weights <- function(M){
+  ev <- eigen(M)
+  w <- Re(ev$vectors[,1])
+  w <- w / sum(w)
+  setNames(as.numeric(w), colnames(M))
+}
+
+# 4) Tutarlilik (lambda_max, CI, CR)
+ahp_consistency <- function(M){
+  n <- nrow(M)
+  ev <- eigen(M)
+  lambda_max <- Re(ev$values[1])
+  CI <- (lambda_max - n) / (n - 1)
+
+  RI <- c(0, 0, 0.58, 0.90, 1.12, 1.24, 1.32, 1.41, 1.45, 1.49)
+  CR <- CI / RI[n]
+
+  list(lambda_max = lambda_max, CI = CI, CR = CR)
+}
+
+# 5) Dense rank (base R uyumlu)
+dense_rank_safe <- function(x, digits = 8){
+  xr <- round(x, digits)
+  match(-xr, sort(unique(-xr)))
+}
+
+# 6) Hesapla
+w_kalite <- ahp_weights(M_kalite)
+cons_kalite <- ahp_consistency(M_kalite)
+
+sonuc_kalite <- data.frame(
+  Kriter = names(w_kalite),
+  Agirlik = as.numeric(w_kalite),
+  Yuzde = 100 * as.numeric(w_kalite)
+)
+
+sonuc_kalite$Sira <- dense_rank_safe(sonuc_kalite$Agirlik)
+sonuc_kalite <- sonuc_kalite[order(sonuc_kalite$Sira, -sonuc_kalite$Agirlik), ]
+
+print("=== AHP Sonuclari (Kalite Yonetimi) ===")
+print(sonuc_kalite)
+
+cat("\n=== Tutarlilik Sonuclari ===\n")
+cat("lambda_max:", round(cons_kalite$lambda_max, 6), "\n")
+cat("CI:", round(cons_kalite$CI, 6), "\n")
+cat("CR:", round(cons_kalite$CR * 100, 2), "%\n")
+
+agirlikli_kriterler <- data.frame(
+  Kriter = c(
+    "Teknik",
+    "Tedarik & Operasyon",
+    "Stratejik İyileştirme",
+    "Maliyet & Kaynak Yönetimi",
+    "Organizasyonel Yönetim",
+    "Kalite"
+  ),
+  Sistem_Basmuhendisi = c(46.6, 17.5, 8.3, 12.4, 7.9, 7.3),
+  Proje_Yoneticisi = c(38.9, 14.4, 3.4, 14.4, 14.4, 14.4),
+  Alt_Sozlesme_Yoneticisi = c(25.6, 9.5, 4.3, 25.6, 9.5, 25.6),
+  Kalite_Yonetim_Muhendisi = c(39.8, 18.7, 7.3, 11.7, 15.2, 7.3)
+)
+```{r}
+library(knitr)
+
+kable(
+  agirlikli_kriterler,
+  digits = 1,
+  col.names = c(
+    "Kriter",
+    "Sistem Başmühendisi",
+    "Proje Yöneticisi",
+    "Alt Sözleşme Yöneticisi",
+    "Kalite Yönetim Mühendisi"
+  ),
+  caption = "Ağırlıklı Değerlendirme Kriterleri"
+)
+
+library(knitr)
+ortalama_agirliklar <- data.frame(
+  Kriter = c(
+    "Teknik",
+    "Tedarik & Operasyon",
+    "Maliyet & Kaynak Yönetimi",
+    "Organizasyonel Yönetim",
+    "Stratejik İyileştirme",
+    "Kalite"
+  ),
+  Ortalama = c(37.7, 15, 16, 11.7, 5.8, 13.7)
+)
+```{r}
+kable(
+  ortalama_agirliklar,
+  digits = 1,
+  col.names = c("Nihai Ağırlıklar", "Ortalama (%)"),
+  caption = "Hesaplanan Ortalama Kriter Ağırlıkları"
+)
+
+
+library(knitr)
+alt_teknik <- data.frame(
+  Ktg = c(1, 2, 3),
+  Alt_Kriter = c(
+    "System Engineering & Verification",
+    "Compliance & Integration Maturity",
+    "RMST"
+  ),
+  Oncelik = c(42.9, 14.3, 42.9),
+  Sira = c(1, 3, 1),
+  Arti = c(0.0, 0.0, 0.0),
+  Eksi = c(0.0, 0.0, 0.0)
+)
+
+kable(
+  alt_teknik,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Teknik – Alt Kriter Ağırlıkları (AHP)"
+)
+alt_teknik <- data.frame(
+  Ktg = c(1, 2, 3),
+  Alt_Kriter = c(
+    "System Engineering & Verification",
+    "Compliance & Integration Maturity",
+    "RMST"
+  ),
+  Oncelik = c(42.9, 14.3, 42.9),
+  Sira = c(1, 3, 1),
+  Arti = c(0.0, 0.0, 0.0),
+  Eksi = c(0.0, 0.0, 0.0)
+)
+
+kable(
+  alt_teknik,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Teknik – Alt Kriter Ağırlıkları (AHP)"
+)
+
+alt_tedarik <- data.frame(
+  Ktg = c(1, 2),
+  Alt_Kriter = c(
+    "Altsözlesme",
+    "Logistics and Customer Service"
+  ),
+  Oncelik = c(75.0, 25.0),
+  Sira = c(1, 2),
+  Arti = c(0.0, 0.0),
+  Eksi = c(0.0, 0.0)
+)
+
+kable(
+  alt_tedarik,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Tedarik & Operasyon – Alt Kriter Ağırlıkları (AHP)"
+)
+alt_org1 <- data.frame(
+  Ktg = c(1, 2, 3),
+  Alt_Kriter = c(
+    "Work Place Organization",
+    "Environment & Energy",
+    "Focused Improvement"
+  ),
+  Oncelik = c(25.0, 25.0, 50.0),
+  Sira = c(2, 2, 1),
+  Arti = c(0.0, 0.0, 0.0),
+  Eksi = c(0.0, 0.0, 0.0)
+)
+
+kable(
+  alt_org1,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Organizasyonel Yönetim – Alt Kriter Ağırlıkları (AHP)"
+)
+alt_strateji <- data.frame(
+  Ktg = 1:6,
+  Alt_Kriter = c(
+    "Program Management",
+    "Clarity of Objectives",
+    "Commitment of the Organization",
+    "Competence of the Organization Toward Improvement",
+    "Management Commitment",
+    "People Development"
+  ),
+  Oncelik = c(20.8, 3.9, 25.4, 10.0, 29.9, 10.0),
+  Sira = c(3, 6, 2, 4, 1, 4),
+  Arti = c(7.1, 0.6, 8.4, 1.9, 5.5, 1.9),
+  Eksi = c(7.1, 0.6, 8.4, 1.9, 5.5, 1.9)
+)
+
+kable(
+  alt_strateji,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Stratejik İyileştirme – Alt Kriter Ağırlıkları (AHP)"
+)
+alt_maliyet <- data.frame(
+  Ktg = c(1, 2, 3),
+  Alt_Kriter = c(
+    "Cost Deployment",
+    "Allocation of Highly Qualified People",
+    "Time and Budget"
+  ),
+  Oncelik = c(23.0, 12.2, 64.8),
+  Sira = c(2, 3, 1),
+  Arti = c(1.4, 0.7, 3.9),
+  Eksi = c(1.4, 0.7, 3.9)
+)
+
+kable(
+  alt_maliyet,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Maliyet & Kaynak Yönetimi – Alt Kriter Ağırlıkları (AHP)"
+)
+alt_kalite <- data.frame(
+  Ktg = c(1, 2, 3),
+  Alt_Kriter = c(
+    "Health & Safety",
+    "Configuration Management",
+    "Quality Management"
+  ),
+  Oncelik = c(63.7, 10.5, 25.8),
+  Sira = c(1, 3, 2),
+  Arti = c(12.4, 2.0, 5.0),
+  Eksi = c(12.4, 2.0, 5.0)
+)
+
+kable(
+  alt_kalite,
+  digits = 1,
+  col.names = c("Ktg", "Alt Kriter", "Öncelik (%)", "Sıra", "(+)", "(-)"),
+  caption = "Kalite – Alt Kriter Ağırlıkları (AHP)"
+)
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

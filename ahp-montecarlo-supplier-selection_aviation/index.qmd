@@ -1,0 +1,50 @@
+---
+title: "AHP + Monte Carlo Based Supplier Selection (Aviation Case)"
+author: "Yiğit Boran"
+date: "2025"
+format:
+  html:
+    toc: true
+    toc-depth: 3
+---
+## 1. Introduction
+
+Supplier selection is a critical decision problem in the aviation industry due to
+high safety, quality, and reliability requirements.  
+This study proposes an integrated **AHP + Monte Carlo simulation** framework
+to evaluate supplier alternatives under uncertainty.
+
+## 2. Methodology
+
+### 2.1 Analytic Hierarchy Process (AHP)
+
+AHP is used to derive the relative importance (weights) of the evaluation criteria
+based on expert judgments.
+
+### 2.2 Monte Carlo Simulation
+
+Monte Carlo simulation is applied to model uncertainty in both:
+- criteria weights
+- supplier performance scores
+
+A Dirichlet distribution is used for weights, while triangular distributions
+are used for supplier scores.
+
+## 3. Case Study: Aviation Supplier Selection
+
+The proposed method is applied to an aviation supplier selection problem
+with four alternative suppliers.
+
+## 4. Monte Carlo Results
+
+## Monte Carlo Simulation Results
+
+```{r}
+library(dplyr)
+library(ggplot2)
+
+summary_tbl
+```
+
+
+

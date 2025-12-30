@@ -1,0 +1,1894 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.7.32">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Yiğit Boran">
+<meta name="dcterms.date" content="2025-12-30">
+
+<title>AHP – Sistem Baş Mühendisi – quarto create project ahp-montecarlo-supplier-selection_aviation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+html { -webkit-text-size-adjust: 100%; }
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="site_libs/quarto-nav/headroom.min.js"></script>
+<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="site_libs/quarto-search/fuse.min.js"></script>
+<script src="site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="./">
+<script src="site_libs/quarto-html/quarto.js" type="module"></script>
+<script src="site_libs/quarto-html/tabsets/tabsets.js" type="module"></script>
+<script src="site_libs/quarto-html/popper.min.js"></script>
+<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="site_libs/quarto-html/anchor.min.js"></script>
+<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-37eea08aefeeee20ff55810ff984fec1.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="site_libs/bootstrap/bootstrap-dfb324f25d9b1687192fa8be62ac8f9c.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 50,
+  "keyboard-shortcut": [
+    "f",
+    "/",
+    "s"
+  ],
+  "show-item-context": false,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-text-placeholder": "",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit",
+    "search-label": "Search"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="styles.css">
+</head>
+
+<body class="nav-fixed quarto-light">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container mx-auto">
+    <a class="navbar-brand" href="./index.html">
+    <span class="navbar-title">quarto create project ahp-montecarlo-supplier-selection_aviation</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" role="menu" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html"> 
+<span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./about.html"> 
+<span class="menu-text">About</span></a>
+  </li>  
+</ul>
+          </div> <!-- /navcollapse -->
+            <div class="quarto-navbar-tools">
+</div>
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#monte-carlo-simülasyonu-yöntemi" id="toc-monte-carlo-simülasyonu-yöntemi" class="nav-link active" data-scroll-target="#monte-carlo-simülasyonu-yöntemi"><span class="header-section-number">1</span> 1) Monte Carlo Simülasyonu Yöntemi</a></li>
+  <li><a href="#kurulum-ve-veri-okuma" id="toc-kurulum-ve-veri-okuma" class="nav-link" data-scroll-target="#kurulum-ve-veri-okuma"><span class="header-section-number">2</span> 2) Kurulum ve veri okuma</a></li>
+  <li><a href="#monte-carlo-simülasyon-sonuçları" id="toc-monte-carlo-simülasyon-sonuçları" class="nav-link" data-scroll-target="#monte-carlo-simülasyon-sonuçları"><span class="header-section-number">3</span> 3) Monte Carlo Simülasyon Sonuçları</a></li>
+  <li><a href="#tornado-duyarlılık-analizleri" id="toc-tornado-duyarlılık-analizleri" class="nav-link" data-scroll-target="#tornado-duyarlılık-analizleri"><span class="header-section-number">4</span> 4) Tornado Duyarlılık Analizleri</a></li>
+  <li><a href="#genel-değerlendirme" id="toc-genel-değerlendirme" class="nav-link" data-scroll-target="#genel-değerlendirme"><span class="header-section-number">5</span> 5) Genel Değerlendirme</a></li>
+  <li><a href="#amaç" id="toc-amaç" class="nav-link" data-scroll-target="#amaç"><span class="header-section-number">6</span> Amaç</a></li>
+  <li><a href="#kullanılan-kriterler" id="toc-kullanılan-kriterler" class="nav-link" data-scroll-target="#kullanılan-kriterler"><span class="header-section-number">7</span> Kullanılan Kriterler</a></li>
+  <li><a href="#ahp-hesaplamaları" id="toc-ahp-hesaplamaları" class="nav-link" data-scroll-target="#ahp-hesaplamaları"><span class="header-section-number">8</span> AHP Hesaplamaları</a></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">AHP – Sistem Baş Mühendisi</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Yiğit Boran </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 30, 2025</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="monte-carlo-simülasyonu-yöntemi" class="level2" data-number="1">
+<h2 data-number="1" class="anchored" data-anchor-id="monte-carlo-simülasyonu-yöntemi"><span class="header-section-number">1</span> 1) Monte Carlo Simülasyonu Yöntemi</h2>
+<p>Bu çalışmada, AHP yöntemi ile elde edilen deterministik tedarikçi sıralamasının belirsizlikler altındaki sağlamlığını değerlendirmek amacıyla Monte Carlo simülasyonu uygulanmıştır. Simülasyon sürecinde iki temel belirsizlik kaynağı dikkate alınmıştır: (i) tedarikçi performans puanlarındaki belirsizlik ve (ii) kriter ağırlıklarındaki belirsizlik. Tedarikçi performans puanlarındaki belirsizlik, her bir alt kriter için 0–5 ölçeğinde belirlenen ortalama puan etrafında ±0,5 yarı aralıklı üçgen dağılım kullanılarak modellenmiştir. Kriter ağırlıklarındaki belirsizlik ise, AHP yöntemiyle elde edilen ortalama ağırlık vektörü merkez alınarak Drichlet dağılımı ile temsil edilmiştir. Drichlet dağılımı için k = 300 parametresi kullanılmış olup, bu değer uzman yargılarının görece güvenilir olduğu ancak tamamen deterministik kabul edilmediği bir durumu temsil etmektedir. Monte Carlo simülasyonları, sonuçların istatistiksel olarak kararlı ve karşılaştırılabilir olmasını sağlamak amacıyla tüm senaryolarda 50.000 iterasyon kullanılarak gerçekleştirilmiştir. Aynı iterasyon sayısının kullanılması, farklı analizler arasında tutarlılık ve metodolojik bütünlük sağlamaktadır.</p>
+</section>
+<section id="kurulum-ve-veri-okuma" class="level2" data-number="2">
+<h2 data-number="2" class="anchored" data-anchor-id="kurulum-ve-veri-okuma"><span class="header-section-number">2</span> 2) Kurulum ve veri okuma</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">rm</span>(<span class="at">list =</span> <span class="fu">ls</span>())</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(readxl)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyr)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tibble)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a>file_path <span class="ot">&lt;-</span> <span class="st">"data/supplier_scores.xlsx"</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>df <span class="ot">&lt;-</span> <span class="fu">read_excel</span>(file_path, <span class="at">.name_repair =</span> <span class="st">"unique"</span>) <span class="sc">%&gt;%</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="fu">matches</span>(<span class="st">"^</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">.</span><span class="sc">\\</span><span class="st">."</span>))</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a><span class="fu">names</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code> [1] "Main_Criterion"  "Sub_Criterion"   "Global_Weight"   "Global_Weight_%"
+ [5] "Supplier1_Score" "Supplier1_Delta" "Supplier2_Score" "Supplier2_Delta"
+ [9] "Supplier3_Score" "Supplier3_Delta" "Supplier4_Score" "Supplier4_Delta"</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">glimpse</span>(df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Rows: 19
+Columns: 12
+$ Main_Criterion    &lt;chr&gt; "Technical", "Technical", "Supply &amp; Operations", "Su…
+$ Sub_Criterion     &lt;chr&gt; "Compliance &amp; Integration Maturity", "RMST", "Subcon…
+$ Global_Weight     &lt;dbl&gt; 0.0539, 0.1617, 0.1125, 0.0375, 0.0145, 0.0145, 0.02…
+$ `Global_Weight_%` &lt;dbl&gt; 5.39, 16.17, 11.25, 3.75, 1.45, 1.45, 2.90, 3.50, 2.…
+$ Supplier1_Score   &lt;dbl&gt; 3, 2, 3, 3, 3, 3, 2, 3, 3, 3, 3, 4, 3, 3, 2, 5, 4, 3…
+$ Supplier1_Delta   &lt;dbl&gt; 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.…
+$ Supplier2_Score   &lt;dbl&gt; 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 2, 4, 4, 4…
+$ Supplier2_Delta   &lt;dbl&gt; 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.…
+$ Supplier3_Score   &lt;dbl&gt; 3, 3, 2, 2, 3, 3, 2, 2, 2, 2, 3, 2, 2, 2, 2, 3, 3, 2…
+$ Supplier3_Delta   &lt;dbl&gt; 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.…
+$ Supplier4_Score   &lt;dbl&gt; 4, 4, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 2, 3, 3, 3…
+$ Supplier4_Delta   &lt;dbl&gt; 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.5, 0.…</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>df <span class="sc">%&gt;%</span> <span class="fu">head</span>(<span class="dv">5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 5 × 12
+  Main_Criterion   Sub_Criterion Global_Weight `Global_Weight_%` Supplier1_Score
+  &lt;chr&gt;            &lt;chr&gt;                 &lt;dbl&gt;             &lt;dbl&gt;           &lt;dbl&gt;
+1 Technical        Compliance &amp;…        0.0539              5.39               3
+2 Technical        RMST                 0.162              16.2                2
+3 Supply &amp; Operat… Subcontract …        0.112              11.2                3
+4 Supply &amp; Operat… Logistics &amp; …        0.0375              3.75               3
+5 Strategic Impro… Work Place O…        0.0145              1.45               3
+# ℹ 7 more variables: Supplier1_Delta &lt;dbl&gt;, Supplier2_Score &lt;dbl&gt;,
+#   Supplier2_Delta &lt;dbl&gt;, Supplier3_Score &lt;dbl&gt;, Supplier3_Delta &lt;dbl&gt;,
+#   Supplier4_Score &lt;dbl&gt;, Supplier4_Delta &lt;dbl&gt;</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>w_raw <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(df[[<span class="st">"Global_Weight_%"</span>]]))</span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a><span class="co"># yüzde (0-100) mi, oran (0-1) mı?</span></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a>w0 <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="fu">all</span>(w_raw <span class="sc">&lt;=</span> <span class="dv">1</span>, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)) w_raw <span class="cf">else</span> w_raw<span class="sc">/</span><span class="dv">100</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># normalize (toplam 1)</span></span>
+<span id="cb7-8"><a href="#cb7-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-9"><a href="#cb7-9" aria-hidden="true" tabindex="-1"></a>w0 <span class="ot">&lt;-</span> w0 <span class="sc">/</span> <span class="fu">sum</span>(w0, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-10"><a href="#cb7-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-11"><a href="#cb7-11" aria-hidden="true" tabindex="-1"></a>m <span class="ot">&lt;-</span> <span class="fu">length</span>(w0)</span>
+<span id="cb7-12"><a href="#cb7-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-13"><a href="#cb7-13" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb7-14"><a href="#cb7-14" aria-hidden="true" tabindex="-1"></a><span class="at">m =</span> m,</span>
+<span id="cb7-15"><a href="#cb7-15" aria-hidden="true" tabindex="-1"></a><span class="at">weight_sum =</span> <span class="fu">sum</span>(w0, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-16"><a href="#cb7-16" aria-hidden="true" tabindex="-1"></a><span class="at">min_w =</span> <span class="fu">min</span>(w0, <span class="at">na.rm =</span> <span class="cn">TRUE</span>),</span>
+<span id="cb7-17"><a href="#cb7-17" aria-hidden="true" tabindex="-1"></a><span class="at">max_w =</span> <span class="fu">max</span>(w0, <span class="at">na.rm =</span> <span class="cn">TRUE</span>)</span>
+<span id="cb7-18"><a href="#cb7-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+      m weight_sum   min_w max_w
+  &lt;int&gt;      &lt;dbl&gt;   &lt;dbl&gt; &lt;dbl&gt;
+1    19          1 0.00549 0.193</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>B_score <span class="ot">&lt;-</span> <span class="st">"Supplier2_Score"</span></span>
+<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>D_score <span class="ot">&lt;-</span> <span class="st">"Supplier4_Score"</span></span>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-4"><a href="#cb9-4" aria-hidden="true" tabindex="-1"></a>muB <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(df[[B_score]]))</span>
+<span id="cb9-5"><a href="#cb9-5" aria-hidden="true" tabindex="-1"></a>muD <span class="ot">&lt;-</span> <span class="fu">suppressWarnings</span>(<span class="fu">as.numeric</span>(df[[D_score]]))</span>
+<span id="cb9-6"><a href="#cb9-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-7"><a href="#cb9-7" aria-hidden="true" tabindex="-1"></a>crit_label <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="st">"Sub_Criterion"</span> <span class="sc">%in%</span> <span class="fu">names</span>(df)) df<span class="sc">$</span>Sub_Criterion <span class="cf">else</span> <span class="fu">paste0</span>(<span class="st">"C"</span>, <span class="fu">seq_len</span>(<span class="fu">nrow</span>(df)))</span>
+<span id="cb9-8"><a href="#cb9-8" aria-hidden="true" tabindex="-1"></a>main_map   <span class="ot">&lt;-</span> <span class="cf">if</span> (<span class="st">"Main_Criterion"</span> <span class="sc">%in%</span> <span class="fu">names</span>(df)) df<span class="sc">$</span>Main_Criterion <span class="cf">else</span> <span class="fu">rep</span>(<span class="st">"MAIN"</span>, <span class="fu">nrow</span>(df))</span>
+<span id="cb9-9"><a href="#cb9-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-10"><a href="#cb9-10" aria-hidden="true" tabindex="-1"></a>clamp <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">lo=</span><span class="dv">1</span>, <span class="at">hi=</span><span class="dv">5</span>) <span class="fu">pmax</span>(lo, <span class="fu">pmin</span>(hi, x))</span>
+<span id="cb9-11"><a href="#cb9-11" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-12"><a href="#cb9-12" aria-hidden="true" tabindex="-1"></a>rtriangle <span class="ot">&lt;-</span> <span class="cf">function</span>(n, a, c, b) {</span>
+<span id="cb9-13"><a href="#cb9-13" aria-hidden="true" tabindex="-1"></a>u <span class="ot">&lt;-</span> <span class="fu">runif</span>(n)</span>
+<span id="cb9-14"><a href="#cb9-14" aria-hidden="true" tabindex="-1"></a>Fc <span class="ot">&lt;-</span> (c <span class="sc">-</span> a) <span class="sc">/</span> (b <span class="sc">-</span> a)</span>
+<span id="cb9-15"><a href="#cb9-15" aria-hidden="true" tabindex="-1"></a><span class="fu">ifelse</span>(u <span class="sc">&lt;</span> Fc,</span>
+<span id="cb9-16"><a href="#cb9-16" aria-hidden="true" tabindex="-1"></a>a <span class="sc">+</span> <span class="fu">sqrt</span>(u <span class="sc">*</span> (b <span class="sc">-</span> a) <span class="sc">*</span> (c <span class="sc">-</span> a)),</span>
+<span id="cb9-17"><a href="#cb9-17" aria-hidden="true" tabindex="-1"></a>b <span class="sc">-</span> <span class="fu">sqrt</span>((<span class="dv">1</span> <span class="sc">-</span> u) <span class="sc">*</span> (b <span class="sc">-</span> a) <span class="sc">*</span> (b <span class="sc">-</span> c)))</span>
+<span id="cb9-18"><a href="#cb9-18" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-19"><a href="#cb9-19" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-20"><a href="#cb9-20" aria-hidden="true" tabindex="-1"></a>rdirichlet_mat <span class="ot">&lt;-</span> <span class="cf">function</span>(n, alpha) {</span>
+<span id="cb9-21"><a href="#cb9-21" aria-hidden="true" tabindex="-1"></a>K <span class="ot">&lt;-</span> <span class="fu">length</span>(alpha)</span>
+<span id="cb9-22"><a href="#cb9-22" aria-hidden="true" tabindex="-1"></a>X <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">rgamma</span>(n<span class="sc">*</span>K, <span class="at">shape=</span>alpha, <span class="at">rate=</span><span class="dv">1</span>), <span class="at">nrow=</span>n, <span class="at">ncol=</span>K, <span class="at">byrow=</span><span class="cn">TRUE</span>)</span>
+<span id="cb9-23"><a href="#cb9-23" aria-hidden="true" tabindex="-1"></a>X <span class="sc">/</span> <span class="fu">rowSums</span>(X)</span>
+<span id="cb9-24"><a href="#cb9-24" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb9-25"><a href="#cb9-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb9-26"><a href="#cb9-26" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb9-27"><a href="#cb9-27" aria-hidden="true" tabindex="-1"></a><span class="at">score_columns =</span> <span class="fu">paste</span>(B_score, D_score, <span class="at">sep =</span> <span class="st">" vs "</span>),</span>
+<span id="cb9-28"><a href="#cb9-28" aria-hidden="true" tabindex="-1"></a><span class="at">n_criteria =</span> m,</span>
+<span id="cb9-29"><a href="#cb9-29" aria-hidden="true" tabindex="-1"></a><span class="at">has_Sub_Criterion =</span> <span class="st">"Sub_Criterion"</span> <span class="sc">%in%</span> <span class="fu">names</span>(df),</span>
+<span id="cb9-30"><a href="#cb9-30" aria-hidden="true" tabindex="-1"></a><span class="at">has_Main_Criterion =</span> <span class="st">"Main_Criterion"</span> <span class="sc">%in%</span> <span class="fu">names</span>(df)</span>
+<span id="cb9-31"><a href="#cb9-31" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 4
+  score_columns                  n_criteria has_Sub_Criterion has_Main_Criterion
+  &lt;chr&gt;                               &lt;int&gt; &lt;lgl&gt;             &lt;lgl&gt;             
+1 Supplier2_Score vs Supplier4_…         19 TRUE              TRUE              </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">42</span>)</span>
+<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a>N <span class="ot">&lt;-</span> <span class="dv">50000</span></span>
+<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a>kappa <span class="ot">&lt;-</span> <span class="dv">300</span></span>
+<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a>half_range <span class="ot">&lt;-</span> <span class="fl">0.5</span></span>
+<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a>alpha <span class="ot">&lt;-</span> w0 <span class="sc">*</span> kappa                 <span class="co"># Dirichlet parametreleri</span></span>
+<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>W <span class="ot">&lt;-</span> <span class="fu">rdirichlet_mat</span>(N, alpha)       <span class="co"># N x m ağırlık matrisi</span></span>
+<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a>SB <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(m), <span class="cf">function</span>(j) {</span>
+<span id="cb11-11"><a href="#cb11-11" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clamp</span>(</span>
+<span id="cb11-12"><a href="#cb11-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rtriangle</span>(N, muB[j] <span class="sc">-</span> half_range, muB[j], muB[j] <span class="sc">+</span> half_range),</span>
+<span id="cb11-13"><a href="#cb11-13" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>, <span class="dv">5</span></span>
+<span id="cb11-14"><a href="#cb11-14" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb11-15"><a href="#cb11-15" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb11-16"><a href="#cb11-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-17"><a href="#cb11-17" aria-hidden="true" tabindex="-1"></a>SD <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(m), <span class="cf">function</span>(j) {</span>
+<span id="cb11-18"><a href="#cb11-18" aria-hidden="true" tabindex="-1"></a>  <span class="fu">clamp</span>(</span>
+<span id="cb11-19"><a href="#cb11-19" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rtriangle</span>(N, muD[j] <span class="sc">-</span> half_range, muD[j], muD[j] <span class="sc">+</span> half_range),</span>
+<span id="cb11-20"><a href="#cb11-20" aria-hidden="true" tabindex="-1"></a>    <span class="dv">1</span>, <span class="dv">5</span></span>
+<span id="cb11-21"><a href="#cb11-21" aria-hidden="true" tabindex="-1"></a>  )</span>
+<span id="cb11-22"><a href="#cb11-22" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb11-23"><a href="#cb11-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-24"><a href="#cb11-24" aria-hidden="true" tabindex="-1"></a>delta <span class="ot">&lt;-</span> SB <span class="sc">-</span> SD</span>
+<span id="cb11-25"><a href="#cb11-25" aria-hidden="true" tabindex="-1"></a>gap   <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(W <span class="sc">*</span> delta)</span>
+<span id="cb11-26"><a href="#cb11-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb11-27"><a href="#cb11-27" aria-hidden="true" tabindex="-1"></a><span class="fu">tibble</span>(</span>
+<span id="cb11-28"><a href="#cb11-28" aria-hidden="true" tabindex="-1"></a><span class="at">N =</span> N,</span>
+<span id="cb11-29"><a href="#cb11-29" aria-hidden="true" tabindex="-1"></a><span class="at">kappa =</span> kappa,</span>
+<span id="cb11-30"><a href="#cb11-30" aria-hidden="true" tabindex="-1"></a><span class="at">half_range =</span> half_range,</span>
+<span id="cb11-31"><a href="#cb11-31" aria-hidden="true" tabindex="-1"></a><span class="at">mean_gap =</span> <span class="fu">mean</span>(gap),</span>
+<span id="cb11-32"><a href="#cb11-32" aria-hidden="true" tabindex="-1"></a><span class="at">p_B_beats_D =</span> <span class="fu">mean</span>(gap <span class="sc">&gt;</span> <span class="dv">0</span>),</span>
+<span id="cb11-33"><a href="#cb11-33" aria-hidden="true" tabindex="-1"></a><span class="at">gap_p05 =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(gap, <span class="fl">0.05</span>)),</span>
+<span id="cb11-34"><a href="#cb11-34" aria-hidden="true" tabindex="-1"></a><span class="at">gap_p95 =</span> <span class="fu">unname</span>(<span class="fu">quantile</span>(gap, <span class="fl">0.95</span>))</span>
+<span id="cb11-35"><a href="#cb11-35" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 1 × 7
+      N kappa half_range mean_gap p_B_beats_D gap_p05 gap_p95
+  &lt;dbl&gt; &lt;dbl&gt;      &lt;dbl&gt;    &lt;dbl&gt;       &lt;dbl&gt;   &lt;dbl&gt;   &lt;dbl&gt;
+1 50000   300        0.5   0.0448       0.678  -0.115   0.205</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a>drivers <span class="ot">&lt;-</span> W <span class="sc">*</span> delta</span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-3"><a href="#cb13-3" aria-hidden="true" tabindex="-1"></a>corr <span class="ot">&lt;-</span> <span class="fu">sapply</span>(<span class="fu">seq_len</span>(m), <span class="cf">function</span>(j) {</span>
+<span id="cb13-4"><a href="#cb13-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">cor</span>(drivers[, j], gap, <span class="at">use =</span> <span class="st">"complete.obs"</span>)</span>
+<span id="cb13-5"><a href="#cb13-5" aria-hidden="true" tabindex="-1"></a>})</span>
+<span id="cb13-6"><a href="#cb13-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-7"><a href="#cb13-7" aria-hidden="true" tabindex="-1"></a>tornado_corr <span class="ot">&lt;-</span> <span class="fu">tibble</span>(</span>
+<span id="cb13-8"><a href="#cb13-8" aria-hidden="true" tabindex="-1"></a><span class="at">Criterion =</span> crit_label,</span>
+<span id="cb13-9"><a href="#cb13-9" aria-hidden="true" tabindex="-1"></a><span class="at">Correlation =</span> corr,</span>
+<span id="cb13-10"><a href="#cb13-10" aria-hidden="true" tabindex="-1"></a><span class="at">AbsCorrelation =</span> <span class="fu">abs</span>(corr)</span>
+<span id="cb13-11"><a href="#cb13-11" aria-hidden="true" tabindex="-1"></a>) <span class="sc">%&gt;%</span></span>
+<span id="cb13-12"><a href="#cb13-12" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(<span class="fu">desc</span>(AbsCorrelation))</span>
+<span id="cb13-13"><a href="#cb13-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb13-14"><a href="#cb13-14" aria-hidden="true" tabindex="-1"></a>top10 <span class="ot">&lt;-</span> tornado_corr <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">10</span>)</span>
+<span id="cb13-15"><a href="#cb13-15" aria-hidden="true" tabindex="-1"></a>top10</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 10 × 3
+   Criterion                            Correlation AbsCorrelation
+   &lt;chr&gt;                                      &lt;dbl&gt;          &lt;dbl&gt;
+ 1 RMST                                       0.579          0.579
+ 2 Time and Budget                            0.447          0.447
+ 3 Subcontract Management (Altsözleşme)       0.405          0.405
+ 4 Health &amp; Safety                            0.367          0.367
+ 5 Compliance &amp; Integration Maturity          0.188          0.188
+ 6 Quality Management                         0.171          0.171
+ 7 Cost Deployment                            0.140          0.140
+ 8 Logistics &amp; Customer Service               0.139          0.139
+ 9 Management Commitment                      0.132          0.132
+10 Focused Improvement                        0.114          0.114</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top10, <span class="fu">aes</span>(<span class="at">x =</span> AbsCorrelation, <span class="at">y =</span> <span class="fu">reorder</span>(Criterion, AbsCorrelation))) <span class="sc">+</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Tornado (Sensitivity) – Top 10 Drivers"</span>,</span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="at">x=</span><span class="st">"|Correlation with (B–D) gap|"</span>, <span class="at">y=</span><span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-1-1.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(top10, <span class="fu">aes</span>(<span class="at">x =</span> Correlation, <span class="at">y =</span> <span class="fu">reorder</span>(Criterion, AbsCorrelation))) <span class="sc">+</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_vline</span>(<span class="at">xintercept =</span> <span class="dv">0</span>, <span class="at">linetype=</span><span class="st">"dashed"</span>) <span class="sc">+</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title=</span><span class="st">"Signed Drivers of (B–D) gap (Top 10)"</span>,</span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a><span class="at">x=</span><span class="st">"Correlation"</span>, <span class="at">y=</span><span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-1-2.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb17-1"><a href="#cb17-1" aria-hidden="true" tabindex="-1"></a>gap_contrib <span class="ot">&lt;-</span> W <span class="sc">*</span> (SB <span class="sc">-</span> SD)</span>
+<span id="cb17-2"><a href="#cb17-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-3"><a href="#cb17-3" aria-hidden="true" tabindex="-1"></a>main_contrib_df <span class="ot">&lt;-</span> <span class="fu">lapply</span>(<span class="fu">unique</span>(main_map), <span class="cf">function</span>(mc) {</span>
+<span id="cb17-4"><a href="#cb17-4" aria-hidden="true" tabindex="-1"></a>idx <span class="ot">&lt;-</span> <span class="fu">which</span>(main_map <span class="sc">==</span> mc)</span>
+<span id="cb17-5"><a href="#cb17-5" aria-hidden="true" tabindex="-1"></a>contrib_iter <span class="ot">&lt;-</span> <span class="fu">rowSums</span>(gap_contrib[, idx, <span class="at">drop =</span> <span class="cn">FALSE</span>])</span>
+<span id="cb17-6"><a href="#cb17-6" aria-hidden="true" tabindex="-1"></a><span class="fu">data.frame</span>(</span>
+<span id="cb17-7"><a href="#cb17-7" aria-hidden="true" tabindex="-1"></a><span class="at">Main_Criterion =</span> mc,</span>
+<span id="cb17-8"><a href="#cb17-8" aria-hidden="true" tabindex="-1"></a><span class="at">MeanAbsContribution =</span> <span class="fu">mean</span>(<span class="fu">abs</span>(contrib_iter))</span>
+<span id="cb17-9"><a href="#cb17-9" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb17-10"><a href="#cb17-10" aria-hidden="true" tabindex="-1"></a>}) <span class="sc">%&gt;%</span></span>
+<span id="cb17-11"><a href="#cb17-11" aria-hidden="true" tabindex="-1"></a><span class="fu">bind_rows</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb17-12"><a href="#cb17-12" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(<span class="fu">desc</span>(MeanAbsContribution))</span>
+<span id="cb17-13"><a href="#cb17-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb17-14"><a href="#cb17-14" aria-hidden="true" tabindex="-1"></a>main_contrib_top6 <span class="ot">&lt;-</span> main_contrib_df <span class="sc">%&gt;%</span> <span class="fu">slice</span>(<span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>)</span>
+<span id="cb17-15"><a href="#cb17-15" aria-hidden="true" tabindex="-1"></a>main_contrib_top6</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Main_Criterion MeanAbsContribution
+1                    Quality          0.14635915
+2 Cost &amp; Resource Management          0.10070001
+3                  Technical          0.04739296
+4        Supply &amp; Operations          0.03319336
+5  Organizational Management          0.01565841
+6      Strategic Improvement          0.01021058</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="fu">ggplot</span>(main_contrib_top6,</span>
+<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a><span class="fu">aes</span>(<span class="at">x =</span> MeanAbsContribution,</span>
+<span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="fu">reorder</span>(Main_Criterion, MeanAbsContribution))) <span class="sc">+</span></span>
+<span id="cb19-4"><a href="#cb19-4" aria-hidden="true" tabindex="-1"></a><span class="fu">geom_col</span>() <span class="sc">+</span></span>
+<span id="cb19-5"><a href="#cb19-5" aria-hidden="true" tabindex="-1"></a><span class="fu">labs</span>(<span class="at">title =</span> <span class="st">"Tornado – Main-criterion Sensitivity (Top 6)"</span>,</span>
+<span id="cb19-6"><a href="#cb19-6" aria-hidden="true" tabindex="-1"></a><span class="at">x =</span> <span class="st">"Mean(|contribution|) to (B–D) gap"</span>,</span>
+<span id="cb19-7"><a href="#cb19-7" aria-hidden="true" tabindex="-1"></a><span class="at">y =</span> <span class="cn">NULL</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<div>
+<figure class="figure">
+<p><img src="analysis_files/figure-html/unnamed-chunk-1-3.png" class="img-fluid figure-img" width="672"></p>
+</figure>
+</div>
+</div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a>main_contrib_df</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>              Main_Criterion MeanAbsContribution
+1                    Quality          0.14635915
+2 Cost &amp; Resource Management          0.10070001
+3                  Technical          0.04739296
+4        Supply &amp; Operations          0.03319336
+5  Organizational Management          0.01565841
+6      Strategic Improvement          0.01021058</code></pre>
+</div>
+</div>
+</section>
+<section id="monte-carlo-simülasyon-sonuçları" class="level2" data-number="3">
+<h2 data-number="3" class="anchored" data-anchor-id="monte-carlo-simülasyon-sonuçları"><span class="header-section-number">3</span> 3) Monte Carlo Simülasyon Sonuçları</h2>
+<p>Gerçekleştirilen 50.000 Monte Carlo iterasyonu sonucunda, dört tedarikçi için toplam performans skorları ve en iyi alternatif olma olasılıkları hesaplanmıştır. Sonuçlar, deterministik AHP sıralaması ile büyük ölçüde tutarlıdır. Elde edilen bulgulara göre SupplierB, yaklaşık %65–66 oranında en iyi alternatif olarak seçilmiş ve en yüksek seçilme olasılığına sahip tedarikçi olmuştur. SupplierD ise yaklaşık %34–35 oranında ikinci sırada yer almıştır. SupplierA ve SupplierC ise simülasyon koşulları altında hiçbir iterasyonda en iyi alternatif olarak seçilmemiştir. Bu sonuçlar, kararın esas olarak iki güçlü tedarikçi (SupplierB ve SupplierD) arasında şekillendiğini ve belirsizlikler dikkate alındığında dahi lider alternatifin değişmediğini göstermektedir. Monte Carlo simülasyonu sonuçlarının deterministik AHP sıralaması ile uyumlu olması, önerilen karar modelinin belirsizlikler altında sağlam (robust) olduğunu ortaya koymaktadır. Tornado tipi duyarlılık analizi sonuçları incelendiğinde, karar sonucunun özellikle Management Commitment, Health &amp; Safety, Time and Budget ile System Engineering &amp; Verification kriterlerine yüksek derecede duyarlı olduğu görülmektedir. Bu bulgu, literatürde WCM ve WPI yaklaşımlarında vurgulanan kritik başarı faktörleri ile yüksek uyum göstermektedir. WCM yaklaşımına göre, yönetim kararlılığı ve liderlik desteği, tüm iyileştirme faaliyetleri için çarpan etkisi yaratan temel bir unsurdur. Benzer şekilde, zaman ve bütçe yönetimi; mühendislik, kalite ve organizasyonel iyileştirme projelerinin sürdürülebilirliğini doğrudan etkilemektedir. Bu bağlamda, Monte Carlo simülasyonu ve tornado analizi sonuçlarının belirli kriterler etrafında yoğunlaşması tesadüfi olmayıp, WCM literatüründe tanımlanan sistemik etki mekanizmaları ile tutarlıdır. Elde edilen sonuçlar, karar modelinin teorik altyapı ile uyumlu çalıştığını göstermektedir. Bu çalışmanın önemli çıktılarından biri, kriterlerin yalnızca göreli ağırlıklarının değil, aynı zamanda mevcut olgunluk seviyeleri ve tedarikçi performansları ile birlikte değerlendirilmiş olmasıdır. WCM yaklaşımında kriterler, reaktif seviyeden dünya klasmanına kadar uzanan olgunluk seviyeleri ile tanımlanmaktadır. AHP yöntemi ile elde edilen kriter ağırlıkları, hangi alanların karar açısından daha kritik olduğunu ortaya koyarken; tedarikçi performans puanları bu alanlardaki mevcut durumu göstermektedir. Monte Carlo simülasyonu ise, bu iki boyut arasındaki belirsizliği ve risk seviyesini nicel olarak değerlendirme imkânı sunmaktadır. Bu bütüncül yaklaşım sayesinde, yüksek ağırlığa sahip ancak olgunluk seviyesi görece düşük olan kriterler, stratejik iyileştirme açısından öncelikli alanlar olarak belirlenebilmektedir. Özellikle Management Commitment, Program Management ve People Development gibi kriterler, iyileştirme yatırımlarının en yüksek geri dönüşü sağlayabileceği alanlar olarak öne çıkmaktadır. Bu yönüyle çalışma, WCM literatüründe yer alan olgunluk değerlendirmelerini, nicel ağırlıklandırma ve belirsizlik temelli analizlerle tamamlayan özgün bir karar destek modeli sunmaktadır.</p>
+</section>
+<section id="tornado-duyarlılık-analizleri" class="level2" data-number="4">
+<h2 data-number="4" class="anchored" data-anchor-id="tornado-duyarlılık-analizleri"><span class="header-section-number">4</span> 4) Tornado Duyarlılık Analizleri</h2>
+<p>Tornado grafiği, karar sonucunun en duyarlı olduğu alt kriterleri göstermektedir. Analiz sonuçlarına göre, kararın en fazla etkilendiği alt kriterler sırasıyla Time and Budget, Health &amp; Safety, RMST ve System Engineering &amp; Verification olarak belirlenmiştir. Bu kriterler, iki önde gelen tedarikçi arasındaki skor farkının büyük bölümünü açıklamaktadır. Daha düşük ağırlığa sahip veya tedarikçiler arasında benzer puanlanan kriterlerin karar üzerindeki etkisinin sınırlı olduğu görülmüştür. Bu durum, modelin kritik ve karar verici öneme sahip kriterlere odaklandığını göstermektedir.</p>
+<p>Alt kriter düzeyinde elde edilen katkılar, ana kriter seviyesinde toplanarak analiz edilmiştir. Şekilde sunulan ana kriter tornado grafiği, karar değişkenliğinin en çok Cost &amp; Resource Management ve Quality ana kriterlerinden kaynaklandığını göstermektedir. Bu bulgu, havacılık sektöründe tedarikçi seçiminde zaman, bütçe, emniyet ve kalite boyutlarının belirleyici rolünü bir kez daha doğrulamaktadır.</p>
+</section>
+<section id="genel-değerlendirme" class="level2" data-number="5">
+<h2 data-number="5" class="anchored" data-anchor-id="genel-değerlendirme"><span class="header-section-number">5</span> 5) Genel Değerlendirme</h2>
+<p>Monte Carlo simülasyonu ve tornado tipi duyarlılık analizi sonuçları birlikte değerlendirildiğinde, önerilen AHP tabanlı tedarikçi değerlendirme modelinin belirsizlikler altında dahi tutarlı ve güvenilir sonuçlar ürettiği görülmektedir. Kararın, düşük etkili kriterlerden ziyade zaman, bütçe, emniyet ve teknik olgunluk gibi kritik boyutlar tarafından yönlendirilmesi, modelin sektörel gerçekliklerle uyumlu olduğunu göstermektedir.</p>
+<p>Elde edilen sonuçlar doğrultusunda, SupplierB birincil tedarikçi olarak önerilirken, SupplierD güçlü bir ikinci kaynak (secondary supplier) olarak değerlendirilebilir. Bu yaklaşım, tedarik zinciri sürekliliği ve risk yönetimi açısından da önemli bir avantaj sağlamaktadır.</p>
+</section>
+<section id="amaç" class="level2" data-number="6">
+<h2 data-number="6" class="anchored" data-anchor-id="amaç"><span class="header-section-number">6</span> Amaç</h2>
+<p>Bu bölümde, Sistem Baş Mühendisi tarafından yapılan ikili karşılaştırmalar Analitik Hiyerarşi Prosesi (AHP) yöntemi kullanılarak analiz edilmiştir. Amaç, kriterlerin göreli önem ağırlıklarını belirlemek ve tutarlılığı kontrol etmektir.</p>
+</section>
+<section id="kullanılan-kriterler" class="level2" data-number="7">
+<h2 data-number="7" class="anchored" data-anchor-id="kullanılan-kriterler"><span class="header-section-number">7</span> Kullanılan Kriterler</h2>
+<ul>
+<li>Teknik<br>
+</li>
+<li>Tedarik ve Operasyon<br>
+</li>
+<li>Stratejik İyileştirme<br>
+</li>
+<li>Maliyet ve Kaynak Yönetimi<br>
+</li>
+<li>Organizasyonel Yönetim<br>
+</li>
+<li>Kalite</li>
+</ul>
+</section>
+<section id="ahp-hesaplamaları" class="level2" data-number="8">
+<h2 data-number="8" class="anchored" data-anchor-id="ahp-hesaplamaları"><span class="header-section-number">8</span> AHP Hesaplamaları</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># AHP - Sistem Baş Mühendisi</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Kriter isimleri (sıra önemli!)</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a>kriterler <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"teknik"</span>,</span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tedarik ve operasyon"</span>,</span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stratejik iyilestirme"</span>,</span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"maliyet ve kaynak yonetimi"</span>,</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"organizasyonel yonetim"</span>,</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kalite"</span></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-15"><a href="#cb22-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Ikili karsilastirma matrisi (6x6)</span></span>
+<span id="cb22-16"><a href="#cb22-16" aria-hidden="true" tabindex="-1"></a>M_sistem <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
+<span id="cb22-17"><a href="#cb22-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">7</span>,    <span class="dv">3</span>,    <span class="dv">7</span>,    <span class="dv">5</span>,</span>
+<span id="cb22-18"><a href="#cb22-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">2</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,</span>
+<span id="cb22-19"><a href="#cb22-19" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,  <span class="fl">0.5</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,</span>
+<span id="cb22-20"><a href="#cb22-20" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">2</span>,</span>
+<span id="cb22-21"><a href="#cb22-21" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,</span>
+<span id="cb22-22"><a href="#cb22-22" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.2</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="fl">0.5</span>,  <span class="dv">1</span>,    <span class="dv">1</span></span>
+<span id="cb22-23"><a href="#cb22-23" aria-hidden="true" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb22-24"><a href="#cb22-24" aria-hidden="true" tabindex="-1"></a><span class="at">dimnames =</span> <span class="fu">list</span>(kriterler, kriterler))</span>
+<span id="cb22-25"><a href="#cb22-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-26"><a href="#cb22-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) AHP agirlik hesaplama (Eigenvector)</span></span>
+<span id="cb22-27"><a href="#cb22-27" aria-hidden="true" tabindex="-1"></a>ahp_weights <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb22-28"><a href="#cb22-28" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb22-29"><a href="#cb22-29" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>vectors[,<span class="dv">1</span>])</span>
+<span id="cb22-30"><a href="#cb22-30" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> w <span class="sc">/</span> <span class="fu">sum</span>(w)</span>
+<span id="cb22-31"><a href="#cb22-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">as.numeric</span>(w), <span class="fu">colnames</span>(M))</span>
+<span id="cb22-32"><a href="#cb22-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-33"><a href="#cb22-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-34"><a href="#cb22-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Tutarlilik (lambda_max, CI, CR)</span></span>
+<span id="cb22-35"><a href="#cb22-35" aria-hidden="true" tabindex="-1"></a>ahp_consistency <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb22-36"><a href="#cb22-36" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(M)</span>
+<span id="cb22-37"><a href="#cb22-37" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb22-38"><a href="#cb22-38" aria-hidden="true" tabindex="-1"></a>  lambda_max <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>values[<span class="dv">1</span>])</span>
+<span id="cb22-39"><a href="#cb22-39" aria-hidden="true" tabindex="-1"></a>  CI <span class="ot">&lt;-</span> (lambda_max <span class="sc">-</span> n) <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb22-40"><a href="#cb22-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-41"><a href="#cb22-41" aria-hidden="true" tabindex="-1"></a>  RI <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.58</span>, <span class="fl">0.90</span>, <span class="fl">1.12</span>, <span class="fl">1.24</span>, <span class="fl">1.32</span>, <span class="fl">1.41</span>, <span class="fl">1.45</span>, <span class="fl">1.49</span>)</span>
+<span id="cb22-42"><a href="#cb22-42" aria-hidden="true" tabindex="-1"></a>  CR <span class="ot">&lt;-</span> CI <span class="sc">/</span> RI[n]</span>
+<span id="cb22-43"><a href="#cb22-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-44"><a href="#cb22-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">lambda_max =</span> lambda_max, <span class="at">CI =</span> CI, <span class="at">CR =</span> CR)</span>
+<span id="cb22-45"><a href="#cb22-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-46"><a href="#cb22-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-47"><a href="#cb22-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Hesapla</span></span>
+<span id="cb22-48"><a href="#cb22-48" aria-hidden="true" tabindex="-1"></a>w_sistem <span class="ot">&lt;-</span> <span class="fu">ahp_weights</span>(M_sistem)</span>
+<span id="cb22-49"><a href="#cb22-49" aria-hidden="true" tabindex="-1"></a>cons_sistem <span class="ot">&lt;-</span> <span class="fu">ahp_consistency</span>(M_sistem)</span>
+<span id="cb22-50"><a href="#cb22-50" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-51"><a href="#cb22-51" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) Sonuc tablosu</span></span>
+<span id="cb22-52"><a href="#cb22-52" aria-hidden="true" tabindex="-1"></a>sonuc_sistem <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb22-53"><a href="#cb22-53" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">names</span>(w_sistem),</span>
+<span id="cb22-54"><a href="#cb22-54" aria-hidden="true" tabindex="-1"></a>  <span class="at">Agirlik =</span> <span class="fu">as.numeric</span>(w_sistem),</span>
+<span id="cb22-55"><a href="#cb22-55" aria-hidden="true" tabindex="-1"></a>  <span class="at">Yuzde =</span> <span class="dv">100</span> <span class="sc">*</span> <span class="fu">as.numeric</span>(w_sistem)</span>
+<span id="cb22-56"><a href="#cb22-56" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-57"><a href="#cb22-57" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-58"><a href="#cb22-58" aria-hidden="true" tabindex="-1"></a><span class="co"># Dense-rank (base R uyumlu)</span></span>
+<span id="cb22-59"><a href="#cb22-59" aria-hidden="true" tabindex="-1"></a>sonuc_sistem<span class="sc">$</span>Agirlik_r <span class="ot">&lt;-</span> <span class="fu">round</span>(sonuc_sistem<span class="sc">$</span>Agirlik, <span class="dv">8</span>)</span>
+<span id="cb22-60"><a href="#cb22-60" aria-hidden="true" tabindex="-1"></a>sonuc_sistem<span class="sc">$</span>Sira <span class="ot">&lt;-</span> <span class="fu">match</span>(</span>
+<span id="cb22-61"><a href="#cb22-61" aria-hidden="true" tabindex="-1"></a>  <span class="sc">-</span>sonuc_sistem<span class="sc">$</span>Agirlik_r,</span>
+<span id="cb22-62"><a href="#cb22-62" aria-hidden="true" tabindex="-1"></a>  <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="sc">-</span>sonuc_sistem<span class="sc">$</span>Agirlik_r))</span>
+<span id="cb22-63"><a href="#cb22-63" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb22-64"><a href="#cb22-64" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-65"><a href="#cb22-65" aria-hidden="true" tabindex="-1"></a>sonuc_sistem <span class="ot">&lt;-</span> sonuc_sistem[</span>
+<span id="cb22-66"><a href="#cb22-66" aria-hidden="true" tabindex="-1"></a>  <span class="fu">order</span>(sonuc_sistem<span class="sc">$</span>Sira, <span class="sc">-</span>sonuc_sistem<span class="sc">$</span>Agirlik_r),</span>
+<span id="cb22-67"><a href="#cb22-67" aria-hidden="true" tabindex="-1"></a>]</span>
+<span id="cb22-68"><a href="#cb22-68" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-69"><a href="#cb22-69" aria-hidden="true" tabindex="-1"></a>sonuc_sistem<span class="sc">$</span>Agirlik_r <span class="ot">&lt;-</span> <span class="cn">NULL</span></span>
+<span id="cb22-70"><a href="#cb22-70" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-71"><a href="#cb22-71" aria-hidden="true" tabindex="-1"></a>sonuc_sistem</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      Kriter    Agirlik     Yuzde Sira
+1                     teknik 0.46571285 46.571285    1
+2       tedarik ve operasyon 0.17507496 17.507496    2
+4 maliyet ve kaynak yonetimi 0.12401606 12.401606    3
+3      stratejik iyilestirme 0.08348154  8.348154    4
+5     organizasyonel yonetim 0.07873574  7.873574    5
+6                     kalite 0.07297885  7.297885    6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"Lambda max:"</span>, <span class="fu">round</span>(cons_sistem<span class="sc">$</span>lambda_max, <span class="dv">4</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>Lambda max: 6.1484 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CI:"</span>, <span class="fu">round</span>(cons_sistem<span class="sc">$</span>CI, <span class="dv">4</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CI: 0.0297 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CR (%):"</span>, <span class="fu">round</span>(cons_sistem<span class="sc">$</span>CR <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CR (%): 2.39 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb30-2"><a href="#cb30-2" aria-hidden="true" tabindex="-1"></a><span class="co"># AHP - Program Yöneticisi</span></span>
+<span id="cb30-3"><a href="#cb30-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb30-4"><a href="#cb30-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-5"><a href="#cb30-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Bu değerlendiricinin matrisine ait GERÇEK kriter sırası</span></span>
+<span id="cb30-6"><a href="#cb30-6" aria-hidden="true" tabindex="-1"></a>kriterler_program <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb30-7"><a href="#cb30-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"teknik"</span>,</span>
+<span id="cb30-8"><a href="#cb30-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tedarik ve operasyon"</span>,</span>
+<span id="cb30-9"><a href="#cb30-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"organizasyonel yonetim"</span>,</span>
+<span id="cb30-10"><a href="#cb30-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"maliyet ve kaynak yonetimi"</span>,</span>
+<span id="cb30-11"><a href="#cb30-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kalite"</span>,</span>
+<span id="cb30-12"><a href="#cb30-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stratejik iyilestirme"</span></span>
+<span id="cb30-13"><a href="#cb30-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb30-14"><a href="#cb30-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-15"><a href="#cb30-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Ikili karsilastirma matrisi (6x6)</span></span>
+<span id="cb30-16"><a href="#cb30-16" aria-hidden="true" tabindex="-1"></a>M_program <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
+<span id="cb30-17"><a href="#cb30-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">7</span>,</span>
+<span id="cb30-18"><a href="#cb30-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">5</span>,</span>
+<span id="cb30-19"><a href="#cb30-19" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">5</span>,</span>
+<span id="cb30-20"><a href="#cb30-20" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">5</span>,</span>
+<span id="cb30-21"><a href="#cb30-21" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">5</span>,</span>
+<span id="cb30-22"><a href="#cb30-22" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">7</span>,  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="dv">1</span></span>
+<span id="cb30-23"><a href="#cb30-23" aria-hidden="true" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb30-24"><a href="#cb30-24" aria-hidden="true" tabindex="-1"></a><span class="at">dimnames =</span> <span class="fu">list</span>(kriterler_program, kriterler_program))</span>
+<span id="cb30-25"><a href="#cb30-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-26"><a href="#cb30-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) AHP agirlik (Eigenvector)</span></span>
+<span id="cb30-27"><a href="#cb30-27" aria-hidden="true" tabindex="-1"></a>ahp_weights <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb30-28"><a href="#cb30-28" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb30-29"><a href="#cb30-29" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>vectors[,<span class="dv">1</span>])</span>
+<span id="cb30-30"><a href="#cb30-30" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> w <span class="sc">/</span> <span class="fu">sum</span>(w)</span>
+<span id="cb30-31"><a href="#cb30-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">as.numeric</span>(w), <span class="fu">colnames</span>(M))</span>
+<span id="cb30-32"><a href="#cb30-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb30-33"><a href="#cb30-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-34"><a href="#cb30-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Tutarlilik (lambda_max, CI, CR)</span></span>
+<span id="cb30-35"><a href="#cb30-35" aria-hidden="true" tabindex="-1"></a>ahp_consistency <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb30-36"><a href="#cb30-36" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(M)</span>
+<span id="cb30-37"><a href="#cb30-37" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb30-38"><a href="#cb30-38" aria-hidden="true" tabindex="-1"></a>  lambda_max <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>values[<span class="dv">1</span>])</span>
+<span id="cb30-39"><a href="#cb30-39" aria-hidden="true" tabindex="-1"></a>  CI <span class="ot">&lt;-</span> (lambda_max <span class="sc">-</span> n) <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb30-40"><a href="#cb30-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-41"><a href="#cb30-41" aria-hidden="true" tabindex="-1"></a>  RI <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.58</span>, <span class="fl">0.90</span>, <span class="fl">1.12</span>, <span class="fl">1.24</span>, <span class="fl">1.32</span>, <span class="fl">1.41</span>, <span class="fl">1.45</span>, <span class="fl">1.49</span>)</span>
+<span id="cb30-42"><a href="#cb30-42" aria-hidden="true" tabindex="-1"></a>  CR <span class="ot">&lt;-</span> CI <span class="sc">/</span> RI[n]</span>
+<span id="cb30-43"><a href="#cb30-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-44"><a href="#cb30-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">lambda_max =</span> lambda_max, <span class="at">CI =</span> CI, <span class="at">CR =</span> CR)</span>
+<span id="cb30-45"><a href="#cb30-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb30-46"><a href="#cb30-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-47"><a href="#cb30-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Dense rank (base R uyumlu)</span></span>
+<span id="cb30-48"><a href="#cb30-48" aria-hidden="true" tabindex="-1"></a>dense_rank_safe <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">digits =</span> <span class="dv">8</span>){</span>
+<span id="cb30-49"><a href="#cb30-49" aria-hidden="true" tabindex="-1"></a>  xr <span class="ot">&lt;-</span> <span class="fu">round</span>(x, digits)</span>
+<span id="cb30-50"><a href="#cb30-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">match</span>(<span class="sc">-</span>xr, <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="sc">-</span>xr)))</span>
+<span id="cb30-51"><a href="#cb30-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb30-52"><a href="#cb30-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-53"><a href="#cb30-53" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) Hesapla</span></span>
+<span id="cb30-54"><a href="#cb30-54" aria-hidden="true" tabindex="-1"></a>w_program <span class="ot">&lt;-</span> <span class="fu">ahp_weights</span>(M_program)</span>
+<span id="cb30-55"><a href="#cb30-55" aria-hidden="true" tabindex="-1"></a>cons_program <span class="ot">&lt;-</span> <span class="fu">ahp_consistency</span>(M_program)</span>
+<span id="cb30-56"><a href="#cb30-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-57"><a href="#cb30-57" aria-hidden="true" tabindex="-1"></a>sonuc_program <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb30-58"><a href="#cb30-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">names</span>(w_program),</span>
+<span id="cb30-59"><a href="#cb30-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">Agirlik =</span> <span class="fu">as.numeric</span>(w_program),</span>
+<span id="cb30-60"><a href="#cb30-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">Yuzde =</span> <span class="dv">100</span> <span class="sc">*</span> <span class="fu">as.numeric</span>(w_program)</span>
+<span id="cb30-61"><a href="#cb30-61" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb30-62"><a href="#cb30-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-63"><a href="#cb30-63" aria-hidden="true" tabindex="-1"></a>sonuc_program<span class="sc">$</span>Sira <span class="ot">&lt;-</span> <span class="fu">dense_rank_safe</span>(sonuc_program<span class="sc">$</span>Agirlik)</span>
+<span id="cb30-64"><a href="#cb30-64" aria-hidden="true" tabindex="-1"></a>sonuc_program <span class="ot">&lt;-</span> sonuc_program[<span class="fu">order</span>(sonuc_program<span class="sc">$</span>Sira, <span class="sc">-</span>sonuc_program<span class="sc">$</span>Agirlik), ]</span>
+<span id="cb30-65"><a href="#cb30-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb30-66"><a href="#cb30-66" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"=== Program Yöneticisi AHP Sonuçları ==="</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "=== Program Yöneticisi AHP Sonuçları ==="</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>sonuc_program</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      Kriter    Agirlik     Yuzde Sira
+1                     teknik 0.38866142 38.866142    1
+3     organizasyonel yonetim 0.14439455 14.439455    2
+4 maliyet ve kaynak yonetimi 0.14439455 14.439455    2
+5                     kalite 0.14439455 14.439455    2
+2       tedarik ve operasyon 0.14439455 14.439455    2
+6      stratejik iyilestirme 0.03376039  3.376039    3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">=== Tutarlılık Sonuçları ===</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+=== Tutarlılık Sonuçları ===</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"lambda_max:"</span>, <span class="fu">round</span>(cons_program<span class="sc">$</span>lambda_max, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lambda_max: 6.066254 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb38"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb38-1"><a href="#cb38-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CI:"</span>, <span class="fu">round</span>(cons_program<span class="sc">$</span>CI, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CI: 0.013251 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb40"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb40-1"><a href="#cb40-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CR:"</span>, <span class="fu">round</span>(cons_program<span class="sc">$</span>CR <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CR: 1.07 %</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb42"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a href="#cb42-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb42-2"><a href="#cb42-2" aria-hidden="true" tabindex="-1"></a><span class="co"># AHP - Altsözleşme</span></span>
+<span id="cb42-3"><a href="#cb42-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb42-4"><a href="#cb42-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-5"><a href="#cb42-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Bu değerlendiricinin matrisine ait kriter sırası</span></span>
+<span id="cb42-6"><a href="#cb42-6" aria-hidden="true" tabindex="-1"></a>kriterler_alt <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb42-7"><a href="#cb42-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"teknik"</span>,</span>
+<span id="cb42-8"><a href="#cb42-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"maliyet ve kaynak yonetimi"</span>,</span>
+<span id="cb42-9"><a href="#cb42-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kalite"</span>,</span>
+<span id="cb42-10"><a href="#cb42-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"organizasyonel yonetim"</span>,</span>
+<span id="cb42-11"><a href="#cb42-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tedarik ve operasyon"</span>,</span>
+<span id="cb42-12"><a href="#cb42-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stratejik iyilestirme"</span></span>
+<span id="cb42-13"><a href="#cb42-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-14"><a href="#cb42-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-15"><a href="#cb42-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Ikili karsilastirma matrisi (6x6)</span></span>
+<span id="cb42-16"><a href="#cb42-16" aria-hidden="true" tabindex="-1"></a>M_alt <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
+<span id="cb42-17"><a href="#cb42-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">5</span>,</span>
+<span id="cb42-18"><a href="#cb42-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">5</span>,</span>
+<span id="cb42-19"><a href="#cb42-19" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">5</span>,</span>
+<span id="cb42-20"><a href="#cb42-20" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,</span>
+<span id="cb42-21"><a href="#cb42-21" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,</span>
+<span id="cb42-22"><a href="#cb42-22" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span></span>
+<span id="cb42-23"><a href="#cb42-23" aria-hidden="true" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb42-24"><a href="#cb42-24" aria-hidden="true" tabindex="-1"></a><span class="at">dimnames =</span> <span class="fu">list</span>(kriterler_alt, kriterler_alt))</span>
+<span id="cb42-25"><a href="#cb42-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-26"><a href="#cb42-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) AHP agirlik (Eigenvector)</span></span>
+<span id="cb42-27"><a href="#cb42-27" aria-hidden="true" tabindex="-1"></a>ahp_weights <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb42-28"><a href="#cb42-28" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb42-29"><a href="#cb42-29" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>vectors[,<span class="dv">1</span>])</span>
+<span id="cb42-30"><a href="#cb42-30" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> w <span class="sc">/</span> <span class="fu">sum</span>(w)</span>
+<span id="cb42-31"><a href="#cb42-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">as.numeric</span>(w), <span class="fu">colnames</span>(M))</span>
+<span id="cb42-32"><a href="#cb42-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-33"><a href="#cb42-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-34"><a href="#cb42-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Tutarlilik (lambda_max, CI, CR)</span></span>
+<span id="cb42-35"><a href="#cb42-35" aria-hidden="true" tabindex="-1"></a>ahp_consistency <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb42-36"><a href="#cb42-36" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(M)</span>
+<span id="cb42-37"><a href="#cb42-37" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb42-38"><a href="#cb42-38" aria-hidden="true" tabindex="-1"></a>  lambda_max <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>values[<span class="dv">1</span>])</span>
+<span id="cb42-39"><a href="#cb42-39" aria-hidden="true" tabindex="-1"></a>  CI <span class="ot">&lt;-</span> (lambda_max <span class="sc">-</span> n) <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb42-40"><a href="#cb42-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-41"><a href="#cb42-41" aria-hidden="true" tabindex="-1"></a>  RI <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.58</span>, <span class="fl">0.90</span>, <span class="fl">1.12</span>, <span class="fl">1.24</span>, <span class="fl">1.32</span>, <span class="fl">1.41</span>, <span class="fl">1.45</span>, <span class="fl">1.49</span>)</span>
+<span id="cb42-42"><a href="#cb42-42" aria-hidden="true" tabindex="-1"></a>  CR <span class="ot">&lt;-</span> CI <span class="sc">/</span> RI[n]</span>
+<span id="cb42-43"><a href="#cb42-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-44"><a href="#cb42-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">lambda_max =</span> lambda_max, <span class="at">CI =</span> CI, <span class="at">CR =</span> CR)</span>
+<span id="cb42-45"><a href="#cb42-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-46"><a href="#cb42-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-47"><a href="#cb42-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Dense rank (base R uyumlu)</span></span>
+<span id="cb42-48"><a href="#cb42-48" aria-hidden="true" tabindex="-1"></a>dense_rank_safe <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">digits =</span> <span class="dv">8</span>){</span>
+<span id="cb42-49"><a href="#cb42-49" aria-hidden="true" tabindex="-1"></a>  xr <span class="ot">&lt;-</span> <span class="fu">round</span>(x, digits)</span>
+<span id="cb42-50"><a href="#cb42-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">match</span>(<span class="sc">-</span>xr, <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="sc">-</span>xr)))</span>
+<span id="cb42-51"><a href="#cb42-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb42-52"><a href="#cb42-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-53"><a href="#cb42-53" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) Hesapla</span></span>
+<span id="cb42-54"><a href="#cb42-54" aria-hidden="true" tabindex="-1"></a>w_alt <span class="ot">&lt;-</span> <span class="fu">ahp_weights</span>(M_alt)</span>
+<span id="cb42-55"><a href="#cb42-55" aria-hidden="true" tabindex="-1"></a>cons_alt <span class="ot">&lt;-</span> <span class="fu">ahp_consistency</span>(M_alt)</span>
+<span id="cb42-56"><a href="#cb42-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-57"><a href="#cb42-57" aria-hidden="true" tabindex="-1"></a>sonuc_alt <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb42-58"><a href="#cb42-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">names</span>(w_alt),</span>
+<span id="cb42-59"><a href="#cb42-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">Agirlik =</span> <span class="fu">as.numeric</span>(w_alt),</span>
+<span id="cb42-60"><a href="#cb42-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">Yuzde =</span> <span class="dv">100</span> <span class="sc">*</span> <span class="fu">as.numeric</span>(w_alt)</span>
+<span id="cb42-61"><a href="#cb42-61" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb42-62"><a href="#cb42-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-63"><a href="#cb42-63" aria-hidden="true" tabindex="-1"></a>sonuc_alt<span class="sc">$</span>Sira <span class="ot">&lt;-</span> <span class="fu">dense_rank_safe</span>(sonuc_alt<span class="sc">$</span>Agirlik)</span>
+<span id="cb42-64"><a href="#cb42-64" aria-hidden="true" tabindex="-1"></a>sonuc_alt <span class="ot">&lt;-</span> sonuc_alt[<span class="fu">order</span>(sonuc_alt<span class="sc">$</span>Sira, <span class="sc">-</span>sonuc_alt<span class="sc">$</span>Agirlik), ]</span>
+<span id="cb42-65"><a href="#cb42-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb42-66"><a href="#cb42-66" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"=== AHP Sonuclari (Altsözleşme) ==="</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "=== AHP Sonuclari (Altsözleşme) ==="</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb44"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb44-1"><a href="#cb44-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sonuc_alt)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      Kriter    Agirlik     Yuzde Sira
+1                     teknik 0.25590052 25.590052    1
+2 maliyet ve kaynak yonetimi 0.25590052 25.590052    1
+3                     kalite 0.25590052 25.590052    1
+4     organizasyonel yonetim 0.09472895  9.472895    2
+5       tedarik ve operasyon 0.09472895  9.472895    2
+6      stratejik iyilestirme 0.04284055  4.284055    3</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb46"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb46-1"><a href="#cb46-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">=== Tutarlilik Sonuclari ===</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+=== Tutarlilik Sonuclari ===</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb48"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb48-1"><a href="#cb48-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"lambda_max:"</span>, <span class="fu">round</span>(cons_alt<span class="sc">$</span>lambda_max, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lambda_max: 6.058128 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb50"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb50-1"><a href="#cb50-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CI:"</span>, <span class="fu">round</span>(cons_alt<span class="sc">$</span>CI, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CI: 0.011626 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb52"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb52-1"><a href="#cb52-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CR:"</span>, <span class="fu">round</span>(cons_alt<span class="sc">$</span>CR <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CR: 0.94 %</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb54"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb54-1"><a href="#cb54-1" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb54-2"><a href="#cb54-2" aria-hidden="true" tabindex="-1"></a><span class="co"># AHP - Kalite Yönetimi</span></span>
+<span id="cb54-3"><a href="#cb54-3" aria-hidden="true" tabindex="-1"></a><span class="co"># =========================</span></span>
+<span id="cb54-4"><a href="#cb54-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-5"><a href="#cb54-5" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) Bu değerlendiricinin matrisine ait kriter sırası</span></span>
+<span id="cb54-6"><a href="#cb54-6" aria-hidden="true" tabindex="-1"></a>kriterler_kalite <span class="ot">&lt;-</span> <span class="fu">c</span>(</span>
+<span id="cb54-7"><a href="#cb54-7" aria-hidden="true" tabindex="-1"></a>  <span class="st">"teknik"</span>,</span>
+<span id="cb54-8"><a href="#cb54-8" aria-hidden="true" tabindex="-1"></a>  <span class="st">"tedarik ve operasyon"</span>,</span>
+<span id="cb54-9"><a href="#cb54-9" aria-hidden="true" tabindex="-1"></a>  <span class="st">"organizasyonel yonetim"</span>,</span>
+<span id="cb54-10"><a href="#cb54-10" aria-hidden="true" tabindex="-1"></a>  <span class="st">"kalite"</span>,</span>
+<span id="cb54-11"><a href="#cb54-11" aria-hidden="true" tabindex="-1"></a>  <span class="st">"maliyet ve kaynak yonetimi"</span>,</span>
+<span id="cb54-12"><a href="#cb54-12" aria-hidden="true" tabindex="-1"></a>  <span class="st">"stratejik iyilestirme"</span></span>
+<span id="cb54-13"><a href="#cb54-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb54-14"><a href="#cb54-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-15"><a href="#cb54-15" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Ikili karsilastirma matrisi (6x6)</span></span>
+<span id="cb54-16"><a href="#cb54-16" aria-hidden="true" tabindex="-1"></a>M_kalite <span class="ot">&lt;-</span> <span class="fu">matrix</span>(<span class="fu">c</span>(</span>
+<span id="cb54-17"><a href="#cb54-17" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span>,    <span class="dv">3</span>,    <span class="dv">3</span>,    <span class="dv">5</span>,    <span class="dv">3</span>,    <span class="dv">5</span>,</span>
+<span id="cb54-18"><a href="#cb54-18" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">5</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,</span>
+<span id="cb54-19"><a href="#cb54-19" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">2</span>,    <span class="dv">1</span>,    <span class="dv">3</span>,</span>
+<span id="cb54-20"><a href="#cb54-20" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.2</span>,  <span class="fl">0.2</span>,  <span class="fl">0.5</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,</span>
+<span id="cb54-21"><a href="#cb54-21" aria-hidden="true" tabindex="-1"></a>  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span>,</span>
+<span id="cb54-22"><a href="#cb54-22" aria-hidden="true" tabindex="-1"></a>  <span class="fl">0.2</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span><span class="sc">/</span><span class="dv">3</span>,  <span class="dv">1</span>,    <span class="dv">1</span>,    <span class="dv">1</span></span>
+<span id="cb54-23"><a href="#cb54-23" aria-hidden="true" tabindex="-1"></a>), <span class="at">nrow =</span> <span class="dv">6</span>, <span class="at">byrow =</span> <span class="cn">TRUE</span>,</span>
+<span id="cb54-24"><a href="#cb54-24" aria-hidden="true" tabindex="-1"></a><span class="at">dimnames =</span> <span class="fu">list</span>(kriterler_kalite, kriterler_kalite))</span>
+<span id="cb54-25"><a href="#cb54-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-26"><a href="#cb54-26" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) AHP agirlik (Eigenvector)</span></span>
+<span id="cb54-27"><a href="#cb54-27" aria-hidden="true" tabindex="-1"></a>ahp_weights <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb54-28"><a href="#cb54-28" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb54-29"><a href="#cb54-29" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>vectors[,<span class="dv">1</span>])</span>
+<span id="cb54-30"><a href="#cb54-30" aria-hidden="true" tabindex="-1"></a>  w <span class="ot">&lt;-</span> w <span class="sc">/</span> <span class="fu">sum</span>(w)</span>
+<span id="cb54-31"><a href="#cb54-31" aria-hidden="true" tabindex="-1"></a>  <span class="fu">setNames</span>(<span class="fu">as.numeric</span>(w), <span class="fu">colnames</span>(M))</span>
+<span id="cb54-32"><a href="#cb54-32" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-33"><a href="#cb54-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-34"><a href="#cb54-34" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Tutarlilik (lambda_max, CI, CR)</span></span>
+<span id="cb54-35"><a href="#cb54-35" aria-hidden="true" tabindex="-1"></a>ahp_consistency <span class="ot">&lt;-</span> <span class="cf">function</span>(M){</span>
+<span id="cb54-36"><a href="#cb54-36" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">&lt;-</span> <span class="fu">nrow</span>(M)</span>
+<span id="cb54-37"><a href="#cb54-37" aria-hidden="true" tabindex="-1"></a>  ev <span class="ot">&lt;-</span> <span class="fu">eigen</span>(M)</span>
+<span id="cb54-38"><a href="#cb54-38" aria-hidden="true" tabindex="-1"></a>  lambda_max <span class="ot">&lt;-</span> <span class="fu">Re</span>(ev<span class="sc">$</span>values[<span class="dv">1</span>])</span>
+<span id="cb54-39"><a href="#cb54-39" aria-hidden="true" tabindex="-1"></a>  CI <span class="ot">&lt;-</span> (lambda_max <span class="sc">-</span> n) <span class="sc">/</span> (n <span class="sc">-</span> <span class="dv">1</span>)</span>
+<span id="cb54-40"><a href="#cb54-40" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-41"><a href="#cb54-41" aria-hidden="true" tabindex="-1"></a>  RI <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">0</span>, <span class="dv">0</span>, <span class="fl">0.58</span>, <span class="fl">0.90</span>, <span class="fl">1.12</span>, <span class="fl">1.24</span>, <span class="fl">1.32</span>, <span class="fl">1.41</span>, <span class="fl">1.45</span>, <span class="fl">1.49</span>)</span>
+<span id="cb54-42"><a href="#cb54-42" aria-hidden="true" tabindex="-1"></a>  CR <span class="ot">&lt;-</span> CI <span class="sc">/</span> RI[n]</span>
+<span id="cb54-43"><a href="#cb54-43" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-44"><a href="#cb54-44" aria-hidden="true" tabindex="-1"></a>  <span class="fu">list</span>(<span class="at">lambda_max =</span> lambda_max, <span class="at">CI =</span> CI, <span class="at">CR =</span> CR)</span>
+<span id="cb54-45"><a href="#cb54-45" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-46"><a href="#cb54-46" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-47"><a href="#cb54-47" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Dense rank (base R uyumlu)</span></span>
+<span id="cb54-48"><a href="#cb54-48" aria-hidden="true" tabindex="-1"></a>dense_rank_safe <span class="ot">&lt;-</span> <span class="cf">function</span>(x, <span class="at">digits =</span> <span class="dv">8</span>){</span>
+<span id="cb54-49"><a href="#cb54-49" aria-hidden="true" tabindex="-1"></a>  xr <span class="ot">&lt;-</span> <span class="fu">round</span>(x, digits)</span>
+<span id="cb54-50"><a href="#cb54-50" aria-hidden="true" tabindex="-1"></a>  <span class="fu">match</span>(<span class="sc">-</span>xr, <span class="fu">sort</span>(<span class="fu">unique</span>(<span class="sc">-</span>xr)))</span>
+<span id="cb54-51"><a href="#cb54-51" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb54-52"><a href="#cb54-52" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-53"><a href="#cb54-53" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) Hesapla</span></span>
+<span id="cb54-54"><a href="#cb54-54" aria-hidden="true" tabindex="-1"></a>w_kalite <span class="ot">&lt;-</span> <span class="fu">ahp_weights</span>(M_kalite)</span>
+<span id="cb54-55"><a href="#cb54-55" aria-hidden="true" tabindex="-1"></a>cons_kalite <span class="ot">&lt;-</span> <span class="fu">ahp_consistency</span>(M_kalite)</span>
+<span id="cb54-56"><a href="#cb54-56" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-57"><a href="#cb54-57" aria-hidden="true" tabindex="-1"></a>sonuc_kalite <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb54-58"><a href="#cb54-58" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">names</span>(w_kalite),</span>
+<span id="cb54-59"><a href="#cb54-59" aria-hidden="true" tabindex="-1"></a>  <span class="at">Agirlik =</span> <span class="fu">as.numeric</span>(w_kalite),</span>
+<span id="cb54-60"><a href="#cb54-60" aria-hidden="true" tabindex="-1"></a>  <span class="at">Yuzde =</span> <span class="dv">100</span> <span class="sc">*</span> <span class="fu">as.numeric</span>(w_kalite)</span>
+<span id="cb54-61"><a href="#cb54-61" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb54-62"><a href="#cb54-62" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-63"><a href="#cb54-63" aria-hidden="true" tabindex="-1"></a>sonuc_kalite<span class="sc">$</span>Sira <span class="ot">&lt;-</span> <span class="fu">dense_rank_safe</span>(sonuc_kalite<span class="sc">$</span>Agirlik)</span>
+<span id="cb54-64"><a href="#cb54-64" aria-hidden="true" tabindex="-1"></a>sonuc_kalite <span class="ot">&lt;-</span> sonuc_kalite[<span class="fu">order</span>(sonuc_kalite<span class="sc">$</span>Sira, <span class="sc">-</span>sonuc_kalite<span class="sc">$</span>Agirlik), ]</span>
+<span id="cb54-65"><a href="#cb54-65" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb54-66"><a href="#cb54-66" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(<span class="st">"=== AHP Sonuclari (Kalite Yonetimi) ==="</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] "=== AHP Sonuclari (Kalite Yonetimi) ==="</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb56"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb56-1"><a href="#cb56-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(sonuc_kalite)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>                      Kriter    Agirlik     Yuzde Sira
+1                     teknik 0.39823276 39.823276    1
+2       tedarik ve operasyon 0.18694362 18.694362    2
+3     organizasyonel yonetim 0.15209193 15.209193    3
+5 maliyet ve kaynak yonetimi 0.11726180 11.726180    4
+4                     kalite 0.07276870  7.276870    5
+6      stratejik iyilestirme 0.07270119  7.270119    6</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb58"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb58-1"><a href="#cb58-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"</span><span class="sc">\n</span><span class="st">=== Tutarlilik Sonuclari ===</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+=== Tutarlilik Sonuclari ===</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb60"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb60-1"><a href="#cb60-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"lambda_max:"</span>, <span class="fu">round</span>(cons_kalite<span class="sc">$</span>lambda_max, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>lambda_max: 6.26386 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb62"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb62-1"><a href="#cb62-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CI:"</span>, <span class="fu">round</span>(cons_kalite<span class="sc">$</span>CI, <span class="dv">6</span>), <span class="st">"</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CI: 0.052772 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb64"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb64-1"><a href="#cb64-1" aria-hidden="true" tabindex="-1"></a><span class="fu">cat</span>(<span class="st">"CR:"</span>, <span class="fu">round</span>(cons_kalite<span class="sc">$</span>CR <span class="sc">*</span> <span class="dv">100</span>, <span class="dv">2</span>), <span class="st">"%</span><span class="sc">\n</span><span class="st">"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>CR: 4.26 %</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb66"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb66-1"><a href="#cb66-1" aria-hidden="true" tabindex="-1"></a>agirlikli_kriterler <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb66-2"><a href="#cb66-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb66-3"><a href="#cb66-3" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Teknik"</span>,</span>
+<span id="cb66-4"><a href="#cb66-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Tedarik &amp; Operasyon"</span>,</span>
+<span id="cb66-5"><a href="#cb66-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Stratejik İyileştirme"</span>,</span>
+<span id="cb66-6"><a href="#cb66-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Maliyet &amp; Kaynak Yönetimi"</span>,</span>
+<span id="cb66-7"><a href="#cb66-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Organizasyonel Yönetim"</span>,</span>
+<span id="cb66-8"><a href="#cb66-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kalite"</span></span>
+<span id="cb66-9"><a href="#cb66-9" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb66-10"><a href="#cb66-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sistem_Basmuhendisi =</span> <span class="fu">c</span>(<span class="fl">46.6</span>, <span class="fl">17.5</span>, <span class="fl">8.3</span>, <span class="fl">12.4</span>, <span class="fl">7.9</span>, <span class="fl">7.3</span>),</span>
+<span id="cb66-11"><a href="#cb66-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Proje_Yoneticisi =</span> <span class="fu">c</span>(<span class="fl">38.9</span>, <span class="fl">14.4</span>, <span class="fl">3.4</span>, <span class="fl">14.4</span>, <span class="fl">14.4</span>, <span class="fl">14.4</span>),</span>
+<span id="cb66-12"><a href="#cb66-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Sozlesme_Yoneticisi =</span> <span class="fu">c</span>(<span class="fl">25.6</span>, <span class="fl">9.5</span>, <span class="fl">4.3</span>, <span class="fl">25.6</span>, <span class="fl">9.5</span>, <span class="fl">25.6</span>),</span>
+<span id="cb66-13"><a href="#cb66-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kalite_Yonetim_Muhendisi =</span> <span class="fu">c</span>(<span class="fl">39.8</span>, <span class="fl">18.7</span>, <span class="fl">7.3</span>, <span class="fl">11.7</span>, <span class="fl">15.2</span>, <span class="fl">7.3</span>)</span>
+<span id="cb66-14"><a href="#cb66-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb67"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb67-1"><a href="#cb67-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb67-2"><a href="#cb67-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb67-3"><a href="#cb67-3" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb67-4"><a href="#cb67-4" aria-hidden="true" tabindex="-1"></a>  agirlikli_kriterler,</span>
+<span id="cb67-5"><a href="#cb67-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb67-6"><a href="#cb67-6" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(</span>
+<span id="cb67-7"><a href="#cb67-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kriter"</span>,</span>
+<span id="cb67-8"><a href="#cb67-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Sistem Başmühendisi"</span>,</span>
+<span id="cb67-9"><a href="#cb67-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Proje Yöneticisi"</span>,</span>
+<span id="cb67-10"><a href="#cb67-10" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Alt Sözleşme Yöneticisi"</span>,</span>
+<span id="cb67-11"><a href="#cb67-11" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kalite Yönetim Mühendisi"</span></span>
+<span id="cb67-12"><a href="#cb67-12" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb67-13"><a href="#cb67-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Ağırlıklı Değerlendirme Kriterleri"</span></span>
+<span id="cb67-14"><a href="#cb67-14" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Ağırlıklı Değerlendirme Kriterleri</caption>
+<colgroup>
+<col style="width: 23%">
+<col style="width: 17%">
+<col style="width: 15%">
+<col style="width: 21%">
+<col style="width: 22%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Kriter</th>
+<th style="text-align: right;">Sistem Başmühendisi</th>
+<th style="text-align: right;">Proje Yöneticisi</th>
+<th style="text-align: right;">Alt Sözleşme Yöneticisi</th>
+<th style="text-align: right;">Kalite Yönetim Mühendisi</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Teknik</td>
+<td style="text-align: right;">46.6</td>
+<td style="text-align: right;">38.9</td>
+<td style="text-align: right;">25.6</td>
+<td style="text-align: right;">39.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tedarik &amp; Operasyon</td>
+<td style="text-align: right;">17.5</td>
+<td style="text-align: right;">14.4</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">18.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stratejik İyileştirme</td>
+<td style="text-align: right;">8.3</td>
+<td style="text-align: right;">3.4</td>
+<td style="text-align: right;">4.3</td>
+<td style="text-align: right;">7.3</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Maliyet &amp; Kaynak Yönetimi</td>
+<td style="text-align: right;">12.4</td>
+<td style="text-align: right;">14.4</td>
+<td style="text-align: right;">25.6</td>
+<td style="text-align: right;">11.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Organizasyonel Yönetim</td>
+<td style="text-align: right;">7.9</td>
+<td style="text-align: right;">14.4</td>
+<td style="text-align: right;">9.5</td>
+<td style="text-align: right;">15.2</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kalite</td>
+<td style="text-align: right;">7.3</td>
+<td style="text-align: right;">14.4</td>
+<td style="text-align: right;">25.6</td>
+<td style="text-align: right;">7.3</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb68"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb68-1"><a href="#cb68-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb68-2"><a href="#cb68-2" aria-hidden="true" tabindex="-1"></a>ortalama_agirliklar <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb68-3"><a href="#cb68-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb68-4"><a href="#cb68-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Teknik"</span>,</span>
+<span id="cb68-5"><a href="#cb68-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Tedarik &amp; Operasyon"</span>,</span>
+<span id="cb68-6"><a href="#cb68-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Maliyet &amp; Kaynak Yönetimi"</span>,</span>
+<span id="cb68-7"><a href="#cb68-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Organizasyonel Yönetim"</span>,</span>
+<span id="cb68-8"><a href="#cb68-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Stratejik İyileştirme"</span>,</span>
+<span id="cb68-9"><a href="#cb68-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Kalite"</span></span>
+<span id="cb68-10"><a href="#cb68-10" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb68-11"><a href="#cb68-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ortalama =</span> <span class="fu">c</span>(<span class="fl">37.7</span>, <span class="dv">15</span>, <span class="dv">16</span>, <span class="fl">11.7</span>, <span class="fl">5.8</span>, <span class="fl">13.7</span>)</span>
+<span id="cb68-12"><a href="#cb68-12" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb69"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb69-1"><a href="#cb69-1" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb69-2"><a href="#cb69-2" aria-hidden="true" tabindex="-1"></a>  ortalama_agirliklar,</span>
+<span id="cb69-3"><a href="#cb69-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb69-4"><a href="#cb69-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Nihai Ağırlıklar"</span>, <span class="st">"Ortalama (%)"</span>),</span>
+<span id="cb69-5"><a href="#cb69-5" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Hesaplanan Ortalama Kriter Ağırlıkları"</span></span>
+<span id="cb69-6"><a href="#cb69-6" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Hesaplanan Ortalama Kriter Ağırlıkları</caption>
+<thead>
+<tr class="header">
+<th style="text-align: left;">Nihai Ağırlıklar</th>
+<th style="text-align: right;">Ortalama (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: left;">Teknik</td>
+<td style="text-align: right;">37.7</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Tedarik &amp; Operasyon</td>
+<td style="text-align: right;">15.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Maliyet &amp; Kaynak Yönetimi</td>
+<td style="text-align: right;">16.0</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Organizasyonel Yönetim</td>
+<td style="text-align: right;">11.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: left;">Stratejik İyileştirme</td>
+<td style="text-align: right;">5.8</td>
+</tr>
+<tr class="even">
+<td style="text-align: left;">Kalite</td>
+<td style="text-align: right;">13.7</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb70"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb70-1"><a href="#cb70-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(knitr)</span>
+<span id="cb70-2"><a href="#cb70-2" aria-hidden="true" tabindex="-1"></a>alt_teknik <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb70-3"><a href="#cb70-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb70-4"><a href="#cb70-4" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb70-5"><a href="#cb70-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"System Engineering &amp; Verification"</span>,</span>
+<span id="cb70-6"><a href="#cb70-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Compliance &amp; Integration Maturity"</span>,</span>
+<span id="cb70-7"><a href="#cb70-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"RMST"</span></span>
+<span id="cb70-8"><a href="#cb70-8" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb70-9"><a href="#cb70-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">42.9</span>, <span class="fl">14.3</span>, <span class="fl">42.9</span>),</span>
+<span id="cb70-10"><a href="#cb70-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span>),</span>
+<span id="cb70-11"><a href="#cb70-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>),</span>
+<span id="cb70-12"><a href="#cb70-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>)</span>
+<span id="cb70-13"><a href="#cb70-13" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb70-14"><a href="#cb70-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb70-15"><a href="#cb70-15" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb70-16"><a href="#cb70-16" aria-hidden="true" tabindex="-1"></a>  alt_teknik,</span>
+<span id="cb70-17"><a href="#cb70-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb70-18"><a href="#cb70-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb70-19"><a href="#cb70-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Teknik – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb70-20"><a href="#cb70-20" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Teknik – Alt Kriter Ağırlıkları (AHP)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">System Engineering &amp; Verification</td>
+<td style="text-align: right;">42.9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Compliance &amp; Integration Maturity</td>
+<td style="text-align: right;">14.3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">RMST</td>
+<td style="text-align: right;">42.9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb71"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb71-1"><a href="#cb71-1" aria-hidden="true" tabindex="-1"></a>alt_teknik <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb71-2"><a href="#cb71-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb71-3"><a href="#cb71-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb71-4"><a href="#cb71-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"System Engineering &amp; Verification"</span>,</span>
+<span id="cb71-5"><a href="#cb71-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Compliance &amp; Integration Maturity"</span>,</span>
+<span id="cb71-6"><a href="#cb71-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"RMST"</span></span>
+<span id="cb71-7"><a href="#cb71-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb71-8"><a href="#cb71-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">42.9</span>, <span class="fl">14.3</span>, <span class="fl">42.9</span>),</span>
+<span id="cb71-9"><a href="#cb71-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">1</span>),</span>
+<span id="cb71-10"><a href="#cb71-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>),</span>
+<span id="cb71-11"><a href="#cb71-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>)</span>
+<span id="cb71-12"><a href="#cb71-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb71-13"><a href="#cb71-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb71-14"><a href="#cb71-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb71-15"><a href="#cb71-15" aria-hidden="true" tabindex="-1"></a>  alt_teknik,</span>
+<span id="cb71-16"><a href="#cb71-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb71-17"><a href="#cb71-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb71-18"><a href="#cb71-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Teknik – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb71-19"><a href="#cb71-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Teknik – Alt Kriter Ağırlıkları (AHP)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">System Engineering &amp; Verification</td>
+<td style="text-align: right;">42.9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Compliance &amp; Integration Maturity</td>
+<td style="text-align: right;">14.3</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">RMST</td>
+<td style="text-align: right;">42.9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb72"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb72-1"><a href="#cb72-1" aria-hidden="true" tabindex="-1"></a>alt_tedarik <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb72-2"><a href="#cb72-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb72-3"><a href="#cb72-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb72-4"><a href="#cb72-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Altsözlesme"</span>,</span>
+<span id="cb72-5"><a href="#cb72-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Logistics and Customer Service"</span></span>
+<span id="cb72-6"><a href="#cb72-6" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb72-7"><a href="#cb72-7" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">75.0</span>, <span class="fl">25.0</span>),</span>
+<span id="cb72-8"><a href="#cb72-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>),</span>
+<span id="cb72-9"><a href="#cb72-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>),</span>
+<span id="cb72-10"><a href="#cb72-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>)</span>
+<span id="cb72-11"><a href="#cb72-11" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb72-12"><a href="#cb72-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb72-13"><a href="#cb72-13" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb72-14"><a href="#cb72-14" aria-hidden="true" tabindex="-1"></a>  alt_tedarik,</span>
+<span id="cb72-15"><a href="#cb72-15" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb72-16"><a href="#cb72-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb72-17"><a href="#cb72-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Tedarik &amp; Operasyon – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb72-18"><a href="#cb72-18" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Tedarik &amp; Operasyon – Alt Kriter Ağırlıkları (AHP)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Altsözlesme</td>
+<td style="text-align: right;">75</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Logistics and Customer Service</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb73"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb73-1"><a href="#cb73-1" aria-hidden="true" tabindex="-1"></a>alt_org1 <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb73-2"><a href="#cb73-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb73-3"><a href="#cb73-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb73-4"><a href="#cb73-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Work Place Organization"</span>,</span>
+<span id="cb73-5"><a href="#cb73-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Environment &amp; Energy"</span>,</span>
+<span id="cb73-6"><a href="#cb73-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Focused Improvement"</span></span>
+<span id="cb73-7"><a href="#cb73-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb73-8"><a href="#cb73-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">25.0</span>, <span class="fl">25.0</span>, <span class="fl">50.0</span>),</span>
+<span id="cb73-9"><a href="#cb73-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">2</span>, <span class="dv">1</span>),</span>
+<span id="cb73-10"><a href="#cb73-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>),</span>
+<span id="cb73-11"><a href="#cb73-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">0.0</span>, <span class="fl">0.0</span>, <span class="fl">0.0</span>)</span>
+<span id="cb73-12"><a href="#cb73-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb73-13"><a href="#cb73-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb73-14"><a href="#cb73-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb73-15"><a href="#cb73-15" aria-hidden="true" tabindex="-1"></a>  alt_org1,</span>
+<span id="cb73-16"><a href="#cb73-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb73-17"><a href="#cb73-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb73-18"><a href="#cb73-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Organizasyonel Yönetim – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb73-19"><a href="#cb73-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Organizasyonel Yönetim – Alt Kriter Ağırlıkları (AHP)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Work Place Organization</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Environment &amp; Energy</td>
+<td style="text-align: right;">25</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Focused Improvement</td>
+<td style="text-align: right;">50</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">0</td>
+<td style="text-align: right;">0</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb74"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb74-1"><a href="#cb74-1" aria-hidden="true" tabindex="-1"></a>alt_strateji <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb74-2"><a href="#cb74-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">6</span>,</span>
+<span id="cb74-3"><a href="#cb74-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb74-4"><a href="#cb74-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Program Management"</span>,</span>
+<span id="cb74-5"><a href="#cb74-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Clarity of Objectives"</span>,</span>
+<span id="cb74-6"><a href="#cb74-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Commitment of the Organization"</span>,</span>
+<span id="cb74-7"><a href="#cb74-7" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Competence of the Organization Toward Improvement"</span>,</span>
+<span id="cb74-8"><a href="#cb74-8" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Management Commitment"</span>,</span>
+<span id="cb74-9"><a href="#cb74-9" aria-hidden="true" tabindex="-1"></a>    <span class="st">"People Development"</span></span>
+<span id="cb74-10"><a href="#cb74-10" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb74-11"><a href="#cb74-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">20.8</span>, <span class="fl">3.9</span>, <span class="fl">25.4</span>, <span class="fl">10.0</span>, <span class="fl">29.9</span>, <span class="fl">10.0</span>),</span>
+<span id="cb74-12"><a href="#cb74-12" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">3</span>, <span class="dv">6</span>, <span class="dv">2</span>, <span class="dv">4</span>, <span class="dv">1</span>, <span class="dv">4</span>),</span>
+<span id="cb74-13"><a href="#cb74-13" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">7.1</span>, <span class="fl">0.6</span>, <span class="fl">8.4</span>, <span class="fl">1.9</span>, <span class="fl">5.5</span>, <span class="fl">1.9</span>),</span>
+<span id="cb74-14"><a href="#cb74-14" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">7.1</span>, <span class="fl">0.6</span>, <span class="fl">8.4</span>, <span class="fl">1.9</span>, <span class="fl">5.5</span>, <span class="fl">1.9</span>)</span>
+<span id="cb74-15"><a href="#cb74-15" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb74-16"><a href="#cb74-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb74-17"><a href="#cb74-17" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb74-18"><a href="#cb74-18" aria-hidden="true" tabindex="-1"></a>  alt_strateji,</span>
+<span id="cb74-19"><a href="#cb74-19" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb74-20"><a href="#cb74-20" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb74-21"><a href="#cb74-21" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Stratejik İyileştirme – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb74-22"><a href="#cb74-22" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Stratejik İyileştirme – Alt Kriter Ağırlıkları (AHP)</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 63%">
+<col style="width: 15%">
+<col style="width: 6%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Program Management</td>
+<td style="text-align: right;">20.8</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">7.1</td>
+<td style="text-align: right;">7.1</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Clarity of Objectives</td>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">6</td>
+<td style="text-align: right;">0.6</td>
+<td style="text-align: right;">0.6</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Commitment of the Organization</td>
+<td style="text-align: right;">25.4</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">8.4</td>
+<td style="text-align: right;">8.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">4</td>
+<td style="text-align: left;">Competence of the Organization Toward Improvement</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">1.9</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">5</td>
+<td style="text-align: left;">Management Commitment</td>
+<td style="text-align: right;">29.9</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">5.5</td>
+<td style="text-align: right;">5.5</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">6</td>
+<td style="text-align: left;">People Development</td>
+<td style="text-align: right;">10.0</td>
+<td style="text-align: right;">4</td>
+<td style="text-align: right;">1.9</td>
+<td style="text-align: right;">1.9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb75"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb75-1"><a href="#cb75-1" aria-hidden="true" tabindex="-1"></a>alt_maliyet <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb75-2"><a href="#cb75-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb75-3"><a href="#cb75-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb75-4"><a href="#cb75-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Cost Deployment"</span>,</span>
+<span id="cb75-5"><a href="#cb75-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Allocation of Highly Qualified People"</span>,</span>
+<span id="cb75-6"><a href="#cb75-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Time and Budget"</span></span>
+<span id="cb75-7"><a href="#cb75-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb75-8"><a href="#cb75-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">23.0</span>, <span class="fl">12.2</span>, <span class="fl">64.8</span>),</span>
+<span id="cb75-9"><a href="#cb75-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">1</span>),</span>
+<span id="cb75-10"><a href="#cb75-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">1.4</span>, <span class="fl">0.7</span>, <span class="fl">3.9</span>),</span>
+<span id="cb75-11"><a href="#cb75-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">1.4</span>, <span class="fl">0.7</span>, <span class="fl">3.9</span>)</span>
+<span id="cb75-12"><a href="#cb75-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb75-13"><a href="#cb75-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb75-14"><a href="#cb75-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb75-15"><a href="#cb75-15" aria-hidden="true" tabindex="-1"></a>  alt_maliyet,</span>
+<span id="cb75-16"><a href="#cb75-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb75-17"><a href="#cb75-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb75-18"><a href="#cb75-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Maliyet &amp; Kaynak Yönetimi – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb75-19"><a href="#cb75-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Maliyet &amp; Kaynak Yönetimi – Alt Kriter Ağırlıkları (AHP)</caption>
+<colgroup>
+<col style="width: 5%">
+<col style="width: 56%">
+<col style="width: 17%">
+<col style="width: 7%">
+<col style="width: 5%">
+<col style="width: 5%">
+</colgroup>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Cost Deployment</td>
+<td style="text-align: right;">23.0</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">1.4</td>
+<td style="text-align: right;">1.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Allocation of Highly Qualified People</td>
+<td style="text-align: right;">12.2</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">0.7</td>
+<td style="text-align: right;">0.7</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Time and Budget</td>
+<td style="text-align: right;">64.8</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">3.9</td>
+<td style="text-align: right;">3.9</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="sourceCode cell-code" id="cb76"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb76-1"><a href="#cb76-1" aria-hidden="true" tabindex="-1"></a>alt_kalite <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(</span>
+<span id="cb76-2"><a href="#cb76-2" aria-hidden="true" tabindex="-1"></a>  <span class="at">Ktg =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb76-3"><a href="#cb76-3" aria-hidden="true" tabindex="-1"></a>  <span class="at">Alt_Kriter =</span> <span class="fu">c</span>(</span>
+<span id="cb76-4"><a href="#cb76-4" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Health &amp; Safety"</span>,</span>
+<span id="cb76-5"><a href="#cb76-5" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Configuration Management"</span>,</span>
+<span id="cb76-6"><a href="#cb76-6" aria-hidden="true" tabindex="-1"></a>    <span class="st">"Quality Management"</span></span>
+<span id="cb76-7"><a href="#cb76-7" aria-hidden="true" tabindex="-1"></a>  ),</span>
+<span id="cb76-8"><a href="#cb76-8" aria-hidden="true" tabindex="-1"></a>  <span class="at">Oncelik =</span> <span class="fu">c</span>(<span class="fl">63.7</span>, <span class="fl">10.5</span>, <span class="fl">25.8</span>),</span>
+<span id="cb76-9"><a href="#cb76-9" aria-hidden="true" tabindex="-1"></a>  <span class="at">Sira =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">3</span>, <span class="dv">2</span>),</span>
+<span id="cb76-10"><a href="#cb76-10" aria-hidden="true" tabindex="-1"></a>  <span class="at">Arti =</span> <span class="fu">c</span>(<span class="fl">12.4</span>, <span class="fl">2.0</span>, <span class="fl">5.0</span>),</span>
+<span id="cb76-11"><a href="#cb76-11" aria-hidden="true" tabindex="-1"></a>  <span class="at">Eksi =</span> <span class="fu">c</span>(<span class="fl">12.4</span>, <span class="fl">2.0</span>, <span class="fl">5.0</span>)</span>
+<span id="cb76-12"><a href="#cb76-12" aria-hidden="true" tabindex="-1"></a>)</span>
+<span id="cb76-13"><a href="#cb76-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb76-14"><a href="#cb76-14" aria-hidden="true" tabindex="-1"></a><span class="fu">kable</span>(</span>
+<span id="cb76-15"><a href="#cb76-15" aria-hidden="true" tabindex="-1"></a>  alt_kalite,</span>
+<span id="cb76-16"><a href="#cb76-16" aria-hidden="true" tabindex="-1"></a>  <span class="at">digits =</span> <span class="dv">1</span>,</span>
+<span id="cb76-17"><a href="#cb76-17" aria-hidden="true" tabindex="-1"></a>  <span class="at">col.names =</span> <span class="fu">c</span>(<span class="st">"Ktg"</span>, <span class="st">"Alt Kriter"</span>, <span class="st">"Öncelik (%)"</span>, <span class="st">"Sıra"</span>, <span class="st">"(+)"</span>, <span class="st">"(-)"</span>),</span>
+<span id="cb76-18"><a href="#cb76-18" aria-hidden="true" tabindex="-1"></a>  <span class="at">caption =</span> <span class="st">"Kalite – Alt Kriter Ağırlıkları (AHP)"</span></span>
+<span id="cb76-19"><a href="#cb76-19" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output-display">
+<table class="caption-top table table-sm table-striped small">
+<caption>Kalite – Alt Kriter Ağırlıkları (AHP)</caption>
+<thead>
+<tr class="header">
+<th style="text-align: right;">Ktg</th>
+<th style="text-align: left;">Alt Kriter</th>
+<th style="text-align: right;">Öncelik (%)</th>
+<th style="text-align: right;">Sıra</th>
+<th style="text-align: right;">(+)</th>
+<th style="text-align: right;">(-)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: right;">1</td>
+<td style="text-align: left;">Health &amp; Safety</td>
+<td style="text-align: right;">63.7</td>
+<td style="text-align: right;">1</td>
+<td style="text-align: right;">12.4</td>
+<td style="text-align: right;">12.4</td>
+</tr>
+<tr class="even">
+<td style="text-align: right;">2</td>
+<td style="text-align: left;">Configuration Management</td>
+<td style="text-align: right;">10.5</td>
+<td style="text-align: right;">3</td>
+<td style="text-align: right;">2.0</td>
+<td style="text-align: right;">2.0</td>
+</tr>
+<tr class="odd">
+<td style="text-align: right;">3</td>
+<td style="text-align: left;">Quality Management</td>
+<td style="text-align: right;">25.8</td>
+<td style="text-align: right;">2</td>
+<td style="text-align: right;">5.0</td>
+<td style="text-align: right;">5.0</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+  window.document.addEventListener("DOMContentLoaded", function (event) {
+    const icon = "";
+    const anchorJS = new window.AnchorJS();
+    anchorJS.options = {
+      placement: 'right',
+      icon: icon
+    };
+    anchorJS.add('.anchored');
+    const isCodeAnnotation = (el) => {
+      for (const clz of el.classList) {
+        if (clz.startsWith('code-annotation-')) {                     
+          return true;
+        }
+      }
+      return false;
+    }
+    const onCopySuccess = function(e) {
+      // button target
+      const button = e.trigger;
+      // don't keep focus
+      button.blur();
+      // flash "checked"
+      button.classList.add('code-copy-button-checked');
+      var currentTitle = button.getAttribute("title");
+      button.setAttribute("title", "Copied!");
+      let tooltip;
+      if (window.bootstrap) {
+        button.setAttribute("data-bs-toggle", "tooltip");
+        button.setAttribute("data-bs-placement", "left");
+        button.setAttribute("data-bs-title", "Copied!");
+        tooltip = new bootstrap.Tooltip(button, 
+          { trigger: "manual", 
+            customClass: "code-copy-button-tooltip",
+            offset: [0, -8]});
+        tooltip.show();    
+      }
+      setTimeout(function() {
+        if (tooltip) {
+          tooltip.hide();
+          button.removeAttribute("data-bs-title");
+          button.removeAttribute("data-bs-toggle");
+          button.removeAttribute("data-bs-placement");
+        }
+        button.setAttribute("title", currentTitle);
+        button.classList.remove('code-copy-button-checked');
+      }, 1000);
+      // clear code selection
+      e.clearSelection();
+    }
+    const getTextToCopy = function(trigger) {
+        const codeEl = trigger.previousElementSibling.cloneNode(true);
+        for (const childEl of codeEl.children) {
+          if (isCodeAnnotation(childEl)) {
+            childEl.remove();
+          }
+        }
+        return codeEl.innerText;
+    }
+    const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+      text: getTextToCopy
+    });
+    clipboard.on('success', onCopySuccess);
+    if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+      const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+        text: getTextToCopy,
+        container: window.document.getElementById('quarto-embedded-source-code-modal')
+      });
+      clipboardModal.on('success', onCopySuccess);
+    }
+      var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var mailtoRegex = new RegExp(/^mailto:/);
+        var filterRegex = new RegExp('/' + window.location.host + '/');
+      var isInternal = (href) => {
+          return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+      }
+      // Inspect non-navigation links and adorn them if external
+     var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+      for (var i=0; i<links.length; i++) {
+        const link = links[i];
+        if (!isInternal(link.href)) {
+          // undo the damage that might have been done by quarto-nav.js in the case of
+          // links that we want to consider external
+          if (link.dataset.originalHref !== undefined) {
+            link.href = link.dataset.originalHref;
+          }
+        }
+      }
+    function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+      const config = {
+        allowHTML: true,
+        maxWidth: 500,
+        delay: 100,
+        arrow: false,
+        appendTo: function(el) {
+            return el.parentElement;
+        },
+        interactive: true,
+        interactiveBorder: 10,
+        theme: 'quarto',
+        placement: 'bottom-start',
+      };
+      if (contentFn) {
+        config.content = contentFn;
+      }
+      if (onTriggerFn) {
+        config.onTrigger = onTriggerFn;
+      }
+      if (onUntriggerFn) {
+        config.onUntrigger = onUntriggerFn;
+      }
+      window.tippy(el, config); 
+    }
+    const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+    for (var i=0; i<noterefs.length; i++) {
+      const ref = noterefs[i];
+      tippyHover(ref, function() {
+        // use id or data attribute instead here
+        let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+        try { href = new URL(href).hash; } catch {}
+        const id = href.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note) {
+          return note.innerHTML;
+        } else {
+          return "";
+        }
+      });
+    }
+    const xrefs = window.document.querySelectorAll('a.quarto-xref');
+    const processXRef = (id, note) => {
+      // Strip column container classes
+      const stripColumnClz = (el) => {
+        el.classList.remove("page-full", "page-columns");
+        if (el.children) {
+          for (const child of el.children) {
+            stripColumnClz(child);
+          }
+        }
+      }
+      stripColumnClz(note)
+      if (id === null || id.startsWith('sec-')) {
+        // Special case sections, only their first couple elements
+        const container = document.createElement("div");
+        if (note.children && note.children.length > 2) {
+          container.appendChild(note.children[0].cloneNode(true));
+          for (let i = 1; i < note.children.length; i++) {
+            const child = note.children[i];
+            if (child.tagName === "P" && child.innerText === "") {
+              continue;
+            } else {
+              container.appendChild(child.cloneNode(true));
+              break;
+            }
+          }
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(container);
+          }
+          return container.innerHTML
+        } else {
+          if (window.Quarto?.typesetMath) {
+            window.Quarto.typesetMath(note);
+          }
+          return note.innerHTML;
+        }
+      } else {
+        // Remove any anchor links if they are present
+        const anchorLink = note.querySelector('a.anchorjs-link');
+        if (anchorLink) {
+          anchorLink.remove();
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        if (note.classList.contains("callout")) {
+          return note.outerHTML;
+        } else {
+          return note.innerHTML;
+        }
+      }
+    }
+    for (var i=0; i<xrefs.length; i++) {
+      const xref = xrefs[i];
+      tippyHover(xref, undefined, function(instance) {
+        instance.disable();
+        let url = xref.getAttribute('href');
+        let hash = undefined; 
+        if (url.startsWith('#')) {
+          hash = url;
+        } else {
+          try { hash = new URL(url).hash; } catch {}
+        }
+        if (hash) {
+          const id = hash.replace(/^#\/?/, "");
+          const note = window.document.getElementById(id);
+          if (note !== null) {
+            try {
+              const html = processXRef(id, note.cloneNode(true));
+              instance.setContent(html);
+            } finally {
+              instance.enable();
+              instance.show();
+            }
+          } else {
+            // See if we can fetch this
+            fetch(url.split('#')[0])
+            .then(res => res.text())
+            .then(html => {
+              const parser = new DOMParser();
+              const htmlDoc = parser.parseFromString(html, "text/html");
+              const note = htmlDoc.getElementById(id);
+              if (note !== null) {
+                const html = processXRef(id, note);
+                instance.setContent(html);
+              } 
+            }).finally(() => {
+              instance.enable();
+              instance.show();
+            });
+          }
+        } else {
+          // See if we can fetch a full url (with no hash to target)
+          // This is a special case and we should probably do some content thinning / targeting
+          fetch(url)
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.querySelector('main.content');
+            if (note !== null) {
+              // This should only happen for chapter cross references
+              // (since there is no id in the URL)
+              // remove the first header
+              if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+                note.children[0].remove();
+              }
+              const html = processXRef(null, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      }, function(instance) {
+      });
+    }
+        let selectedAnnoteEl;
+        const selectorForAnnotation = ( cell, annotation) => {
+          let cellAttr = 'data-code-cell="' + cell + '"';
+          let lineAttr = 'data-code-annotation="' +  annotation + '"';
+          const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+          return selector;
+        }
+        const selectCodeLines = (annoteEl) => {
+          const doc = window.document;
+          const targetCell = annoteEl.getAttribute("data-target-cell");
+          const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+          const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+          const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+          const lineIds = lines.map((line) => {
+            return targetCell + "-" + line;
+          })
+          let top = null;
+          let height = null;
+          let parent = null;
+          if (lineIds.length > 0) {
+              //compute the position of the single el (top and bottom and make a div)
+              const el = window.document.getElementById(lineIds[0]);
+              top = el.offsetTop;
+              height = el.offsetHeight;
+              parent = el.parentElement.parentElement;
+            if (lineIds.length > 1) {
+              const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+              const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+              height = bottom - top;
+            }
+            if (top !== null && height !== null && parent !== null) {
+              // cook up a div (if necessary) and position it 
+              let div = window.document.getElementById("code-annotation-line-highlight");
+              if (div === null) {
+                div = window.document.createElement("div");
+                div.setAttribute("id", "code-annotation-line-highlight");
+                div.style.position = 'absolute';
+                parent.appendChild(div);
+              }
+              div.style.top = top - 2 + "px";
+              div.style.height = height + 4 + "px";
+              div.style.left = 0;
+              let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+              if (gutterDiv === null) {
+                gutterDiv = window.document.createElement("div");
+                gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+                gutterDiv.style.position = 'absolute';
+                const codeCell = window.document.getElementById(targetCell);
+                const gutter = codeCell.querySelector('.code-annotation-gutter');
+                gutter.appendChild(gutterDiv);
+              }
+              gutterDiv.style.top = top - 2 + "px";
+              gutterDiv.style.height = height + 4 + "px";
+            }
+            selectedAnnoteEl = annoteEl;
+          }
+        };
+        const unselectCodeLines = () => {
+          const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+          elementsIds.forEach((elId) => {
+            const div = window.document.getElementById(elId);
+            if (div) {
+              div.remove();
+            }
+          });
+          selectedAnnoteEl = undefined;
+        };
+          // Handle positioning of the toggle
+      window.addEventListener(
+        "resize",
+        throttle(() => {
+          elRect = undefined;
+          if (selectedAnnoteEl) {
+            selectCodeLines(selectedAnnoteEl);
+          }
+        }, 10)
+      );
+      function throttle(fn, ms) {
+      let throttle = false;
+      let timer;
+        return (...args) => {
+          if(!throttle) { // first call gets through
+              fn.apply(this, args);
+              throttle = true;
+          } else { // all the others get throttled
+              if(timer) clearTimeout(timer); // cancel #2
+              timer = setTimeout(() => {
+                fn.apply(this, args);
+                timer = throttle = false;
+              }, ms);
+          }
+        };
+      }
+        // Attach click handler to the DT
+        const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+        for (const annoteDlNode of annoteDls) {
+          annoteDlNode.addEventListener('click', (event) => {
+            const clickedEl = event.target;
+            if (clickedEl !== selectedAnnoteEl) {
+              unselectCodeLines();
+              const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+              if (activeEl) {
+                activeEl.classList.remove('code-annotation-active');
+              }
+              selectCodeLines(clickedEl);
+              clickedEl.classList.add('code-annotation-active');
+            } else {
+              // Unselect the line
+              unselectCodeLines();
+              clickedEl.classList.remove('code-annotation-active');
+            }
+          });
+        }
+    const findCites = (el) => {
+      const parentEl = el.parentElement;
+      if (parentEl) {
+        const cites = parentEl.dataset.cites;
+        if (cites) {
+          return {
+            el,
+            cites: cites.split(' ')
+          };
+        } else {
+          return findCites(el.parentElement)
+        }
+      } else {
+        return undefined;
+      }
+    };
+    var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+    for (var i=0; i<bibliorefs.length; i++) {
+      const ref = bibliorefs[i];
+      const citeInfo = findCites(ref);
+      if (citeInfo) {
+        tippyHover(citeInfo.el, function() {
+          var popup = window.document.createElement('div');
+          citeInfo.cites.forEach(function(cite) {
+            var citeDiv = window.document.createElement('div');
+            citeDiv.classList.add('hanging-indent');
+            citeDiv.classList.add('csl-entry');
+            var biblioDiv = window.document.getElementById('ref-' + cite);
+            if (biblioDiv) {
+              citeDiv.innerHTML = biblioDiv.innerHTML;
+            }
+            popup.appendChild(citeDiv);
+          });
+          return popup.innerHTML;
+        });
+      }
+    }
+  });
+  </script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
